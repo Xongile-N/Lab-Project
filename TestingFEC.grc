@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.11'?>
+<?grc format='1' created='3.7.13'?>
 <flow_graph>
   <timestamp>Tue Jul 16 14:53:13 2019</timestamp>
   <block>
@@ -73,12 +73,20 @@
       <value>True</value>
     </param>
     <param>
+      <key>sizing_mode</key>
+      <value>fixed</value>
+    </param>
+    <param>
       <key>thread_safe_setters</key>
       <value></value>
     </param>
     <param>
       <key>title</key>
       <value></value>
+    </param>
+    <param>
+      <key>placement</key>
+      <value>(0,0)</value>
     </param>
   </block>
   <block>
@@ -105,7 +113,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>60</value>
+      <value>8</value>
     </param>
   </block>
   <block>
@@ -190,11 +198,11 @@
     </param>
     <param>
       <key>state_end</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>framebits</key>
-      <value>FrameBits*PackRate</value>
+      <value>FrameBits*PackRate*scale</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -230,7 +238,7 @@
     </param>
     <param>
       <key>mode</key>
-      <value>fec.CC_STREAMING</value>
+      <value>fec.CC_TERMINATED</value>
     </param>
   </block>
   <block>
@@ -293,7 +301,7 @@
     </param>
     <param>
       <key>mode</key>
-      <value>fec.CC_STREAMING</value>
+      <value>fec.CC_TERMINATED</value>
     </param>
   </block>
   <block>
@@ -324,6 +332,33 @@
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(320, 184)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>scale</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_char_to_float</key>
     <param>
       <key>alias</key>
@@ -339,11 +374,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(704, 116)</value>
+      <value>(800, 108)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -390,15 +425,15 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>file</key>
-      <value>/home/xongile/TestOutputFEC.txt</value>
+      <value>C:\Users\XongileN\Google Drive\2019\Semester2\ELEN40024012 lab project\Lab-Project\TestOutputFEC.txt</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(832, 316)</value>
+      <value>(1136, 348)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -441,11 +476,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>file</key>
-      <value>/home/xongile/TestOutput.txt</value>
+      <value>C:\Users\XongileN\Google Drive\2019\Semester2\ELEN40024012 lab project\Lab-Project\TestOutput.txt</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -496,11 +531,11 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/xongile/TestInputTX.txt</value>
+      <value>C:\Users\XongileN\Google Drive\2019\Semester2\ELEN40024012 lab project\Lab-Project\TestInputTXPacked.txt</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(664, 428)</value>
+      <value>(720, 444)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -508,58 +543,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_file_sink_0_0_0_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>unbuffered</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_file_sink</key>
-    <param>
-      <key>append</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>/home/xongile/TestOutputInter.txt</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1000, 236)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_file_sink_0_1</value>
+      <value>blocks_file_sink_0_0_0_0_0</value>
     </param>
     <param>
       <key>type</key>
@@ -577,6 +561,10 @@
   <block>
     <key>blocks_file_source</key>
     <param>
+      <key>begin_tag</key>
+      <value>pmt.PMT_NIL</value>
+    </param>
+    <param>
       <key>alias</key>
       <value></value>
     </param>
@@ -594,7 +582,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/xongile/TestInput.txt</value>
+      <value>C:\Users\XongileN\Google Drive\2019\Semester2\ELEN40024012 lab project\Lab-Project\TestInput.txt</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -649,7 +637,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(656, 316)</value>
+      <value>(616, 332)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -661,7 +649,7 @@
     </param>
     <param>
       <key>k</key>
-      <value>PackRate</value>
+      <value>8</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -670,6 +658,61 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_packed_to_unpacked_xx</key>
+    <param>
+      <key>bits_per_chunk</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>endianness</key>
+      <value>gr.GR_MSB_FIRST</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(344, 340)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_packed_to_unpacked_xx_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_ports</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
     </param>
   </block>
   <block>
@@ -692,7 +735,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(184, 372)</value>
+      <value>(184, 332)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -728,7 +771,11 @@
     </param>
   </block>
   <block>
-    <key>blocks_unpack_k_bits_bb</key>
+    <key>blocks_unpacked_to_packed_xx</key>
+    <param>
+      <key>bits_per_chunk</key>
+      <value>1</value>
+    </param>
     <param>
       <key>alias</key>
       <value></value>
@@ -743,11 +790,15 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
+    </param>
+    <param>
+      <key>endianness</key>
+      <value>gr.GR_MSB_FIRST</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 316)</value>
+      <value>(872, 340)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -755,11 +806,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_unpack_k_bits_bb_0</value>
-    </param>
-    <param>
-      <key>k</key>
-      <value>UnpackRate</value>
+      <value>blocks_unpacked_to_packed_xx_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -768,6 +815,14 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>num_ports</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
     </param>
   </block>
   <block>
@@ -786,11 +841,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 116)</value>
+      <value>(600, 20)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -814,7 +869,11 @@
     </param>
   </block>
   <block>
-    <key>fec_generic_decoder</key>
+    <key>fec_extended_decoder</key>
+    <param>
+      <key>ann</key>
+      <value>None</value>
+    </param>
     <param>
       <key>alias</key>
       <value></value>
@@ -828,7 +887,7 @@
       <value></value>
     </param>
     <param>
-      <key>decoder</key>
+      <key>decoder_list</key>
       <value>decoder</value>
     </param>
     <param>
@@ -837,7 +896,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(704, 212)</value>
+      <value>(872, 244)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -845,11 +904,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>fec_generic_decoder_0</value>
-    </param>
-    <param>
-      <key>itype</key>
-      <value>float</value>
+      <value>fec_extended_decoder_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -860,12 +915,20 @@
       <value>0</value>
     </param>
     <param>
-      <key>otype</key>
-      <value>byte</value>
+      <key>puncpat</key>
+      <value>'11'</value>
+    </param>
+    <param>
+      <key>threadtype</key>
+      <value>capillary</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>fec_extended_decoder</value>
     </param>
   </block>
   <block>
-    <key>fec_generic_encoder</key>
+    <key>fec_extended_encoder</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -875,20 +938,20 @@
       <value></value>
     </param>
     <param>
-      <key>encoder</key>
-      <value>encoder</value>
-    </param>
-    <param>
       <key>affinity</key>
       <value></value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
+    </param>
+    <param>
+      <key>encoder_list</key>
+      <value>encoder</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(344, 236)</value>
+      <value>(264, 252)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -896,11 +959,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>fec_generic_encoder_0</value>
-    </param>
-    <param>
-      <key>itype</key>
-      <value>byte</value>
+      <value>fec_extended_encoder_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -911,13 +970,17 @@
       <value>0</value>
     </param>
     <param>
-      <key>otype</key>
-      <value>byte</value>
+      <key>puncpat</key>
+      <value>'11'</value>
+    </param>
+    <param>
+      <key>threadtype</key>
+      <value>capillary</value>
     </param>
   </block>
   <connection>
     <source_block_id>blocks_char_to_float_0</source_block_id>
-    <sink_block_id>fec_generic_decoder_0</sink_block_id>
+    <sink_block_id>fec_extended_decoder_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -929,7 +992,13 @@
   </connection>
   <connection>
     <source_block_id>blocks_pack_k_bits_bb_0</source_block_id>
-    <sink_block_id>blocks_file_sink_0</sink_block_id>
+    <sink_block_id>blocks_file_sink_0_0_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_packed_to_unpacked_xx_0</source_block_id>
+    <sink_block_id>fec_extended_encoder_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -941,13 +1010,13 @@
   </connection>
   <connection>
     <source_block_id>blocks_throttle_0</source_block_id>
-    <sink_block_id>blocks_unpack_k_bits_bb_0</sink_block_id>
+    <sink_block_id>blocks_packed_to_unpacked_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_unpack_k_bits_bb_0</source_block_id>
-    <sink_block_id>fec_generic_encoder_0</sink_block_id>
+    <source_block_id>blocks_unpacked_to_packed_xx_0</source_block_id>
+    <sink_block_id>blocks_file_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -958,25 +1027,19 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>fec_generic_decoder_0</source_block_id>
-    <sink_block_id>blocks_file_sink_0_1</sink_block_id>
+    <source_block_id>fec_extended_decoder_0</source_block_id>
+    <sink_block_id>blocks_unpacked_to_packed_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>fec_generic_decoder_0</source_block_id>
+    <source_block_id>fec_extended_encoder_0</source_block_id>
     <sink_block_id>blocks_pack_k_bits_bb_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>fec_generic_encoder_0</source_block_id>
-    <sink_block_id>blocks_file_sink_0_0_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>fec_generic_encoder_0</source_block_id>
+    <source_block_id>fec_extended_encoder_0</source_block_id>
     <sink_block_id>digital_map_bb_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
