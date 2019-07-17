@@ -1,1 +1,14 @@
-This a test file with a bit of data. Random shit here for testing purposes. Adding more shit her
+Figure 9-2, where the received bits are 00. For each state transition, the number on the arc
+shows the branch metric for that transition. Two of the branch metrics are 0, corresponding
+to the only states and transitions where the corresponding Hamming distance is 0. The
+other non-zero branch metrics correspond to cases when there are bit errors.
+The path metric is a value associated with a state in the trellis (i.e., a value associated
+with each node). For hard decision decoding, it corresponds to the Hamming distance
+over the most likely path from the initial state to the current state in the trellis. By “most
+likely”, we mean the path with smallest Hamming distance between the initial state and
+the current state, measured over all possible paths between the two states. The path with
+the smallest Hamming distance minimizes the total number of bit errors, and is most likely
+when the BER is low.
+The key insight in the Viterbi algorithm is that the receiver can compute the path metric
+for a (state, time) pair incrementally using the path metrics of previously computed states
+and the branch metrics.
