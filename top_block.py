@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Jul 17 15:16:38 2019
+# Generated: Wed Jul 17 16:29:26 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -89,6 +89,10 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, UnpackRate, "packet_len")
         self.blocks_pack_k_bits_bb_0_0 = blocks.pack_k_bits_bb(8)
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestInput.txt', False)
+        self.blocks_file_sink_0_0_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestMap.txt', False)
+        self.blocks_file_sink_0_0_0.set_unbuffered(False)
+        self.blocks_file_sink_0_0 = blocks.file_sink(gr.sizeof_float*1, '/home/xongile/Lab-Project/TestFloat.txt', False)
+        self.blocks_file_sink_0_0.set_unbuffered(False)
         self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestOutputFEC.txt', False)
         self.blocks_file_sink_0.set_unbuffered(False)
         self.blocks_char_to_float_0 = blocks.char_to_float(1, 1)
@@ -96,6 +100,7 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Connections
         ##################################################
+        self.connect((self.blocks_char_to_float_0, 0), (self.blocks_file_sink_0_0, 0))
         self.connect((self.blocks_char_to_float_0, 0), (self.fec_extended_tagged_decoder_1, 0))
         self.connect((self.blocks_file_source_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.blocks_pack_k_bits_bb_0_0, 0), (self.blocks_file_sink_0, 0))
@@ -103,6 +108,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_throttle_0, 0), (self.blocks_unpack_k_bits_bb_0, 0))
         self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))
         self.connect((self.digital_map_bb_0, 0), (self.blocks_char_to_float_0, 0))
+        self.connect((self.digital_map_bb_0, 0), (self.blocks_file_sink_0_0_0, 0))
         self.connect((self.fec_extended_tagged_decoder_1, 0), (self.blocks_pack_k_bits_bb_0_0, 0))
         self.connect((self.fec_extended_tagged_encoder_0, 0), (self.digital_map_bb_0, 0))
 
