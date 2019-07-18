@@ -1,5 +1,5 @@
 Figure 9-2, where the received bits are 00. For each state transition, the number on the arc
-shows the branch metric for that transition. Two @»^œ¦1^Š½¼‹¦`metrics are 0, corresponding
+shows the branch metric for that transition. Two of the branch metrics are 0, corresponding
 to the only states and transitions where the corresponding Hamming distance is 0. The
 other non-zero branch metrics correspond to cases when there are bit errors.
 The path metric is a value associated with a state in the trellis (i.e., a value associated
