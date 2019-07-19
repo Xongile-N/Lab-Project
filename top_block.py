@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Fri Jul 19 11:42:39 2019
+# Generated: Fri Jul 19 12:09:30 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -65,7 +65,7 @@ class top_block(gr.top_block, Qt.QWidget):
         # Variables
         ##################################################
         self.PackRate = PackRate = 8
-        self.FrameBits = FrameBits = 16
+        self.FrameBits = FrameBits = 2048
         self.samp_rate = samp_rate = 125000000
         self.packetLength = packetLength = 16
 
@@ -79,10 +79,9 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         self.fec_extended_tagged_decoder_1 = self.fec_extended_tagged_decoder_1 = fec_extended_tagged_decoder_1 = fec.extended_tagged_decoder(decoder_obj_list=decoder, ann=None, puncpat='11', integration_period=10000, lentagname='packet_len', mtu=1500)
         self.digital_map_bb_0 = digital.map_bb((-1,1))
-        self.blocks_throttle_0 = blocks.throttle(gr.sizeof_char*1, samp_rate,True)
         self.blocks_stream_to_tagged_stream_0_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, 16, "packet_len")
         self.blocks_pack_k_bits_bb_0_0 = blocks.pack_k_bits_bb(8)
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, '/home/xongile/Lab-Project/Sent.dat', False)
+        self.blocks_file_source_0_0_0 = blocks.file_source(gr.sizeof_char*1, '/home/xongile/Lab-Project/Sent.dat', False)
         self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/Received.dat', False)
         self.blocks_file_sink_0.set_unbuffered(False)
         self.blocks_char_to_float_0 = blocks.char_to_float(1, 1)
@@ -91,10 +90,9 @@ class top_block(gr.top_block, Qt.QWidget):
         # Connections
         ##################################################
         self.connect((self.blocks_char_to_float_0, 0), (self.fec_extended_tagged_decoder_1, 0))
-        self.connect((self.blocks_file_source_0, 0), (self.blocks_throttle_0, 0))
+        self.connect((self.blocks_file_source_0_0_0, 0), (self.blocks_stream_to_tagged_stream_0_0, 0))
         self.connect((self.blocks_pack_k_bits_bb_0_0, 0), (self.blocks_file_sink_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0_0, 0), (self.digital_map_bb_0, 0))
-        self.connect((self.blocks_throttle_0, 0), (self.blocks_stream_to_tagged_stream_0_0, 0))
         self.connect((self.digital_map_bb_0, 0), (self.blocks_char_to_float_0, 0))
         self.connect((self.fec_extended_tagged_decoder_1, 0), (self.blocks_pack_k_bits_bb_0_0, 0))
 
@@ -120,7 +118,6 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.blocks_throttle_0.set_sample_rate(self.samp_rate)
 
     def get_packetLength(self):
         return self.packetLength
