@@ -393,7 +393,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -456,7 +456,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(960, 140)</value>
+      <value>(576, 140)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -554,6 +554,53 @@
     </param>
     <param>
       <key>_coordinate</key>
+      <value>(920, 308)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_char_to_float_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>scale</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_char_to_float</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
       <value>(456, 372)</value>
     </param>
     <param>
@@ -601,7 +648,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(824, 316)</value>
+      <value>(704, 340)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -746,7 +793,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(0, 412)</value>
+      <value>(312, 420)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -797,7 +844,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -891,7 +938,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(320, 548)</value>
+      <value>(320, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -938,7 +985,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(96, 524)</value>
+      <value>(112, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1146,7 +1193,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(48, 252)</value>
+      <value>(176, 316)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1201,7 +1248,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(320, 284)</value>
+      <value>(272, 220)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1417,11 +1464,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(952, 396)</value>
+      <value>(928, 444)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1745,11 +1792,11 @@
     </param>
     <param>
       <key>ymax</key>
-      <value>1</value>
+      <value>255</value>
     </param>
     <param>
       <key>ymin</key>
-      <value>-1</value>
+      <value>-255</value>
     </param>
   </block>
   <block>
@@ -1784,7 +1831,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2132,6 +2179,12 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_char_to_float_0_0</source_block_id>
+    <sink_block_id>qtgui_time_sink_x_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_char_to_float_0_0_1_0</source_block_id>
     <sink_block_id>blocks_multiply_const_vxx_0</sink_block_id>
     <source_key>0</source_key>
@@ -2187,6 +2240,12 @@
   </connection>
   <connection>
     <source_block_id>blocks_stream_to_tagged_stream_0</source_block_id>
+    <sink_block_id>blocks_char_to_float_0_0_1_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_stream_to_tagged_stream_0</source_block_id>
     <sink_block_id>fec_extended_tagged_encoder_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -2229,7 +2288,7 @@
   </connection>
   <connection>
     <source_block_id>fec_extended_tagged_decoder_1</source_block_id>
-    <sink_block_id>blocks_char_to_float_0_0_1_0_0</sink_block_id>
+    <sink_block_id>blocks_char_to_float_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
