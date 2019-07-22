@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xongile/Lab-Project/CustomBlocks/CCEncoder/CCEncoder.cpp
+Pothos/Framework.hpp
+-
+
+/home/xongile/Lab-Project/CustomBlocks/CCEncoder/CCEncoderDocs.cpp
+Pothos/Framework.hpp
+-
+Pothos/Plugin.hpp
+-
+

@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+d805c409fb2623ba088798c1402a5aa8 CCEncoderDocs.cpp

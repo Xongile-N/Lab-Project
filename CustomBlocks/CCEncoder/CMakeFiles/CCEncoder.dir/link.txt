@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fvisibility-inlines-hidden -O3 -DNDEBUG  -Wl,--no-undefined -shared  -o libCCEncoder.so CMakeFiles/CCEncoder.dir/CCEncoder.cpp.o CMakeFiles/CCEncoder.dir/CCEncoderDocs.cpp.o -lPothos /usr/lib/libPocoUtil.so.50 /usr/lib/libPocoXML.so.50 /usr/lib/libPocoNet.so.50 -lexpat /usr/lib/libPocoJSON.so.50 /usr/lib/libPocoFoundation.so.50 -lpcre -lz -lpthread -ldl -lrt 

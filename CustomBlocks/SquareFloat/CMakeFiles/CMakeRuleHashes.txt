@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+162a4edf7edf8e2f91f7456201587cdc SquareFloatDocs.cpp
