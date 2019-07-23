@@ -2,18 +2,18 @@
 /***********************************************************************
  * |PothosDoc Convolution Code Encoder
  *
- * This custom block implments convolutional code, bool array version. Byet bool conversions present.All with pointers initialised. Removed using any as array. V2
+ * This custom block implments convolutional code
  *
  * |category /Custom
  * |factory /Custom/CCEncoder()
  **********************************************************************/
 #include <Pothos/Framework.hpp>
-class CCEncoder: public Pothos::Block
+class CCDecoder: public Pothos::Block
 {
 public:
 	CCEncoder(){
-		this->setupInput(0,"uint8");
-		this->setupOutput(0,"uint8");  
+		this->setupInput(0,typeid(int));
+		this->setupOutput(0,typeid(int));  
 		
 	}
     	static Block *make()
@@ -24,60 +24,33 @@ public:
 	void work(void){
 		auto inputPort = this->input(0);
 		auto outputPort=this->output(0);
-		const uint8_t *inputBuffer=inputPort->buffer();
-		uint8_t *outputBuffer=outputPort->buffer();
-		
-		bool* inBuffer=NULL;
-		bool* outBuffer=NULL;
+
 		const size_t numElems=inputPort->elements();
-		if(numElems<=0)
-			return;
-		inBuffer=new bool[numElems*8];
-		outBuffer=new bool[(numElems*8+constraint)*rate];	
-
-		BytesToBool(inputBuffer,inBuffer,numElems);
-		encode(inBuffer,outBuffer,numElems*8);
-		size_t outCount=((numElems*8+constraint)*rate)/8;
-		outCount+=(((numElems*8+constraint)*rate)%8)>0?1:0;
-		BoolToBytes(outBuffer,outputBuffer,outCount );
+		int* codes=new int[rate];
+		codes[0]=79;
+		codes[1]=109;c
+		Decode(inputPort->buffer(),outputPort->buffer(),numElems);
 		const size_t numElemsOut=outputPort->elements();
-		delete inBuffer;
-		inBuffer=NULL;
-		delete outBuffer;
-		outBuffer=NULL;		
-		//inputPort->consume(numElems);
-		inputPort->clear();
-		outputPort->produce(outCount);
-		//outputPort->produce(8192);
-
-		//delete outputBuffer;
-		//outputBuffer=NULL;
-
+		outputPort->produce(numElemsOut);
 	}
 
 private:
-	int constraint =4;
+	int constraint =7;
 	int rate =2;
 	int bitsIn=1;
-	uint8_t* codes=NULL;
+	int* codes=NULL;
 	bool** polyCodes=NULL;
 	bool * codeBuffer=NULL;
-
-	void encode(bool* inBuffer,bool*outBuffer, const size_t numIn ){
-		uint8_t* codes=new uint8_t[rate];
-		codes[0]=15;
-		codes[1]=11	;	
+	
+	void Decode(const bool* inBuffer,bool*outBuffer, const size_t numIn ){
 		polyCodes=new bool*[rate];
-		
 		for(auto i=0;i<rate;i++){
 			polyCodes[i]=new bool[constraint];
 			for(auto j=0;j<constraint;j++){
-				polyCodes[i][j]=0;
-				polyCodes[i][j]=getBit(*(codes+i),j);
+				polyCodes[i][j]=getBit(codes[i],j);
 			}
 		}
-		
-		
+
 		codeBuffer=new bool[constraint];
 		for(auto i=0;i<constraint;i++){
 			codeBuffer[i]=0;		
@@ -87,7 +60,7 @@ private:
 				codeBuffer[j]=codeBuffer[j-1]	;		
 			}
 			for(int j=bitsIn-1;j>-1;j--){
-				codeBuffer[j]=*(inBuffer+i+bitsIn-1-j)	;		
+				codeBuffer[j]=inBuffer[i+bitsIn-1-j]	;		
 			}
 			for(int j=0;j<rate;j++){
 				bool out=0;
@@ -96,10 +69,9 @@ private:
 ;
 					out=XOR(out,poly);
 				}
-				*(outBuffer+i*rate+j)=out;			
+				outBuffer[i*rate+j]=out;			
 			}	
 		}
-
 		for(size_t i=numIn;i<constraint+numIn;i++){
 			for(int j=constraint-1;j>bitsIn-1;j--){
 				codeBuffer[j]=codeBuffer[j-1]	;		
@@ -115,48 +87,23 @@ private:
 	;
 					out=XOR(out,poly);
 				}
-				*(outBuffer+i*rate+j)=out;	
+				outBuffer[i*rate+j]=out;	
 			}	
 		}
-
 		for(auto i=0;i<rate;i++){
 			delete polyCodes[i];
 			polyCodes[i]=NULL;
 		}
-		delete codes;
-		codes=NULL;
 		delete polyCodes;
 		polyCodes=NULL;
 		delete codeBuffer;
 		codeBuffer=NULL;
 	}
-void BytesToBool(const uint8_t* oldBuff,bool* newBuff,size_t length){
-	size_t offset=0;
-	for(size_t i=0;i<length;i++){
-		for(auto j=7;j>-1;j--){
-			*(newBuff+offset)=getBit(*(oldBuff+i),j);	
-			offset++;
-		}	
-
-	}
-}
-void BoolToBytes(bool* oldBuff,uint8_t* newBuff,size_t length){
-	size_t offset=0;
-	for(size_t i=0;i<length;i++){
-	    for(int j=0;j<8;j++){
-            *(newBuff+i)*=2;
-    		*(newBuff+i)+=*(oldBuff+offset);
-			offset++;		
-
-		}
-	}
-}
 	bool XOR(bool A, bool B){
 		return A!=B	;
 	}
 	bool getBit(unsigned char byte, int position)
 	{
-		//return false;
 	    return (byte >> position) & 0x1;
 	}
 };
