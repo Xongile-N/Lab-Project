@@ -26,47 +26,59 @@ public:
 		auto outputPort=this->output(0);
 		const uint8_t *inputBuffer=inputPort->buffer();
 		uint8_t *outputBuffer=outputPort->buffer();
-		
 		bool* inBuffer=NULL;
 		bool* outBuffer=NULL;
 		const size_t numElems=inputPort->elements();
+		const size_t numElemsOut=outputPort->elements();
 		if(numElems<=0)
 			return;
-		inBuffer=new bool[numElems*8];
-		outBuffer=new bool[(numElems*8+constraint)*rate];	
 
+		inBuffer=new bool[numElems*8];
+		int flushBits=constraint*rate;
+		int flushBytes=flushBits/8;
+		
+		flushBytes+=(flushBits%8)>0?1:0;
+		if((numElemsOut-numElems)<=flushBytes){
+			//skip=true;
+			//flushBytes=0;
+			//flushBits=0;		
+		}
+			flushBytes=0;
+			flushBits=0;
+		outBuffer=new bool[numElems*8*rate+flushBits];	
 		BytesToBool(inputBuffer,inBuffer,numElems);
 		encode(inBuffer,outBuffer,numElems*8);
-		size_t outCount=((numElems*8+constraint)*rate)/8;
-		outCount+=(((numElems*8+constraint)*rate)%8)>0?1:0;
+		size_t outCount=(numElems*rate);
+		outCount+=flushBytes;
 		BoolToBytes(outBuffer,outputBuffer,outCount );
-		const size_t numElemsOut=outputPort->elements();
+
 		delete inBuffer;
 		inBuffer=NULL;
 		delete outBuffer;
 		outBuffer=NULL;		
-		//inputPort->consume(numElems);
-		inputPort->clear();
+		inputPort->consume(numElems);
+		//inputPort->clear();
 		outputPort->produce(outCount);
-		//outputPort->produce(8192);
+		//outputPort->produce(flushBytes*10000);
 
-		//delete outputBuffer;
-		//outputBuffer=NULL;
+
+
+
 
 	}
 
 private:
-	int constraint =4;
+	int constraint =7;
 	int rate =2;
 	int bitsIn=1;
 	uint8_t* codes=NULL;
 	bool** polyCodes=NULL;
 	bool * codeBuffer=NULL;
-
+	bool skip=true;
 	void encode(bool* inBuffer,bool*outBuffer, const size_t numIn ){
 		uint8_t* codes=new uint8_t[rate];
-		codes[0]=15;
-		codes[1]=11	;	
+		codes[0]=109;
+		codes[1]=79	;	
 		polyCodes=new bool*[rate];
 		
 		for(auto i=0;i<rate;i++){
@@ -99,24 +111,25 @@ private:
 				*(outBuffer+i*rate+j)=out;			
 			}	
 		}
-
-		for(size_t i=numIn;i<constraint+numIn;i++){
-			for(int j=constraint-1;j>bitsIn-1;j--){
-				codeBuffer[j]=codeBuffer[j-1]	;		
-			}
-			for(int j=bitsIn-1;j>-1;j--){
-				codeBuffer[j]=0	;		
-			}
-
-			for(int j=0;j<rate;j++){
-				bool out=0;
-				for(int k=0;k<constraint;k++){
-					bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k]
-	;
-					out=XOR(out,poly);
+		if(!skip){
+			for(size_t i=numIn;i<constraint+numIn;i++){
+				for(int j=constraint-1;j>bitsIn-1;j--){
+					codeBuffer[j]=codeBuffer[j-1]	;		
 				}
-				*(outBuffer+i*rate+j)=out;	
-			}	
+				for(int j=bitsIn-1;j>-1;j--){
+					codeBuffer[j]=0	;		
+				}
+
+				for(int j=0;j<rate;j++){
+					bool out=0;
+					for(int k=0;k<constraint;k++){
+						bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k]
+		;
+						out=XOR(out,poly);
+					}
+					*(outBuffer+i*rate+j)=out;	
+				}	
+			}
 		}
 
 		for(auto i=0;i<rate;i++){

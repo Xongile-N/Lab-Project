@@ -32,7 +32,8 @@ public:
 		const float *inputBuffer=inputPort->buffer();
 		float *outputBuffer=outputPort->buffer();
 		const size_t numElems=inputPort->elements();
-				
+					if(numElems<=0)
+			return;	
 		for(size_t i=0;i<numElems;i++)
 		{
 			//auto inc=i*(inputPort->dtype().size() );
