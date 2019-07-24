@@ -1,0 +1,7 @@
+/home/xongile/Lab-Project/CustomBlocks/CCDecoder/CMakeFiles/edit_cache.dir
+/home/xongile/Lab-Project/CustomBlocks/CCDecoder/CMakeFiles/install/strip.dir
+/home/xongile/Lab-Project/CustomBlocks/CCDecoder/CMakeFiles/CCDecoder.dir
+/home/xongile/Lab-Project/CustomBlocks/CCDecoder/CMakeFiles/rebuild_cache.dir
+/home/xongile/Lab-Project/CustomBlocks/CCDecoder/CMakeFiles/list_install_components.dir
+/home/xongile/Lab-Project/CustomBlocks/CCDecoder/CMakeFiles/install/local.dir
+/home/xongile/Lab-Project/CustomBlocks/CCDecoder/CMakeFiles/install.dir
