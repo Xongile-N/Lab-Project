@@ -34,8 +34,8 @@
                         }
                     ],
                     "path": "/blocks/binary_file_sink",
-                    "positionX": 692,
-                    "positionY": 353,
+                    "positionX": 770,
+                    "positionY": 276,
                     "properties": [
                         {
                             "key": "path",
@@ -49,7 +49,84 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 50
+                    "zValue": 79
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "BinaryFileSink1",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEnabled",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setEnabled",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_sink",
+                    "positionX": 826,
+                    "positionY": 170,
+                    "properties": [
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/PothosDecoderTest.dat\""
+                        },
+                        {
+                            "key": "enabled",
+                            "value": "true"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 82
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "ConvolutionCodeDecoder0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/Custom/CCDecoder",
+                    "positionX": 590,
+                    "positionY": 181,
+                    "properties": [
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 88
                 },
                 {
                     "affinityZone": "",
@@ -81,7 +158,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 47
+                    "zValue": 84
                 },
                 {
                     "affinityZone": "",
@@ -229,7 +306,7 @@
                         },
                         {
                             "key": "elements",
-                            "value": "[155]"
+                            "value": "[145]"
                         },
                         {
                             "key": "startId",
@@ -241,9 +318,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 69
+                    "zValue": 89
                 },
                 {
                     "activeEditTab": "Axis",
@@ -407,8 +484,8 @@
                         }
                     ],
                     "path": "/plotters/wave_monitor",
-                    "positionX": 557,
-                    "positionY": 246,
+                    "positionX": 576,
+                    "positionY": 94,
                     "properties": [
                         {
                             "key": "title",
@@ -526,12 +603,40 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 24
+                    "zValue": 75
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_ConvolutionCodeDecoder00_BinaryFileSink10",
+                    "inputId": "BinaryFileSink1",
+                    "inputKey": "0",
+                    "outputId": "ConvolutionCodeDecoder0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
                 },
                 {
                     "enabled": true,
                     "id": "Connection_ConvolutionCodeEncoder00_BinaryFileSink00",
                     "inputId": "BinaryFileSink0",
+                    "inputKey": "0",
+                    "outputId": "ConvolutionCodeEncoder0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_ConvolutionCodeEncoder00_ConvolutionCodeDecoder00",
+                    "inputId": "ConvolutionCodeDecoder0",
                     "inputKey": "0",
                     "outputId": "ConvolutionCodeEncoder0",
                     "outputKey": "0",
@@ -603,14 +708,14 @@
                     "enabled": true,
                     "height": 158,
                     "id": "WidgetWaveMonitor0",
-                    "positionX": 65,
-                    "positionY": 351,
+                    "positionX": 89,
+                    "positionY": 416,
                     "rotation": 0,
                     "selected": false,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/BiTdLxqfxAWUAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 604,
-                    "zValue": 67
+                    "zValue": 70
                 }
             ],
             "pageName": "Main",

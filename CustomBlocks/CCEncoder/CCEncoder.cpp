@@ -2,7 +2,8 @@
 /***********************************************************************
  * |PothosDoc Convolution Code Encoder
  *
- * This custom block implments convolutional code, bool array version. Byet bool conversions present.All with pointers initialised. Removed using any as array. V2
+ * This custom block implments convolutional code, bool array version. Byet bool conversions present.All with pointers initialised. 	 
+ * Removed using any as array. V2
  *
  * |category /Custom
  * |factory /Custom/CCEncoder()
@@ -81,7 +82,7 @@ public:
 	}
 
 private:
-	uint8_t constraint =7;
+	uint8_t constraint =4;
 	int rate =2;
 	int bitsIn=1;
 	uint8_t* codes=NULL;
@@ -90,8 +91,8 @@ private:
 	bool skip=true;
 	void encode(bool* inBuffer,bool*outBuffer, const size_t numIn,bool* bufferForFlush ){
 		codes=new uint8_t[rate];
-		codes[0]=109;
-		codes[1]=79	;	
+		codes[0]=13;
+		codes[1]=11	;	
 		polyCodes=new bool*[rate];
 		
 		for(auto i=0;i<rate;i++){
