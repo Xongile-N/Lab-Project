@@ -26,7 +26,7 @@ public:
 		}
 	}
 	void addPath(const std::vector<int> toCopy, int newPathHamming){
-	     if(toCopy.size()>path.size()){
+	     if(toCopy.size()>=path.size()){
 		    prevPrevPath.clear();
 		    for(uint8_t i=0;i<prevPath.size();i++){
 				prevPrevPath.push_back(prevPath[i]);			
@@ -43,27 +43,6 @@ public:
 			
 			path.push_back(trellisIndex);
 			pathHamming=newPathHamming;
-		}else if(toCopy.size()==path.size()){
-		    if(newPathHamming<pathHamming){
-
-    		    prevPrevPath.clear();
-    		    for(uint8_t i=0;i<prevPath.size();i++){
-    				prevPrevPath.push_back(prevPath[i]);			
-    			}
-    		    prevPath.clear();
-    			for(uint8_t i=0;i<path.size();i++){
-    				prevPath.push_back(path[i]);			
-    			}
-    			path.clear();
-    			prevPathHamming=pathHamming;
-    			for(uint8_t i=0;i<toCopy.size();i++){
-    				path.push_back(toCopy[i]);	
-    			}	
-    			
-    			path.push_back(trellisIndex);
-    			pathHamming=newPathHamming;
-		        
-		    }
 		}
 		else if(toCopy.size()==prevPath.size()&&newPathHamming<pathHamming){
 
@@ -134,7 +113,6 @@ private:
 	std::vector<int> path;	
 	std::vector<int> prevPath;
 	std::vector<int> prevPrevPath;
-	//ViterbiNode *nextNode=NULL;
 	int trellisIndex=0;
 	bool nodeAlloc=false;
 
@@ -226,144 +204,96 @@ private:
 	int prev_1=6;
 	ViterbiNode ** nodes;
 	int Decode(const bool* inBuffer,bool*outBuffer, const size_t numIn ){
-	codes=new int[rate];
-	codes[0]=15;
-	codes[1]=11;
-	int tester=0;
-	buildTrellis(constraint,codes,rate);
-	stateCount=(int)pow(2,constraint);
-	nodes=new ViterbiNode*[stateCount];	
-	for(int i=0;i<stateCount;i++){
-		nodes[i]=new ViterbiNode(i);
-	}
-	int finalNode=0;
-	int loop=12;
-	int check=7;
-	for(uint8_t i=0;i<numIn;i+=2){
-		bool curr0=*(inBuffer+i);
-		bool curr1=*(inBuffer+i+1);
-		uint8_t out=curr0*2+curr1;
-	//       cout<<curr0<<curr1;
-		//cout<<+out<<endl;
-		if(i==0){
-		    nodes[trellis[0][oneNext]]->addPath(nodes[0]->getPath(),nodes[0]->getPathHamming()+ getHammingDist(out,trellis[0][oneOutput]));	
-			nodes[trellis[0][zeroNext]]->addPath(nodes[0]->getPath(),nodes[0]->getPathHamming()+ getHammingDist(out,trellis[0][zeroOutput]));
-  
+		codes=new int[rate];
+		codes[0]=15;
+		codes[1]=11;
+		/*int tester=0;
+		int loop=12;
+		int check=7;*/
+		buildTrellis(constraint,codes,rate);
+		stateCount=(int)pow(2,constraint);
+		nodes=new ViterbiNode*[stateCount];	
+		for(int i=0;i<stateCount;i++){
+			nodes[i]=new ViterbiNode(i);
 		}
-		else 
-		{
+		int finalNode=0;
 
-			for(int j=0;j<stateCount;j++){
-                    if(i==loop){
-                       // cout<<j<<"Checking: "<<check<<" "<<nodes[check]->getPathLength()<<" "<<nodes[check]->getPathHamming()<<" "<<nodes[check]->getPrevPathLength()<<" "<<nodes[check]->getPrevPathHamming()<<" "<<nodes[check]->getPrevPrevPathLength()<<" "<<nodes[check]->getPrevPrevPathHamming()<<endl;
-                    }
-					if(nodes[j]->getPathLength()<(i/2+1)){
-					    nodes[j]->deletePath();	
-                    
-				    	continue;
+		for(uint8_t i=0;i<numIn;i+=rate){
+			bool curr0=*(inBuffer+i);
+			bool curr1=*(inBuffer+i+1);
+			uint8_t out=curr0*2+curr1;
+			if(i==0){
+				nodes[trellis[0][oneNext]]->addPath(nodes[0]->getPath(),nodes[0]->getPathHamming()+ getHammingDist(out,trellis[0][oneOutput]));	
+				nodes[trellis[0][zeroNext]]->addPath(nodes[0]->getPath(),nodes[0]->getPathHamming()+ getHammingDist(out,trellis[0][zeroOutput]));
+		    }
+			else 
+			{
+
+				for(int j=0;j<stateCount;j++){
+						if(nodes[j]->getPathLength()<(i/rate+1)){
+							nodes[j]->deletePath();	
+		                
+							continue;
+						}
+						if(nodes[j]->getPathLength()==(i/rate+1)){
+		                    nodes[trellis[j][zeroNext]]->addPath(nodes[j]->getPath(),nodes[j]->getPathHamming()+ getHammingDist(out,trellis[j][zeroOutput]));
+							if(trellis[j][zeroNext]==trellis[j][currState]){
+								nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPrevPath(),nodes[j]->getPrevPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));
+							}	else{		
+								nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPath(),nodes[j]->getPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));
+		                    }		    
+						}
+						else if(nodes[j]->getPrevPathLength()==(i/rate+1)){
+							nodes[trellis[j][zeroNext]]->addPath(nodes[j]->getPrevPath(),nodes[j]->getPrevPathHamming()+ getHammingDist(out,trellis[j][zeroOutput]));
+							if(trellis[j][zeroNext]==trellis[j][currState]){
+								nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPrevPrevPath(),nodes[j]->getPrevPrevPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));	
+							}	
+							else{						    
+								nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPrevPath(),nodes[j]->getPrevPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));	
+		                    }
+						}else if(nodes[j]->getPrevPrevPathLength()==(i/rate+1)){
+							nodes[trellis[j][zeroNext]]->addPath(nodes[j]->getPrevPrevPath(),nodes[j]->getPrevPrevPathHamming()+ getHammingDist(out,trellis[j][zeroOutput]));
+							nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPrevPrevPath(),nodes[j]->getPrevPrevPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));	
+						}
+				}
+
+			}		
+
+		}
+		
+		int finalHamming=10000;
+		int pathLength=numIn/rate+1;
+		for(int i=0;i<stateCount;i++){
+			 if(nodes[i]->getPathHamming()<0||nodes[i]->getPathLength()!=pathLength){
+					continue;
+				}else if(nodes[i]->getPathHamming()<=finalHamming){
+					if(nodes[i]->getPathHamming()==finalHamming&&(rand()%2)==1){
+					    continue;
 					}
-					if(nodes[j]->getPathLength()==(i/2+1)){
-
-						 if(loop==i&&j==check){
-		              //      cout<<j<<" norm0bef "<<+trellis[j][zeroNext]<<" "<<nodes[trellis[j][zeroNext]]->getPathLength()<< " "<<nodes[trellis[j][zeroNext]]->getPathHamming()<<endl;
-		            //        cout<<j<<" norm1bef "<<+trellis[j][oneNext]<<" " <<nodes[trellis[j][oneNext]]->getPathLength()<< " "<<nodes[trellis[j][oneNext]]->getPathHamming()<<endl;
-                        }
-                        nodes[trellis[j][zeroNext]]->addPath(nodes[j]->getPath(),nodes[j]->getPathHamming()+ getHammingDist(out,trellis[j][zeroOutput]));
-						if(trellis[j][zeroNext]==trellis[j][currState]){
-						    nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPrevPath(),nodes[j]->getPrevPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));
-						}	else{		
-						    nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPath(),nodes[j]->getPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));
-                        }		    
-                        if(loop==i&&j==check){
-		                  //  cout<<j<<" norm0 "<<+trellis[j][zeroNext]<<" "<<nodes[trellis[j][zeroNext]]->getPathLength()<< " "<<nodes[trellis[j][zeroNext]]->getPathHamming()<<endl;
-		            //        cout<<j<<" norm1 "<<+trellis[j][oneNext]<<" " <<nodes[trellis[j][oneNext]]->getPathLength()<< " "<<nodes[trellis[j][oneNext]]->getPathHamming()<<endl;
-
-                            
-                        }
-					}
-					else if(nodes[j]->getPrevPathLength()==(i/2+1)){
-						if(loop==i&&j==check){
-		                 //   cout<<j<<" meh0bef "<<+trellis[j][zeroNext]<<" "<<nodes[trellis[j][zeroNext]]->getPathLength()<< " "<<nodes[trellis[j][zeroNext]]->getPathHamming()<<endl;
-		               //     cout<<j<<" meh1bef "<<+trellis[j][oneNext]<<" " <<nodes[trellis[j][oneNext]]->getPathLength()<< " "<<nodes[trellis[j][oneNext]]->getPathHamming()<<endl;
-                        }
-						nodes[trellis[j][zeroNext]]->addPath(nodes[j]->getPrevPath(),nodes[j]->getPrevPathHamming()+ getHammingDist(out,trellis[j][zeroOutput]));
-					    if(trellis[j][zeroNext]==trellis[j][currState]){
-						    nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPrevPrevPath(),nodes[j]->getPrevPrevPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));	
-						}	
-						else{						    
-						    nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPrevPath(),nodes[j]->getPrevPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));	
-                        }
-                        if(loop==i&&j==check){
-		                  //  cout<<j<<" meh0 "<<+trellis[j][zeroNext]<<" "<<nodes[trellis[j][zeroNext]]->getPathLength()<< " "<<nodes[trellis[j][zeroNext]]->getPathHamming()<<endl;
-		                //    cout<<j<<" meh1 "<<+trellis[j][oneNext]<<" "<<nodes[trellis[j][oneNext]]->getPathLength()<< " "<<nodes[trellis[j][oneNext]]->getPathHamming()<<endl;
-
-		                }
-
-					}else if(nodes[j]->getPrevPrevPathLength()==(i/2+1)){
-                        if(loop==i&&j==check){
-				          //  cout<<"here0before "<<+nodes[j]->getPrevPrevPathHamming() <<" "<<+trellis[j][oneNext]<<" "<<nodes[trellis[j][oneNext]]->getPathHamming()<<" "<<nodes[trellis[j][oneNext]]->getPathLength()<<" "<< +trellis[j][currState]<<endl;
-				         //   cout<<"here1before "<<+nodes[j]->getPrevPrevPathHamming() <<" "<<+trellis[j][zeroNext]<<" "<<nodes[trellis[j][zeroNext]]->getPathHamming()<<" "<<nodes[trellis[j][zeroNext]]->getPathLength()<<" "<< +trellis[j][currState]<<endl;
-
-				        }
-                        if(loop==i&&j==check){
-                          //  cout<<"before "<<+nodes[j]->getPathHamming()<<" "<<+nodes[j]->getPrevPathHamming()<<" "<<+nodes[j]->getPrevPrevPathHamming()<<endl;
-                        }
-					    nodes[trellis[j][zeroNext]]->addPath(nodes[j]->getPrevPrevPath(),nodes[j]->getPrevPrevPathHamming()+ getHammingDist(out,trellis[j][zeroOutput]));
-					    nodes[trellis[j][oneNext]]->addPath(nodes[j]->getPrevPrevPath(),nodes[j]->getPrevPrevPathHamming()+ getHammingDist(out,trellis[j][oneOutput]));	
-					    if(loop==i&&j==check){
-				           // cout<<"here0 "<<+nodes[j]->getPrevPrevPathHamming() <<" "<<+trellis[j][oneNext]<<" "<<nodes[trellis[j][oneNext]]->getPathHamming()<<" "<<nodes[trellis[j][oneNext]]->getPathLength()<<" "<< +trellis[j][currState]<<endl;
-				          // cout<<"here1 "<<+nodes[j]->getPrevPrevPathHamming() <<" "<<+trellis[j][zeroNext]<<" "<<nodes[trellis[j][zeroNext]]->getPathHamming()<<" "<<nodes[trellis[j][zeroNext]]->getPathLength()<<" "<< +trellis[j][currState]<<endl;
-
-				        }
-
-					}
-			}
-
-		}		
-
-	}
-	
-	int finalHamming=10000;
-
-	for(int i=0;i<stateCount;i++){
-		 if(nodes[i]->getPathHamming()<0){
-				continue;
-			}else if(nodes[i]->getPathHamming()<=finalHamming){
-			    if(nodes[i]->getPathHamming()==0){
-			     //   cout<<"strange"<<i<<endl;
-			    }
-			    if(nodes[i]->getPathHamming()==finalHamming&&(rand()%2)==1){
-			        continue;
-			    }
-				finalHamming=nodes[i]->getPathHamming();
-				finalNode=i;
-			}
-	}
-	std::vector<int> finalPath=nodes[1]->getPath();
-	for (int i=0;i<numIn/2;i++){
-		*(outBuffer+i)=getBit(trellis[finalPath[i+1]][currState],constraint-1);	
-	//	cout<<getBit(trellis[finalPath[i+1]][currState],constraint-1);
-
-	}
-//	cout<<endl;
-//    for (int i=0;i<numIn/2+1;i++){
-	//	    		cout<<finalPath[i]<<endl;
-//
-  //  }
-//	cout<<finalHamming<<" "<<finalNode<<" "<<endl;
+					finalHamming=nodes[i]->getPathHamming();
+					finalNode=i;
+				}
+		}
+		std::vector<int> finalPath=nodes[finalNode]->getPath();
+		for (uint8_t i=0;i<numIn/rate;i++){
+			*(outBuffer+i)=getBit(trellis[finalPath[i+1]][currState],constraint-1);	
+			
+		}
 
 
-	delete codes;
-	delete nodes;
-	nodes=NULL;
-	codes=NULL;
-	return tester;
+
+		delete codes;
+		delete nodes;
+		nodes=NULL;
+		codes=NULL;
+		return finalHamming;
 }
+
 
 	void buildTrellis(int k_constraint,int * polies,int codeRate){
 	stateCount=(int)pow(2,k_constraint);
 	trellis =new  uint8_t*[(stateCount)];
-	polyCodes=new bool*[rate];
+	polyCodes=new bool*[codeRate];
 	for(uint8_t i=0;i<stateCount;i++){
 		trellis[i]=new uint8_t[stateAttri];
 		trellis[i][currState]=i;
