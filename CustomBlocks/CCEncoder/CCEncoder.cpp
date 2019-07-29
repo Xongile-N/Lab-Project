@@ -2,26 +2,55 @@
 /***********************************************************************
  * |PothosDoc Convolution Code Encoder
  *
- * This custom block implments convolutional code, bool array version. Byet bool conversions present.All with pointers initialised. 	 
- * Removed using any as array. V2
+ * This custom block implments convolutional code, 1/2 rate codes currently supported. Add polynomials below
  *
  * |category /Custom
+ * |param polyF[Polynomial First ] First decimal polynomial representation
+ * |default 15
+ * |param polyS[Polynomial Second ] Second decimal polynomial representation
+ * |default 11 
+ * |param constraint[Constraint K] Constraint Length
+ * |default 4 
  * |factory /Custom/CCEncoder()
+ * |setter setPolyF(polyF)
+ * |setter setPolyS(polyS)
+ * |setter setConstraint(constraint)
  **********************************************************************/
 #include <Pothos/Framework.hpp>
+#include <math.h>
+#include <stdlib.h> 
+#include <vector> 
 class CCEncoder: public Pothos::Block
 {
 public:
 	CCEncoder(){
+
 		this->setupInput(0,"uint8");
-		this->setupOutput(0,"uint8");  
-		
+		this->setupOutput(0,"uint8"); 
+		this->registerCall(this, POTHOS_FCN_TUPLE(CCEncoder, setPolyF));
+ 		this->registerCall(this, POTHOS_FCN_TUPLE(CCEncoder, setPolyS));
+ 		this->registerCall(this, POTHOS_FCN_TUPLE(CCEncoder, setConstraint));
+		//	codes=new uint8_t[rate];
 	}
     	static Block *make()
 	{
 	        //a factory function to create an instance of MyBlock
 	        return new CCEncoder();
 	}
+	void setPolyF(int poly0){
+		uint8_t toPush=(uint8_t)poly0;
+		codes.push_back(toPush);
+	}
+	
+	void setPolyS(int poly1){
+		uint8_t toPush=(uint8_t)poly1;
+		codes.push_back(toPush);
+	}
+		void setConstraint(int k){
+		constraint=(uint8_t)k;
+	}
+
+
 	void work(void){
 		auto inputPort = this->input(0);
 		auto outputPort=this->output(0);
@@ -78,28 +107,28 @@ public:
 		flushBuffer=NULL;
 		delete tempFlushBuffer;
 		tempFlushBuffer=NULL;
-
 	}
 
 private:
-	uint8_t constraint =4;
+	uint8_t constraint =0;
 	int rate =2;
 	int bitsIn=1;
-	uint8_t* codes=NULL;
+	std::vector<uint8_t> codes;
 	bool** polyCodes=NULL;
 	bool * codeBuffer=NULL;
 	bool skip=true;
+
 	void encode(bool* inBuffer,bool*outBuffer, const size_t numIn,bool* bufferForFlush ){
-		codes=new uint8_t[rate];
-		codes[0]=13;
-		codes[1]=11	;	
+
+		//codes.push_back(15);
+		//codes.push_back(11)	;	
 		polyCodes=new bool*[rate];
 		
 		for(auto i=0;i<rate;i++){
 			polyCodes[i]=new bool[constraint];
 			for(auto j=0;j<constraint;j++){
 				polyCodes[i][j]=0;
-				polyCodes[i][j]=getBit(*(codes+i),j);
+				polyCodes[i][j]=getBit(codes[i],j);
 			}
 		}
 		
@@ -150,8 +179,6 @@ private:
 			delete polyCodes[i];
 			polyCodes[i]=NULL;
 		}
-		delete codes;
-		codes=NULL;
 		delete polyCodes;
 		polyCodes=NULL;
 		delete codeBuffer;

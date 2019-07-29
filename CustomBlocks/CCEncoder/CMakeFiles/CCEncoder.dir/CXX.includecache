@@ -9,6 +9,12 @@
 /home/xongile/Lab-Project/CustomBlocks/CCEncoder/CCEncoder.cpp
 Pothos/Framework.hpp
 -
+math.h
+-
+stdlib.h
+-
+vector
+-
 
 /home/xongile/Lab-Project/CustomBlocks/CCEncoder/CCEncoderDocs.cpp
 Pothos/Framework.hpp

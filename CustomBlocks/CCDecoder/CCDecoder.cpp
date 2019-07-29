@@ -5,7 +5,16 @@
  * This custom block implments viterbi decoding. 
  * Maximum constraint of 8 for this implementation. Also 1 bit input for now
  * |category /Custom
+ * |param polyF[Polynomial 0 ] First decimal polynomial representation
+ * |default 15
+ * |param polyS[Polynomial 1 ] Second decimal polynomial representation
+ * |default 11 
+ * |param constraint[Constraint K] Constraint Length
+ * |default 4 
  * |factory /Custom/CCDecoder()
+ * |setter setPolyF(polyF)
+ * |setter setPolyS(polyS)
+ * |setter setConstraint(constraint)
  **********************************************************************/
 #include <Pothos/Framework.hpp>
 #include <math.h>
@@ -125,12 +134,26 @@ public:
 	CCDecoder(){
 		this->setupInput(0,"uint8");
 		this->setupOutput(0,"uint8");  
-		
+		this->registerCall(this, POTHOS_FCN_TUPLE(CCDecoder, setPolyF));
+ 		this->registerCall(this, POTHOS_FCN_TUPLE(CCDecoder, setPolyS));
+ 		this->registerCall(this, POTHOS_FCN_TUPLE(CCDecoder, setConstraint));
 	}
     static Block *make()
 	{
 
 	        return new CCDecoder();
+	}
+	void setPolyF(int poly0){
+		uint8_t toPush=(uint8_t)poly0;
+		codes.push_back(toPush);
+	}
+	
+	void setPolyS(int poly1){
+		uint8_t toPush=(uint8_t)poly1;
+		codes.push_back(toPush);
+	}
+		void setConstraint(int k){
+		constraint=k;
 	}
 	void work(void){
 		auto inputPort = this->input(0);
@@ -170,9 +193,9 @@ public:
 	
 		inputPort->consume(numElems);
 		//inputPort->clear();
-		//outputPort->produce(outCount);
+		outputPort->produce(outCount);
 
-		outputPort->produce((test+1)*10000);
+		//outputPort->produce((test+1)*10000);
 
 
 
@@ -186,11 +209,11 @@ public:
 	}
 
 private:
-	int constraint =4;
+	int constraint =0;
 	int rate =2;
 	uint8_t stateCount=0;
 	int bitsIn=1;
-	int* codes=NULL;
+	std::vector<uint8_t> codes;
 	bool** polyCodes=NULL;
 	bool * codeBuffer=NULL;
 	uint8_t ** trellis;
@@ -204,9 +227,9 @@ private:
 	int prev_1=6;
 	ViterbiNode ** nodes;
 	int Decode(const bool* inBuffer,bool*outBuffer, const size_t numIn ){
-		codes=new int[rate];
-		codes[0]=15;
-		codes[1]=11;
+		//codes=new int[rate];
+		//codes[0]=15;
+		//codes[1]=11;
 		/*int tester=0;
 		int loop=12;
 		int check=7;*/
@@ -282,15 +305,15 @@ private:
 
 
 
-		delete codes;
+
 		delete nodes;
 		nodes=NULL;
-		codes=NULL;
+
 		return finalHamming;
 }
 
 
-	void buildTrellis(int k_constraint,int * polies,int codeRate){
+	void buildTrellis(int k_constraint,std::vector<uint8_t> polies,int codeRate){
 	stateCount=(int)pow(2,k_constraint);
 	trellis =new  uint8_t*[(stateCount)];
 	polyCodes=new bool*[codeRate];
