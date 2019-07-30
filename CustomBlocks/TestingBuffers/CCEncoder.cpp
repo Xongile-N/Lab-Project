@@ -2,7 +2,7 @@
 /***********************************************************************
  * |PothosDoc Convolution Code Encoder
  *
- * This custom block implments convolutional code, 1/2 rate codes currently supported. Buffer reallocated and sent again. Add polynomials in variables
+ * This custom block implments convolutional code, 1/2 rate codes currently supported. Add polynomials below
  *
  * |category /Custom
  * |param polyF[Polynomial First ] First decimal polynomial representation
@@ -11,21 +11,15 @@
  * |default 11 
  * |param constraint[Constraint K] Constraint Length
  * |default 4 
- * |param frameLen[Frame Length] Frame Length (Bytes)
- * |default 24 
  * |factory /Custom/CCEncoder()
  * |setter setPolyF(polyF)
  * |setter setPolyS(polyS)
  * |setter setConstraint(constraint)
- * |setter setFrameLength(frameLen)
  **********************************************************************/
 #include <Pothos/Framework.hpp>
 #include <math.h>
 #include <stdlib.h> 
 #include <vector> 
-#include <complex>
-#include <cstring> //memcpy
-#include <algorithm> //min/max
 class CCEncoder: public Pothos::Block
 {
 public:
@@ -36,7 +30,6 @@ public:
 		this->registerCall(this, POTHOS_FCN_TUPLE(CCEncoder, setPolyF));
  		this->registerCall(this, POTHOS_FCN_TUPLE(CCEncoder, setPolyS));
  		this->registerCall(this, POTHOS_FCN_TUPLE(CCEncoder, setConstraint));
-	 		this->registerCall(this, POTHOS_FCN_TUPLE(CCEncoder, setFrameLength));
 		//	codes=new uint8_t[rate];
 	}
     	static Block *make()
@@ -56,77 +49,64 @@ public:
 		void setConstraint(int k){
 		constraint=(uint8_t)k;
 	}
-		void setFrameLength(int len){
-		frameLength=(size_t)len;
-	}
-    void activate(void)
-    {
-        done = false;
-        flush=false;
-        outElems = Pothos::BufferChunk();
-    }
+
+
 	void work(void){
-		if(done){
-			//return;
-			done=false;
-		}
 		auto inputPort = this->input(0);
 		auto outputPort=this->output(0);
-		auto outputBuffer=outputPort->buffer();
 		const uint8_t *inputBuffer=inputPort->buffer();
+		uint8_t *outputBuffer=outputPort->buffer();
 		bool* inBuffer=NULL;
 		bool* outBuffer=NULL;
+		bool* flushBuffer=NULL;
+		const size_t numElems=inputPort->elements();
+		const size_t numElemsOut=outputPort->elements();
+		if(numElems<=0)
+			return;
 
-		size_t outCount;
-
-		if(outElems.length==0){
-			
-			numElems=std::min(inputPort->elements(),frameLength-procCount);
-			procCount+=numElems;
-			outCount=(numElems*rate);
-			//outCount+=(flushBits%8)>0?1:0;
-			size_t flushBits=constraint*rate;
-			size_t flushBytes=flushBits/8;
-			flushBytes+=(flushBits%8)>0?1:0;
-			if(procCount==frameLength){
-				flush=true;
-				//outCount+=flushBytes
-				procCount=0;
-			}
-
-			outElems=Pothos::BufferChunk(Pothos::DType("uint8"),outCount);
-			uint8_t *temp=new uint8_t [outCount];
-			inBuffer=new bool[numElems*8];
-
-			outBuffer=new bool[numElems*8*rate];	
-
-			BytesToBool(inputBuffer,inBuffer,numElems);
-			encode(inBuffer,outBuffer,numElems*8);
-			BoolToBytes(outBuffer,temp,outCount );
-			std::memcpy(outElems.as<void *>(),temp,outCount);
-
-			delete temp;
-			temp=NULL;
+		inBuffer=new bool[numElems*8];
+		size_t flushBits=constraint*rate;
+		size_t flushBytes=flushBits/8;
+		
+		flushBytes+=(flushBits%8)>0?1:0;
+		if((numElemsOut-numElems)<=flushBytes){
+			//skip=true;
+			//flushBytes=0;
+			//flushBits=0;		
 		}
+			//flushBytes=0;
+			//flushBits=0;
+		outBuffer=new bool[numElems*8*rate];	
+		//outBuffer=new bool[numElems*8*rate+flushBits];	
+		flushBuffer=new bool[flushBits];
+		BytesToBool(inputBuffer,inBuffer,numElems);
+		encode(inBuffer,outBuffer,numElems*8,flushBuffer);
+		size_t outCount=(numElems*rate);
+		//outCount+=flushBytes;
+		//BoolToBytes(outBuffer,outputBuffer,outCount );
+		BoolToBytes(outBuffer,outputBuffer,outCount );
+	
+		inputPort->consume(numElems);
+		//inputPort->clear();
+		outputPort->produce(outCount);
+		uint8_t *tempFlushBuffer=new uint8_t[flushBytes];
+		/*
+		outputPort->popElements(outCount);
 		
 
-		
-		const auto outElemCount=std::min(outElems.elements(),outputPort->elements());
-		std::memcpy(outputBuffer.as<void *>(),outElems.as<const void *>(),outElemCount);		
-		outputPort->produce(outElemCount);
-		outElems.address+=outElemCount;
-		outElems.length-=outElemCount;
-		if(outElems.length==0){
-			inputPort->consume(numElems);
-			done=true;
-			delete inBuffer;
-			inBuffer=NULL;
-			delete outBuffer;
-			outBuffer=NULL;	
-			//delete tempFlushBuffer;
-			//tempFlushBuffer=NULL;
-		}
+		BoolToBytes(flushBuffer,outhPutBuffer,flushBytes );
 
+		outputPort->produce(flushBytes);
+		*/
+
+		delete inBuffer;
+		inBuffer=NULL;
+		delete outBuffer;
+		outBuffer=NULL;	
+		delete flushBuffer;
+		flushBuffer=NULL;
+		delete tempFlushBuffer;
+		tempFlushBuffer=NULL;
 	}
 
 private:
@@ -137,13 +117,8 @@ private:
 	bool** polyCodes=NULL;
 	bool * codeBuffer=NULL;
 	bool skip=true;
-	bool flush=false;
-    Pothos::BufferChunk outElems;
-    bool done=false;
-    size_t numElems=0;
-    size_t frameLength;
-    size_t procCount=0;
-	void encode(bool* inBuffer,bool*outBuffer, const size_t numIn){
+
+	void encode(bool* inBuffer,bool*outBuffer, const size_t numIn,bool* bufferForFlush ){
 
 		//codes.push_back(15);
 		//codes.push_back(11)	;	
@@ -179,25 +154,24 @@ private:
 				*(outBuffer+i*rate+j)=out;			
 			}	
 		}
-		if(flush){
-			flush=false;
-			for(size_t i=numIn;i<constraint+numIn;i++){
+		if(!skip){
+			for(size_t i=0;i<constraint;i++){
 				for(int j=constraint-1;j>bitsIn-1;j--){
 					codeBuffer[j]=codeBuffer[j-1]	;		
 				}
 				for(int j=bitsIn-1;j>-1;j--){
 					codeBuffer[j]=0	;		
 				}
-				/*
+
 				for(int j=0;j<rate;j++){
 					bool out=0;
 					for(int k=0;k<constraint;k++){
-						bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k];
+						bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k]
+		;
 						out=XOR(out,poly);
 					}
-					*(outBuffer+i*rate+j)=out;	
+					*(bufferForFlush+i*rate+j)=out;	
 				}	
-				*/
 			}
 		}
 

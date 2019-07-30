@@ -3,7 +3,7 @@
  * |PothosDoc Convolution Code Decoder
  *
  * This custom block implments viterbi decoding. 
- * Maximum constraint of 8 for this implementation. Also 1 bit input for now
+ * Maximum constraint of 8 for this implementation. 1/2 rate limited. frame size important
  * |category /Custom
  * |param polyF[Polynomial 0 ] First decimal polynomial representation
  * |default 15
@@ -11,15 +11,21 @@
  * |default 11 
  * |param constraint[Constraint K] Constraint Length
  * |default 4 
+ * |param frameLen[Frame Length] Frame Length (Bytes)
+ * |default 3 
  * |factory /Custom/CCDecoder()
  * |setter setPolyF(polyF)
  * |setter setPolyS(polyS)
  * |setter setConstraint(constraint)
+ * |setter setFrameLength(frameLen)
  **********************************************************************/
 #include <Pothos/Framework.hpp>
 #include <math.h>
 #include <stdlib.h> 
 #include <vector> 
+#include <complex>
+#include <cstring> //memcpy
+#include <algorithm> //min/max
 class ViterbiNode{
 public: 	
 	ViterbiNode(){}
@@ -137,6 +143,7 @@ public:
 		this->registerCall(this, POTHOS_FCN_TUPLE(CCDecoder, setPolyF));
  		this->registerCall(this, POTHOS_FCN_TUPLE(CCDecoder, setPolyS));
  		this->registerCall(this, POTHOS_FCN_TUPLE(CCDecoder, setConstraint));
+		 this->registerCall(this, POTHOS_FCN_TUPLE(CCDecoder, setFrameLength));
 	}
     static Block *make()
 	{
@@ -154,58 +161,64 @@ public:
 	}
 		void setConstraint(int k){
 		constraint=k;
+	}		
+	void setFrameLength(int len){
+		frameLength=len;
 	}
+	void activate(void)
+    {
+        done = false;
+        flush=false;
+        buildTrellis(constraint,codes,rate);
+        outElems = Pothos::BufferChunk();
+    }
+    void deactivate(void){
+    	destroyTrellis();
+    }
 	void work(void){
 		auto inputPort = this->input(0);
 		auto outputPort=this->output(0);
+		
+	
 		const uint8_t *inputBuffer=inputPort->buffer();
-		uint8_t *outputBuffer=outputPort->buffer();
+		auto outputBuffer=outputPort->buffer();
 		bool* inBuffer=NULL;
 		bool* outBuffer=NULL; 	
-		bool* flushBuffer=NULL;
-
-		const size_t numElems=inputPort->elements();
-		const size_t numElemsOut=outputPort->elements();
-		if(numElems<=0)
-			return;
-		inBuffer=new bool[numElems*8];
-		size_t flushBits=constraint*rate;
-		size_t flushBytes=flushBits/8;
-		flushBytes+=(flushBits%8)>0?1:0;
-
-		flushBytes+=(flushBits%8)>0?1:0;
-		if((numElemsOut-numElems)<=flushBytes){
-			//skip=true;
-			//flushBytes=0;
-			//flushBits=0;		
+		size_t outCount=0;
+		if(outElems.length==0){
+			numElems=std::min(inputPort->elements(),frameLength*rate);
+			procCount=numElems;
+			size_t flushBits=constraint*rate;
+			size_t flushBytes=flushBits/8;
+			flushBytes+=(flushBits%8)>0?1:0;
+			if(procCount==frameLength*rate){
+				procCount=0;
+				inBuffer=new bool[numElems*8];
+				outBuffer=new bool[numElems*8/rate];	
+				BytesToBool(inputBuffer,inBuffer,numElems);
+				decodeOutput=Decode(inBuffer,outBuffer,numElems*8);
+				outCount=(numElems/rate);
+				outElems=Pothos::BufferChunk(Pothos::DType("uint8"),outCount);
+				uint8_t *temp=new uint8_t [outCount];
+				BoolToBytes(outBuffer,temp,outCount );
+				std::memcpy(outElems.as<void *>(),temp,outCount);
+				delete temp;
+				temp=NULL;
+				delete inBuffer;
+				inBuffer=NULL;
+				delete outBuffer;
+				outBuffer=NULL;	
+			}
 		}
-			//flushBytes=0;
-			//flushBits=0;
-		outBuffer=new bool[numElems*8/rate];	
-		//outBuffer=new bool[numElems*8*rate+flushBits];	
-		flushBuffer=new bool[flushBits];
-		BytesToBool(inputBuffer,inBuffer,numElems);
-		int test=Decode(inBuffer,outBuffer,numElems*8);
-		size_t outCount=(numElems/rate);
-		//outCount+=flushBytes;
-		//BoolToBytes(outBuffer,outputBuffer,outCount );
-		BoolToBytes(outBuffer,outputBuffer,outCount );
-	
-		inputPort->consume(numElems);
-		//inputPort->clear();
-		outputPort->produce(outCount);
-
-		//outputPort->produce((test+1)*10000);
-
-
-
-
-		delete inBuffer;
-		inBuffer=NULL;
-		delete outBuffer;
-		outBuffer=NULL;	
-		delete flushBuffer;
-		flushBuffer=NULL;
+		const auto outElemCount=std::min(outElems.elements(),outputPort->elements());
+		std::memcpy(outputBuffer.as<void *>(),outElems.as<const void *>(),outElemCount);		
+		outputPort->produce(outElemCount);
+		outElems.address+=outElemCount;
+		outElems.length-=outElemCount;
+		if(outElems.length==0){
+			inputPort->consume(numElems);
+			done=true;
+		}
 	}
 
 private:
@@ -214,8 +227,12 @@ private:
 	uint8_t stateCount=0;
 	int bitsIn=1;
 	std::vector<uint8_t> codes;
+	
 	bool** polyCodes=NULL;
 	bool * codeBuffer=NULL;
+
+	
+	int decodeOutput=5000;
 	uint8_t ** trellis;
 	int stateAttri=7;
 	int currState=0;
@@ -225,22 +242,23 @@ private:
 	int oneOutput=4;
 	int prev_0=5;
 	int prev_1=6;
+	
 	ViterbiNode ** nodes;
+	
+	Pothos::BufferChunk outElems;
+    bool done=false;
+    size_t numElems=0;
+	size_t frameLength;
+	bool flush=true;
+	    size_t procCount=0;
+	
 	int Decode(const bool* inBuffer,bool*outBuffer, const size_t numIn ){
-		//codes=new int[rate];
-		//codes[0]=15;
-		//codes[1]=11;
-		/*int tester=0;
-		int loop=12;
-		int check=7;*/
-		buildTrellis(constraint,codes,rate);
 		stateCount=(int)pow(2,constraint);
 		nodes=new ViterbiNode*[stateCount];	
 		for(int i=0;i<stateCount;i++){
 			nodes[i]=new ViterbiNode(i);
 		}
 		int finalNode=0;
-
 		for(uint8_t i=0;i<numIn;i+=rate){
 			bool curr0=*(inBuffer+i);
 			bool curr1=*(inBuffer+i+1);
@@ -302,6 +320,10 @@ private:
 			*(outBuffer+i)=getBit(trellis[finalPath[i+1]][currState],constraint-1);	
 			
 		}
+		for(int i=0;i<stateCount;i++){
+			delete nodes[i];
+			nodes[i]=NULL;
+		}
 
 
 
@@ -309,10 +331,17 @@ private:
 		delete nodes;
 		nodes=NULL;
 
+
 		return finalHamming;
 }
 
+	void destroyTrellis(){
+		for(uint8_t i=0;i<stateCount;i++){
+			delete trellis[i];
 
+		}	
+		delete trellis;
+	}
 	void buildTrellis(int k_constraint,std::vector<uint8_t> polies,int codeRate){
 	stateCount=(int)pow(2,k_constraint);
 	trellis =new  uint8_t*[(stateCount)];

@@ -228,7 +228,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Block",
                     "zValue": 422
                 },
@@ -2674,16 +2674,16 @@
                 {
                     "blockId": "WaveMonitor1",
                     "enabled": true,
-                    "height": 176,
+                    "height": 222,
                     "id": "WidgetWaveMonitor1",
-                    "positionX": 708,
-                    "positionY": 174,
+                    "positionX": 404,
+                    "positionY": 106,
                     "rotation": 0,
                     "selected": false,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAACAAAAFAAAAAAAAAAAAL/wAAAAAAAAQDR64UeuFHtAAAAAAAAAAAAAABQAQByh2gXEJpM/8rYqCbN4MEAk4K75ibF2P9IwgVjtIwgAAAAKAGkAbgBkAGUAeAAAAAMAAAAAAA==",
                     "what": "Widget",
-                    "width": 308,
-                    "zValue": 417
+                    "width": 670,
+                    "zValue": 426
                 }
             ],
             "pageName": "Main",

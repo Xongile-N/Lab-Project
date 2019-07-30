@@ -15,6 +15,12 @@ stdlib.h
 -
 vector
 -
+complex
+-
+cstring
+-
+algorithm
+-
 
 /home/xongile/Lab-Project/CustomBlocks/CCDecoder/CCDecoderDocs.cpp
 Pothos/Framework.hpp
