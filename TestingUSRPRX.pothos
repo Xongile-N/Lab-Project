@@ -618,12 +618,12 @@
                         }
                     ],
                     "path": "/soapy/source",
-                    "positionX": 287,
-                    "positionY": 258,
+                    "positionX": 285,
+                    "positionY": 257,
                     "properties": [
                         {
                             "key": "deviceArgs",
-                            "value": "{ \"driver\" : \"uhd\", \"addr\" : \"192.168.10.3\",\"type\" : \"usrp2\"}"
+                            "value": "{\"addr\" : \"192.168.10.3\", \"driver\" : \"uhd\", \"label\" : \" E7R1BREUP\", \"name\" : \"\", \"serial\" : \"E7R1BREUP\", \"type\" : \"usrp2\"}"
                         },
                         {
                             "key": "dtype",
@@ -639,7 +639,7 @@
                         },
                         {
                             "key": "sampleRate",
-                            "value": "1e6"
+                            "value": "25e6"
                         },
                         {
                             "key": "autoActivate",
@@ -655,7 +655,7 @@
                         },
                         {
                             "key": "frequency",
-                            "value": "0.0"
+                            "value": "10e6"
                         },
                         {
                             "key": "tuneArgs",
@@ -717,7 +717,7 @@
                     "rotation": 0,
                     "selected": true,
                     "what": "Block",
-                    "zValue": 31
+                    "zValue": 37
                 },
                 {
                     "affinityZone": "",
@@ -1240,7 +1240,7 @@
                     "positionY": 359,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAAAAAACgBzAHQAYQBjAGsAAAAJAAAAAAIAAAAUAMB/QAAAAAAAAAAAAAAAAABAj0AAAAAAAEAkAAAAAAAAAAAAFADAfm3vMdsHSEAizD2NSiRfQDXhwCPZ6HA/4XyAsw9jUAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAB",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAAAAAACgBzAHQAYQBjAGsAAAAJAAAAAAEAAAAUAMAD///+wAAAAAAAAAAAAABAOQAAAAAAAEAkAAAAAAAAAAAACgBpAG4AZABlAHgAAAADAAAAAAA=",
                     "what": "Widget",
                     "width": 571,
                     "zValue": 27
@@ -1248,16 +1248,16 @@
                 {
                     "blockId": "WaveMonitor0",
                     "enabled": true,
-                    "height": 158,
+                    "height": 163,
                     "id": "WidgetWaveMonitor0",
                     "positionX": 508,
                     "positionY": 48,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/BiTdLxqfxAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQER64UeuFHtAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
-                    "width": 308,
-                    "zValue": 23
+                    "width": 351,
+                    "zValue": 38
                 }
             ],
             "pageName": "Main",

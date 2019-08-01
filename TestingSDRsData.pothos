@@ -78,8 +78,8 @@
                         }
                     ],
                     "path": "/widgets/qwt_slider",
-                    "positionX": 219,
-                    "positionY": 84,
+                    "positionX": 305,
+                    "positionY": 85,
                     "properties": [
                         {
                             "key": "title",
@@ -115,7 +115,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
                     "zValue": 559
                 },
@@ -191,8 +191,8 @@
                         }
                     ],
                     "path": "/widgets/qwt_slider",
-                    "positionX": 222,
-                    "positionY": 233,
+                    "positionX": 308,
+                    "positionY": 234,
                     "properties": [
                         {
                             "key": "title",
@@ -228,7 +228,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
                     "zValue": 422
                 },
@@ -269,8 +269,8 @@
                         }
                     ],
                     "path": "/comms/scale",
-                    "positionX": 532,
-                    "positionY": 224,
+                    "positionX": 618,
+                    "positionY": 225,
                     "properties": [
                         {
                             "key": "dtype",
@@ -286,7 +286,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
                     "zValue": 582
                 },
@@ -902,8 +902,8 @@
                         }
                     ],
                     "path": "/soapy/sink",
-                    "positionX": 778,
-                    "positionY": 58,
+                    "positionX": 864,
+                    "positionY": 59,
                     "properties": [
                         {
                             "key": "deviceArgs",
@@ -999,7 +999,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
                     "zValue": 576
                 },
@@ -1615,8 +1615,8 @@
                         }
                     ],
                     "path": "/soapy/source",
-                    "positionX": 300,
-                    "positionY": 351,
+                    "positionX": 386,
+                    "positionY": 352,
                     "properties": [
                         {
                             "key": "deviceArgs",
@@ -1712,7 +1712,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
                     "zValue": 579
                 },
@@ -1837,8 +1837,8 @@
                         }
                     ],
                     "path": "/plotters/spectrogram",
-                    "positionX": 728,
-                    "positionY": 354,
+                    "positionX": 814,
+                    "positionY": 355,
                     "properties": [
                         {
                             "key": "title",
@@ -1914,7 +1914,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
                     "zValue": 455
                 },
@@ -2086,8 +2086,8 @@
                         }
                     ],
                     "path": "/plotters/wave_monitor",
-                    "positionX": 909,
-                    "positionY": 164,
+                    "positionX": 995,
+                    "positionY": 165,
                     "properties": [
                         {
                             "key": "title",
@@ -2203,7 +2203,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
                     "zValue": 542
                 },
@@ -2265,8 +2265,8 @@
                         }
                     ],
                     "path": "/comms/waveform_source",
-                    "positionX": 420,
-                    "positionY": 123,
+                    "positionX": 506,
+                    "positionY": 124,
                     "properties": [
                         {
                             "key": "dtype",
@@ -2298,7 +2298,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
                     "zValue": 540
                 },
@@ -2308,7 +2308,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "sigSlots": [
                         [
                             "valueChanged",
@@ -2328,7 +2328,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "sigSlots": [
                         [
                             "valueChanged",
@@ -2352,7 +2352,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Connection",
                     "zValue": 0
                 },
@@ -2366,7 +2366,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Connection",
                     "zValue": 0
                 },
@@ -2380,7 +2380,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Connection",
                     "zValue": 0
                 },
@@ -2394,7 +2394,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Connection",
                     "zValue": 0
                 },
@@ -2408,19 +2408,19 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Connection",
                     "zValue": 0
                 },
                 {
                     "blockId": "QWTSlider0",
                     "enabled": true,
-                    "height": 79,
+                    "height": 115,
                     "id": "WidgetQWTSlider0",
-                    "positionX": 595,
-                    "positionY": 314,
+                    "positionX": 681,
+                    "positionY": 315,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "state": "AAAABgBBGm2gAAAAAA==",
                     "what": "Widget",
                     "width": 300,
@@ -2429,12 +2429,12 @@
                 {
                     "blockId": "QWTSlider1",
                     "enabled": true,
-                    "height": 79,
+                    "height": 115,
                     "id": "WidgetQWTSlider1",
-                    "positionX": 369,
-                    "positionY": 501,
+                    "positionX": 455,
+                    "positionY": 502,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "state": "AAAABgA/71wo9cKPXA==",
                     "what": "Widget",
                     "width": 323,
@@ -2443,12 +2443,12 @@
                 {
                     "blockId": "Spectrogram0",
                     "enabled": true,
-                    "height": 356,
+                    "height": 392,
                     "id": "WidgetSpectrogram0",
-                    "positionX": 220,
-                    "positionY": 331,
+                    "positionX": 306,
+                    "positionY": 332,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAAAAAACgBzAHQAYQBjAGsAAAAJAAAAAAEAAAAUAEB3cAAAAAAAAAAAAAAAAABAk4gAAAAAAEAUAAAAAAAAAAAACgBpAG4AZABlAHgAAAADAAAAAAA=",
                     "what": "Widget",
                     "width": 805,
@@ -2457,12 +2457,12 @@
                 {
                     "blockId": "WaveMonitor1",
                     "enabled": true,
-                    "height": 214,
+                    "height": 250,
                     "id": "WidgetWaveMonitor1",
                     "positionX": 184,
-                    "positionY": 363,
+                    "positionY": 364,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAFCwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP+o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 1096,
