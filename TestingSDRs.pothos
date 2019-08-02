@@ -75,8 +75,8 @@
                         }
                     ],
                     "path": "/comms/abs",
-                    "positionX": 1048,
-                    "positionY": 556,
+                    "positionX": 820,
+                    "positionY": 509,
                     "properties": [
                         {
                             "key": "dtype",
@@ -86,7 +86,43 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1034
+                    "zValue": 1053
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "Abs2",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        }
+                    ],
+                    "path": "/comms/abs",
+                    "positionX": 834,
+                    "positionY": 594,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"float32\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 1051
                 },
                 {
                     "affinityZone": "",
@@ -132,8 +168,8 @@
                         }
                     ],
                     "path": "/comms/arithmetic",
-                    "positionX": 939,
-                    "positionY": 559,
+                    "positionX": 984,
+                    "positionY": 565,
                     "properties": [
                         {
                             "key": "dtype",
@@ -155,7 +191,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1030
+                    "zValue": 1055
                 },
                 {
                     "affinityZone": "",
@@ -2924,7 +2960,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1027
+                    "zValue": 1052
                 },
                 {
                     "affinityZone": "",
@@ -3035,8 +3071,8 @@
                         }
                     ],
                     "path": "/gr/blocks/threshold_ff",
-                    "positionX": 995,
-                    "positionY": 447,
+                    "positionX": 1114,
+                    "positionY": 451,
                     "properties": [
                         {
                             "key": "low",
@@ -3052,9 +3088,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Block",
-                    "zValue": 1044
+                    "zValue": 1057
                 },
                 {
                     "affinityZone": "",
@@ -3910,6 +3946,7 @@
                     "zValue": 1010
                 },
                 {
+                    "activeEditTab": "Axis",
                     "affinityZone": "",
                     "enabled": true,
                     "id": "WaveMonitor3",
@@ -4099,11 +4136,11 @@
                         },
                         {
                             "key": "autoScale",
-                            "value": "true"
+                            "value": "false"
                         },
                         {
                             "key": "yRange",
-                            "value": "[-1.0, 1.0]"
+                            "value": "[0, 1]"
                         },
                         {
                             "key": "enableXAxis",
@@ -4357,7 +4394,7 @@
                     "properties": [
                         {
                             "key": "title",
-                            "value": "\"Thresh\""
+                            "value": "\"ThreshAbsX\""
                         },
                         {
                             "key": "numInputs",
@@ -4381,11 +4418,11 @@
                         },
                         {
                             "key": "autoScale",
-                            "value": "true"
+                            "value": "false"
                         },
                         {
                             "key": "yRange",
-                            "value": "[-1.0, 1.0]"
+                            "value": "[0, 1.0]"
                         },
                         {
                             "key": "enableXAxis",
@@ -4471,7 +4508,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1017
+                    "zValue": 1045
                 },
                 {
                     "affinityZone": "",
@@ -4639,7 +4676,7 @@
                     "properties": [
                         {
                             "key": "title",
-                            "value": "\"Threshsum\""
+                            "value": "\"ThreshsumX\""
                         },
                         {
                             "key": "numInputs",
@@ -4663,11 +4700,11 @@
                         },
                         {
                             "key": "autoScale",
-                            "value": "true"
+                            "value": "false"
                         },
                         {
                             "key": "yRange",
-                            "value": "[-1.0, 1.0]"
+                            "value": "[00, 1.0]"
                         },
                         {
                             "key": "enableXAxis",
@@ -4753,7 +4790,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1040
+                    "zValue": 1046
                 },
                 {
                     "affinityZone": "",
@@ -5257,10 +5294,38 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_Abs10_Threshold10",
+                    "id": "Connection_Abs10_Arithmetic00",
+                    "inputId": "Arithmetic0",
+                    "inputKey": "0",
+                    "outputId": "Abs1",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_Abs20_Arithmetic01",
+                    "inputId": "Arithmetic0",
+                    "inputKey": "1",
+                    "outputId": "Abs2",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_Arithmetic00_Threshold10",
                     "inputId": "Threshold1",
                     "inputKey": "0",
-                    "outputId": "Abs1",
+                    "outputId": "Arithmetic0",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
@@ -5271,22 +5336,8 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_Abs10_WaveMonitor30",
+                    "id": "Connection_Arithmetic00_WaveMonitor30",
                     "inputId": "WaveMonitor3",
-                    "inputKey": "0",
-                    "outputId": "Abs1",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_Arithmetic00_Abs10",
-                    "inputId": "Abs1",
                     "inputKey": "0",
                     "outputId": "Arithmetic0",
                     "outputKey": "0",
@@ -5451,9 +5502,9 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_SplitComplex0im_Arithmetic01",
-                    "inputId": "Arithmetic0",
-                    "inputKey": "1",
+                    "id": "Connection_SplitComplex0im_Abs20",
+                    "inputId": "Abs2",
+                    "inputKey": "0",
                     "outputId": "SplitComplex0",
                     "outputKey": "im",
                     "positionX": 0,
@@ -5479,8 +5530,8 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_SplitComplex0re_Arithmetic00",
-                    "inputId": "Arithmetic0",
+                    "id": "Connection_SplitComplex0re_Abs10",
+                    "inputId": "Abs1",
                     "inputKey": "0",
                     "outputId": "SplitComplex0",
                     "outputKey": "re",
@@ -5577,7 +5628,7 @@
                 }
             ],
             "pageName": "Main",
-            "selected": true
+            "selected": false
         },
         {
             "graphObjects": [
@@ -5590,80 +5641,80 @@
                     "positionY": 386,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAABgBAs7oAAAAAAA==",
+                    "state": "AAAABgBAw4gAAAAAAA==",
                     "what": "Widget",
                     "width": 205,
-                    "zValue": 19
+                    "zValue": 41
                 },
                 {
                     "blockId": "QWTSlider1",
                     "enabled": true,
                     "height": 79,
                     "id": "WidgetQWTSlider1",
-                    "positionX": 67,
-                    "positionY": 294,
+                    "positionX": 165,
+                    "positionY": 556,
                     "rotation": 0,
                     "selected": false,
                     "state": "AAAABgA/+AAAAAAAAA==",
                     "what": "Widget",
                     "width": 302,
-                    "zValue": 20
+                    "zValue": 28
                 },
                 {
                     "blockId": "WaveMonitor0",
                     "enabled": true,
                     "height": 158,
                     "id": "WidgetWaveMonitor0",
-                    "positionX": 308,
-                    "positionY": 151,
+                    "positionX": 0,
+                    "positionY": 0,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAFEwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQFQAAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAFAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQFQAAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
-                    "zValue": 15
+                    "zValue": 61
                 },
                 {
                     "blockId": "WaveMonitor1",
                     "enabled": true,
                     "height": 158,
                     "id": "WidgetWaveMonitor1",
-                    "positionX": 311,
-                    "positionY": 0,
+                    "positionX": 77,
+                    "positionY": 330,
                     "rotation": 0,
                     "selected": false,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAHBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQFQAAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
-                    "zValue": 13
+                    "zValue": 63
                 },
                 {
                     "blockId": "WaveMonitor2",
                     "enabled": true,
                     "height": 158,
                     "id": "WidgetWaveMonitor2",
-                    "positionX": 0,
-                    "positionY": 156,
+                    "positionX": 115,
+                    "positionY": 157,
                     "rotation": 0,
                     "selected": false,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQFQAAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
-                    "width": 308,
-                    "zValue": 14
+                    "width": 712,
+                    "zValue": 64
                 },
                 {
                     "blockId": "WaveMonitor3",
                     "enabled": true,
                     "height": 158,
                     "id": "WidgetWaveMonitor3",
-                    "positionX": 0,
-                    "positionY": 0,
+                    "positionX": 305,
+                    "positionY": 158,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQFQAAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAAAAAAAAAAAAQFQAAAAAAAA/8AAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
-                    "zValue": 12
+                    "zValue": 46
                 },
                 {
                     "blockId": "WaveMonitor4",
@@ -5674,42 +5725,42 @@
                     "positionY": 0,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQFQAAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAAAAAAAAAAAAQFQAAAAAAAA/8AAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
-                    "zValue": 16
+                    "zValue": 26
                 },
                 {
                     "blockId": "WaveMonitor5",
                     "enabled": true,
-                    "height": 158,
+                    "height": 176,
                     "id": "WidgetWaveMonitor5",
-                    "positionX": 608,
-                    "positionY": 152,
+                    "positionX": 609,
+                    "positionY": 161,
+                    "rotation": 0,
+                    "selected": true,
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAAAAAAAAAAAAQFQAAAAAAAA/8AAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "what": "Widget",
+                    "width": 308,
+                    "zValue": 65
+                },
+                {
+                    "blockId": "WaveMonitor6",
+                    "enabled": true,
+                    "height": 158,
+                    "id": "WidgetWaveMonitor6",
+                    "positionX": 295,
+                    "positionY": 0,
                     "rotation": 0,
                     "selected": false,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQFQAAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
-                    "zValue": 18
-                },
-                {
-                    "blockId": "WaveMonitor6",
-                    "enabled": true,
-                    "height": 176,
-                    "id": "WidgetWaveMonitor6",
-                    "positionX": 611,
-                    "positionY": 320,
-                    "rotation": 0,
-                    "selected": true,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
-                    "what": "Widget",
-                    "width": 308,
-                    "zValue": 22
+                    "zValue": 37
                 }
             ],
             "pageName": "Display",
-            "selected": false
+            "selected": true
         }
     ]
 }
