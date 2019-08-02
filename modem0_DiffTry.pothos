@@ -10,16 +10,218 @@
         },
         {
             "name": "rate",
-            "value": "1.25e6"
+            "value": "2e4"
         },
         {
             "name": "freq",
-            "value": "1e7"
+            "value": "1e5"
         }
     ],
     "pages": [
         {
             "graphObjects": [
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "Spectrogram0",
+                    "inputDesc": [
+                        {
+                            "alias": "setTitle",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTitle",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setDisplayRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setDisplayRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSampleRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setSampleRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setCenterFrequency",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setCenterFrequency",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setNumPoints",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setNumFFTBins",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setWindowType",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setWindowType",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFullScale",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFullScale",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setTimeSpan",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTimeSpan",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setReferenceLevel",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setReferenceLevel",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setDynamicRange",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setDynamicRange",
+                            "size": 1
+                        },
+                        {
+                            "alias": "enableXAxis",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "enableXAxis",
+                            "size": 1
+                        },
+                        {
+                            "alias": "enableYAxis",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "enableYAxis",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setColorMap",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setColorMap",
+                            "size": 1
+                        },
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "frequencySelected",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "frequencySelected",
+                            "size": 1
+                        },
+                        {
+                            "alias": "relativeFrequencySelected",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "relativeFrequencySelected",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/plotters/spectrogram",
+                    "positionX": 294,
+                    "positionY": 215,
+                    "properties": [
+                        {
+                            "key": "title",
+                            "value": "\"Spectrogram\""
+                        },
+                        {
+                            "key": "displayRate",
+                            "value": "10.0"
+                        },
+                        {
+                            "key": "sampleRate",
+                            "value": "1e6"
+                        },
+                        {
+                            "key": "centerFreq",
+                            "value": "0.0"
+                        },
+                        {
+                            "key": "numBins",
+                            "value": "1024"
+                        },
+                        {
+                            "key": "window",
+                            "value": "\"hann\""
+                        },
+                        {
+                            "key": "windowArgs",
+                            "value": "[]"
+                        },
+                        {
+                            "key": "fullScale",
+                            "value": "1.0"
+                        },
+                        {
+                            "key": "fftMode",
+                            "value": "\"AUTO\""
+                        },
+                        {
+                            "key": "timeSpan",
+                            "value": "10.0"
+                        },
+                        {
+                            "key": "refLevel",
+                            "value": "0.0"
+                        },
+                        {
+                            "key": "dynRange",
+                            "value": "100.0"
+                        },
+                        {
+                            "key": "enableXAxis",
+                            "value": "true"
+                        },
+                        {
+                            "key": "enableYAxis",
+                            "value": "true"
+                        },
+                        {
+                            "key": "colorMap",
+                            "value": "\"rainbow\""
+                        },
+                        {
+                            "key": "freqLabelId",
+                            "value": "\"rxFreq\""
+                        },
+                        {
+                            "key": "rateLabelId",
+                            "value": "\"rxRate\""
+                        },
+                        {
+                            "key": "startLabelId",
+                            "value": "\"\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 3349
+                },
                 {
                     "blockId": "ChatBox0",
                     "enabled": true,
@@ -28,10 +230,10 @@
                     "positionX": 294,
                     "positionY": 331,
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Widget",
                     "width": 282,
-                    "zValue": 3343
+                    "zValue": 3347
                 },
                 {
                     "blockId": "ChatBox1",
@@ -69,7 +271,7 @@
                     "positionY": 4,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP8o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQCmZmZmZmZpAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
                     "zValue": 3279
@@ -83,7 +285,7 @@
                     "positionY": 168,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP8o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQCmZmZmZmZpAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 312,
                     "zValue": 3285
@@ -111,7 +313,7 @@
                     "positionY": 165,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAEDwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP+64UeuFHrhAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAEDwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQE4AAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 537,
                     "zValue": 3288
@@ -228,7 +430,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2483
+                    "zValue": 2747
                 },
                 {
                     "affinityZone": "",
@@ -509,7 +711,7 @@
                     "rotation": 180,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2745
+                    "zValue": 2753
                 },
                 {
                     "affinityZone": "",
@@ -1279,8 +1481,8 @@
                         }
                     ],
                     "path": "/soapy/sink",
-                    "positionX": 465,
-                    "positionY": 432,
+                    "positionX": 453,
+                    "positionY": 516,
                     "properties": [
                         {
                             "key": "deviceArgs",
@@ -1378,7 +1580,65 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2744
+                    "zValue": 2748
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "Scale0",
+                    "inputDesc": [
+                        {
+                            "alias": "setFactor",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFactor",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setLabelId",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setLabelId",
+                            "size": 1
+                        },
+                        {
+                            "alias": "0",
+                            "dtype": "complex_float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 8
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "complex_float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 8
+                        }
+                    ],
+                    "path": "/comms/scale",
+                    "positionX": 486,
+                    "positionY": 338,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"complex_float32\""
+                        },
+                        {
+                            "key": "factor",
+                            "value": "3"
+                        },
+                        {
+                            "key": "labelId",
+                            "value": "\"\""
+                        }
+                    ],
+                    "rotation": 180,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 2762
                 },
                 {
                     "affinityZone": "",
@@ -1870,8 +2130,8 @@
                         }
                     ],
                     "path": "/plotters/wave_monitor",
-                    "positionX": 636,
-                    "positionY": 194,
+                    "positionX": 278,
+                    "positionY": 211,
                     "properties": [
                         {
                             "key": "title",
@@ -1987,21 +2247,21 @@
                         }
                     ],
                     "rotation": 180,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 2721
+                    "zValue": 2765
                 },
                 {
                     "enabled": true,
                     "id": "data0",
                     "isInput": true,
                     "nodeName": "data",
-                    "positionX": 646,
-                    "positionY": 255,
+                    "positionX": 803,
+                    "positionY": 409,
                     "rotation": 180,
                     "selected": false,
                     "what": "Breaker",
-                    "zValue": 2678
+                    "zValue": 2757
                 },
                 {
                     "enabled": true,
@@ -2099,22 +2359,8 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_FIRFilter00_SDRSink00",
-                    "inputId": "SDRSink0",
-                    "inputKey": "0",
-                    "outputId": "FIRFilter0",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_FIRFilter00_WaveMonitor20",
-                    "inputId": "WaveMonitor2",
+                    "id": "Connection_FIRFilter00_Scale00",
+                    "inputId": "Scale0",
                     "inputKey": "0",
                     "outputId": "FIRFilter0",
                     "outputKey": "0",
@@ -2137,7 +2383,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Connection",
-                    "zValue": 0
+                    "zValue": 2755
                 },
                 {
                     "enabled": true,
@@ -2159,6 +2405,34 @@
                     "inputId": "SymbolMapper2",
                     "inputKey": "0",
                     "outputId": "PacketToStream1",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_Scale00_SDRSink00",
+                    "inputId": "SDRSink0",
+                    "inputKey": "0",
+                    "outputId": "Scale0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_Scale00_WaveMonitor20",
+                    "inputId": "WaveMonitor2",
+                    "inputKey": "0",
+                    "outputId": "Scale0",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
@@ -3394,9 +3668,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 3348
+                    "zValue": 3355
                 },
                 {
                     "affinityZone": "",
@@ -4124,7 +4398,7 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Block",
                     "zValue": 3354
                 },
