@@ -10,11 +10,11 @@
         },
         {
             "name": "rate",
-            "value": "1e5"
+            "value": "2e4"
         },
         {
             "name": "freq",
-            "value": "1e6"
+            "value": "1e5"
         }
     ],
     "pages": [
@@ -26,12 +26,12 @@
                     "height": 393,
                     "id": "WidgetChatBox0",
                     "positionX": 288,
-                    "positionY": 327,
+                    "positionY": 328,
                     "rotation": 0,
                     "selected": true,
                     "what": "Widget",
                     "width": 282,
-                    "zValue": 3341
+                    "zValue": 3336
                 },
                 {
                     "blockId": "ChatBox1",
@@ -69,7 +69,7 @@
                     "positionY": 4,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/R64UeuFHtAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQCmZmZmZmZpAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
                     "zValue": 3279
@@ -83,7 +83,7 @@
                     "positionY": 168,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/R64UeuFHtAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAACAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQCmZmZmZmZpAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 312,
                     "zValue": 3285
@@ -111,86 +111,17 @@
                     "positionY": 165,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAEAwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQBgAAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAEDwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQE4AAAAAAABAAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 537,
-                    "zValue": 3346
+                    "zValue": 3288
                 }
             ],
             "pageName": "Display",
-            "selected": false
+            "selected": true
         },
         {
             "graphObjects": [
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "Arithmetic0",
-                    "inputDesc": [
-                        {
-                            "alias": "setNumInputs",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setNumInputs",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setPreload",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setPreload",
-                            "size": 1
-                        },
-                        {
-                            "alias": "0",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 8
-                        },
-                        {
-                            "alias": "1",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "1",
-                            "size": 8
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 8
-                        }
-                    ],
-                    "path": "/comms/arithmetic",
-                    "positionX": 410,
-                    "positionY": 320,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"complex_float32\""
-                        },
-                        {
-                            "key": "operation",
-                            "value": "\"MUL\""
-                        },
-                        {
-                            "key": "numInputs",
-                            "value": "2"
-                        },
-                        {
-                            "key": "preload",
-                            "value": "[]"
-                        }
-                    ],
-                    "rotation": 180,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 2770
-                },
                 {
                     "affinityZone": "",
                     "enabled": true,
@@ -298,49 +229,6 @@
                     "selected": false,
                     "what": "Block",
                     "zValue": 2483
-                },
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "CombineComplex0",
-                    "inputDesc": [
-                        {
-                            "alias": "re",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "re",
-                            "size": 4
-                        },
-                        {
-                            "alias": "im",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "im",
-                            "size": 4
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 8
-                        }
-                    ],
-                    "path": "/comms/combine_complex",
-                    "positionX": 555,
-                    "positionY": 416,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"float32\""
-                        }
-                    ],
-                    "rotation": 180,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 2766
                 },
                 {
                     "affinityZone": "",
@@ -582,8 +470,8 @@
                         }
                     ],
                     "path": "/comms/fir_filter",
-                    "positionX": 671,
-                    "positionY": 178,
+                    "positionX": 811,
+                    "positionY": 285,
                     "properties": [
                         {
                             "key": "dtype",
@@ -621,7 +509,7 @@
                     "rotation": 180,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2778
+                    "zValue": 2741
                 },
                 {
                     "affinityZone": "",
@@ -780,7 +668,7 @@
                     "zValue": 2698
                 },
                 {
-                    "activeEditTab": "Streaming",
+                    "activeEditTab": "Channels",
                     "affinityZone": "",
                     "enabled": true,
                     "id": "SDRSink0",
@@ -1391,8 +1279,8 @@
                         }
                     ],
                     "path": "/soapy/sink",
-                    "positionX": 167,
-                    "positionY": 438,
+                    "positionX": 465,
+                    "positionY": 432,
                     "properties": [
                         {
                             "key": "deviceArgs",
@@ -1440,7 +1328,7 @@
                         },
                         {
                             "key": "gain",
-                            "value": "20"
+                            "value": "0.0"
                         },
                         {
                             "key": "antenna",
@@ -1487,10 +1375,10 @@
                             "value": "false"
                         }
                     ],
-                    "rotation": 180,
+                    "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2777
+                    "zValue": 2739
                 },
                 {
                     "affinityZone": "",
@@ -1717,7 +1605,7 @@
                         },
                         {
                             "key": "sampleRate",
-                            "value": "2e8"
+                            "value": "rate"
                         },
                         {
                             "key": "numPoints",
@@ -1817,9 +1705,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Block",
-                    "zValue": 2784
+                    "zValue": 2723
                 },
                 {
                     "affinityZone": "",
@@ -1982,8 +1870,8 @@
                         }
                     ],
                     "path": "/plotters/wave_monitor",
-                    "positionX": 240,
-                    "positionY": 187,
+                    "positionX": 438,
+                    "positionY": 182,
                     "properties": [
                         {
                             "key": "title",
@@ -2099,199 +1987,9 @@
                         }
                     ],
                     "rotation": 180,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 2783
-                },
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "WaveformSource0",
-                    "inputDesc": [
-                        {
-                            "alias": "setWaveform",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setWaveform",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setOffset",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setOffset",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setAmplitude",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setAmplitude",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setFrequency",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setFrequency",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setSampleRate",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setSampleRate",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setResolution",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setResolution",
-                            "size": 1
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 4
-                        }
-                    ],
-                    "path": "/comms/waveform_source",
-                    "positionX": 753,
-                    "positionY": 374,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"float32\""
-                        },
-                        {
-                            "key": "wave",
-                            "value": "\"SINE\""
-                        },
-                        {
-                            "key": "rate",
-                            "value": "1e6"
-                        },
-                        {
-                            "key": "freq",
-                            "value": "1e5"
-                        },
-                        {
-                            "key": "ampl",
-                            "value": "1.0"
-                        },
-                        {
-                            "key": "offset",
-                            "value": "0.0"
-                        },
-                        {
-                            "key": "res",
-                            "value": "0.0"
-                        }
-                    ],
-                    "rotation": 180,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 2780
-                },
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "WaveformSource1",
-                    "inputDesc": [
-                        {
-                            "alias": "setWaveform",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setWaveform",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setOffset",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setOffset",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setAmplitude",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setAmplitude",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setFrequency",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setFrequency",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setSampleRate",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setSampleRate",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setResolution",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setResolution",
-                            "size": 1
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 4
-                        }
-                    ],
-                    "path": "/comms/waveform_source",
-                    "positionX": 708,
-                    "positionY": 501,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"float32\""
-                        },
-                        {
-                            "key": "wave",
-                            "value": "\"CONST\""
-                        },
-                        {
-                            "key": "rate",
-                            "value": "10000"
-                        },
-                        {
-                            "key": "freq",
-                            "value": "1000000"
-                        },
-                        {
-                            "key": "ampl",
-                            "value": "0"
-                        },
-                        {
-                            "key": "offset",
-                            "value": "0.0"
-                        },
-                        {
-                            "key": "res",
-                            "value": "0.0"
-                        }
-                    ],
-                    "rotation": 180,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 2772
+                    "zValue": 2743
                 },
                 {
                     "enabled": true,
@@ -2316,34 +2014,6 @@
                     "selected": false,
                     "what": "Breaker",
                     "zValue": 2736
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_Arithmetic00_SDRSink00",
-                    "inputId": "SDRSink0",
-                    "inputKey": "0",
-                    "outputId": "Arithmetic0",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_Arithmetic00_WaveMonitor20",
-                    "inputId": "WaveMonitor2",
-                    "inputKey": "0",
-                    "outputId": "Arithmetic0",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
                 },
                 {
                     "enabled": true,
@@ -2380,20 +2050,6 @@
                     "inputKey": "0",
                     "outputId": "ChatBox0",
                     "outputKey": "out",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_CombineComplex00_Arithmetic01",
-                    "inputId": "Arithmetic0",
-                    "inputKey": "1",
-                    "outputId": "CombineComplex0",
-                    "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
@@ -2443,8 +2099,22 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_FIRFilter00_Arithmetic00",
-                    "inputId": "Arithmetic0",
+                    "id": "Connection_FIRFilter00_SDRSink00",
+                    "inputId": "SDRSink0",
+                    "inputKey": "0",
+                    "outputId": "FIRFilter0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_FIRFilter00_WaveMonitor20",
+                    "inputId": "WaveMonitor2",
                     "inputKey": "0",
                     "outputId": "FIRFilter0",
                     "outputKey": "0",
@@ -2510,34 +2180,6 @@
                     "selected": false,
                     "what": "Connection",
                     "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_WaveformSource00_CombineComplex0",
-                    "inputId": "CombineComplex0",
-                    "inputKey": "re",
-                    "outputId": "WaveformSource0",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_WaveformSource10_CombineComplex0",
-                    "inputId": "CombineComplex0",
-                    "inputKey": "im",
-                    "outputId": "WaveformSource1",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
                 }
             ],
             "pageName": "TxData",
@@ -2545,75 +2187,6 @@
         },
         {
             "graphObjects": [
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "Arithmetic1",
-                    "inputDesc": [
-                        {
-                            "alias": "setNumInputs",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setNumInputs",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setPreload",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setPreload",
-                            "size": 1
-                        },
-                        {
-                            "alias": "0",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 8
-                        },
-                        {
-                            "alias": "1",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "1",
-                            "size": 8
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 8
-                        }
-                    ],
-                    "path": "/comms/arithmetic",
-                    "positionX": 396,
-                    "positionY": 241,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"complex_float32\""
-                        },
-                        {
-                            "key": "operation",
-                            "value": "\"MUL\""
-                        },
-                        {
-                            "key": "numInputs",
-                            "value": "2"
-                        },
-                        {
-                            "key": "preload",
-                            "value": "[]"
-                        }
-                    ],
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 3380
-                },
                 {
                     "affinityZone": "",
                     "enabled": true,
@@ -2667,49 +2240,6 @@
                     "selected": false,
                     "what": "Block",
                     "zValue": 3287
-                },
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "CombineComplex1",
-                    "inputDesc": [
-                        {
-                            "alias": "re",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "re",
-                            "size": 4
-                        },
-                        {
-                            "alias": "im",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "im",
-                            "size": 4
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 8
-                        }
-                    ],
-                    "path": "/comms/combine_complex",
-                    "positionX": 423,
-                    "positionY": 104,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"float32\""
-                        }
-                    ],
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 3387
                 },
                 {
                     "affinityZone": "",
@@ -2881,8 +2411,8 @@
                         }
                     ],
                     "path": "/comms/dc_removal",
-                    "positionX": 240,
-                    "positionY": 361,
+                    "positionX": 332,
+                    "positionY": 296,
                     "properties": [
                         {
                             "key": "dtype",
@@ -2900,7 +2430,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 3360
+                    "zValue": 3341
                 },
                 {
                     "affinityZone": "",
@@ -2967,8 +2497,8 @@
                         }
                     ],
                     "path": "/comms/fir_filter",
-                    "positionX": 599,
-                    "positionY": 335,
+                    "positionX": 609,
+                    "positionY": 249,
                     "properties": [
                         {
                             "key": "dtype",
@@ -3006,7 +2536,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 3363
+                    "zValue": 3344
                 },
                 {
                     "affinityZone": "",
@@ -3101,8 +2631,8 @@
                         }
                     ],
                     "path": "/comms/frame_sync",
-                    "positionX": 952,
-                    "positionY": 311,
+                    "positionX": 853,
+                    "positionY": 239,
                     "properties": [
                         {
                             "key": "dtype",
@@ -3152,10 +2682,10 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 3385
+                    "zValue": 3301
                 },
                 {
-                    "activeEditTab": "Streaming",
+                    "activeEditTab": "Channels",
                     "affinityZone": "",
                     "enabled": true,
                     "id": "SDRSource0",
@@ -3766,8 +3296,8 @@
                         }
                     ],
                     "path": "/soapy/source",
-                    "positionX": 105,
-                    "positionY": 248,
+                    "positionX": 180,
+                    "positionY": 87,
                     "properties": [
                         {
                             "key": "deviceArgs",
@@ -3815,7 +3345,7 @@
                         },
                         {
                             "key": "gain",
-                            "value": "20"
+                            "value": "0.0"
                         },
                         {
                             "key": "antenna",
@@ -3863,9 +3393,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 3355
+                    "zValue": 3347
                 },
                 {
                     "affinityZone": "",
@@ -4211,7 +3741,7 @@
                         },
                         {
                             "key": "sampleRate",
-                            "value": "2e8"
+                            "value": "rate"
                         },
                         {
                             "key": "numPoints",
@@ -4311,9 +3841,9 @@
                         }
                     ],
                     "rotation": 180,
-                    "selected": true,
+                    "selected": false,
                     "what": "Block",
-                    "zValue": 3392
+                    "zValue": 3328
                 },
                 {
                     "affinityZone": "",
@@ -4476,8 +4006,8 @@
                         }
                     ],
                     "path": "/plotters/wave_monitor",
-                    "positionX": 750,
-                    "positionY": 102,
+                    "positionX": 595,
+                    "positionY": 79,
                     "properties": [
                         {
                             "key": "title",
@@ -4493,7 +4023,7 @@
                         },
                         {
                             "key": "sampleRate",
-                            "value": "2e8"
+                            "value": "1e6"
                         },
                         {
                             "key": "numPoints",
@@ -4595,197 +4125,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 3391
-                },
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "WaveformSource2",
-                    "inputDesc": [
-                        {
-                            "alias": "setWaveform",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setWaveform",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setOffset",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setOffset",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setAmplitude",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setAmplitude",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setFrequency",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setFrequency",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setSampleRate",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setSampleRate",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setResolution",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setResolution",
-                            "size": 1
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 4
-                        }
-                    ],
-                    "path": "/comms/waveform_source",
-                    "positionX": 189,
-                    "positionY": 129,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"float32\""
-                        },
-                        {
-                            "key": "wave",
-                            "value": "\"CONST\""
-                        },
-                        {
-                            "key": "rate",
-                            "value": "10000"
-                        },
-                        {
-                            "key": "freq",
-                            "value": "1000000"
-                        },
-                        {
-                            "key": "ampl",
-                            "value": "0"
-                        },
-                        {
-                            "key": "offset",
-                            "value": "0.0"
-                        },
-                        {
-                            "key": "res",
-                            "value": "0.0"
-                        }
-                    ],
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 3358
-                },
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "WaveformSource3",
-                    "inputDesc": [
-                        {
-                            "alias": "setWaveform",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setWaveform",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setOffset",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setOffset",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setAmplitude",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setAmplitude",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setFrequency",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setFrequency",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setSampleRate",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setSampleRate",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setResolution",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setResolution",
-                            "size": 1
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 4
-                        }
-                    ],
-                    "path": "/comms/waveform_source",
-                    "positionX": 126,
-                    "positionY": 26,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"float32\""
-                        },
-                        {
-                            "key": "wave",
-                            "value": "\"SINE\""
-                        },
-                        {
-                            "key": "rate",
-                            "value": "1e6"
-                        },
-                        {
-                            "key": "freq",
-                            "value": "1e5"
-                        },
-                        {
-                            "key": "ampl",
-                            "value": "1.0"
-                        },
-                        {
-                            "key": "offset",
-                            "value": "0.0"
-                        },
-                        {
-                            "key": "res",
-                            "value": "0.0"
-                        }
-                    ],
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 3382
+                    "zValue": 3335
                 },
                 {
                     "enabled": false,
@@ -4812,48 +4152,6 @@
                     "zValue": 3346
                 },
                 {
-                    "enabled": true,
-                    "id": "Connection_Arithmetic10_FIRFilter10",
-                    "inputId": "FIRFilter1",
-                    "inputKey": "0",
-                    "outputId": "Arithmetic1",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_CombineComplex10_Arithmetic10",
-                    "inputId": "Arithmetic1",
-                    "inputKey": "0",
-                    "outputId": "CombineComplex1",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_CombineComplex10_WaveMonitor30",
-                    "inputId": "WaveMonitor3",
-                    "inputKey": "0",
-                    "outputId": "CombineComplex1",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
                     "enabled": false,
                     "id": "Connection_DCRemoval00_FIRFilter10",
                     "inputId": "FIRFilter1",
@@ -4866,6 +4164,20 @@
                     "selected": false,
                     "what": "Connection",
                     "zValue": 0
+                },
+                {
+                    "enabled": false,
+                    "id": "Connection_DCRemoval00_WaveMonitor30",
+                    "inputId": "WaveMonitor3",
+                    "inputKey": "0",
+                    "outputId": "DCRemoval0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 3334
                 },
                 {
                     "enabled": true,
@@ -4910,20 +4222,6 @@
                     "zValue": 0
                 },
                 {
-                    "enabled": true,
-                    "id": "Connection_SDRSource00_Arithmetic11",
-                    "inputId": "Arithmetic1",
-                    "inputKey": "1",
-                    "outputId": "SDRSource0",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
                     "enabled": false,
                     "id": "Connection_SDRSource00_DCRemoval00",
                     "inputId": "DCRemoval0",
@@ -4936,6 +4234,34 @@
                     "selected": false,
                     "what": "Connection",
                     "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_SDRSource00_FIRFilter10",
+                    "inputId": "FIRFilter1",
+                    "inputKey": "0",
+                    "outputId": "SDRSource0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_SDRSource00_WaveMonitor30",
+                    "inputId": "WaveMonitor3",
+                    "inputKey": "0",
+                    "outputId": "SDRSource0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 3333
                 },
                 {
                     "enabled": true,
@@ -4995,34 +4321,6 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_WaveformSource20_CombineComplex1",
-                    "inputId": "CombineComplex1",
-                    "inputKey": "im",
-                    "outputId": "WaveformSource2",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_WaveformSource30_CombineComplex1",
-                    "inputId": "CombineComplex1",
-                    "inputKey": "re",
-                    "outputId": "WaveformSource3",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
                     "id": "Connection_data10_FrameSync00",
                     "inputId": "FrameSync0",
                     "inputKey": "0",
@@ -5057,7 +4355,7 @@
                 }
             ],
             "pageName": "RxData",
-            "selected": true
+            "selected": false
         }
     ]
 }
