@@ -3,7 +3,7 @@
  * |PothosDoc SymbolsToSamples
  *
  * This custom block outputs N samples for every symbol in. Rates listed are all suitable for 1.25e6 Hz signal
- *
+ * Should split and recombine the data
  * |category /Custom
  * |param samps The number of smaples per symbol
  * |option 1
@@ -14,7 +14,42 @@
  * |option 10
  * |option 16
  * |option 20
- * |factory /Custom/SymbolsToSamples()
+ * |option 25
+ * |option 40
+ * |option 50
+ * |option 80
+ * |option 100
+ * |option 125
+ * |option 200
+ * |option 250
+ * |option 400
+ * |option 500
+ * |option 625
+ * |option 1000
+ * |option 1250
+ * |option 2000
+ * |option 2500
+ * |option 3125
+ * |option 5000
+ * |option 6250
+ * |option 12500
+ * |option 15625
+ * |option 25000
+ * |option 32150
+ * |option 50000
+ * |option 62500
+ * |option 78125
+ * |option 125000
+ * |option 156250
+ * |option 250000
+ * |option 312500
+ * |option 625000
+ * |option 1250000
+ * |param dtype[Data Type] The data type.
+ * |widget DTypeChooser(float=1,cfloat=1,int=1,cint=1,dim=1)
+ * |default "complex_float64"
+ * |preview disable
+ * |factory /Custom/SymbolsToSamples(dtype)
  * |setter setSamps(samps)
  **********************************************************************/
 #include <Pothos/Framework.hpp>
@@ -27,24 +62,23 @@
 class SymbolsToSamples: public Pothos::Block
 {
 public:
-	SymbolsToSamples(){
+	SymbolsToSamples(const Pothos::DType &dtype){
 
-		this->setupInput(0,"uint8");
-		this->setupOutput(0,"uint8"); 
+		this->setupInput(0,dtype);
+		this->setupOutput(0,dtype); 
 		this->registerCall(this, POTHOS_FCN_TUPLE(SymbolsToSamples, setSamps));
  		//	codes=new uint8_t[rate];
 	}
-    	static Block *make()
+    	static Block *make(const Pothos::DType &dtype)
 	{
 	        //a factory function to create an instance of MyBlock
-	        return new SymbolsToSamples();
+	        return new SymbolsToSamples(dtype);
 	}
 	void setSamps(int new_samps){
 			samps=new_samps;
 	}
     void activate(void)
     {
-        done = false;
         outElems = Pothos::BufferChunk();
     }
 	void work(void){
@@ -55,21 +89,30 @@ public:
 		auto inputPort = this->input(0);
 		auto outputPort=this->output(0);
 		auto outputBuffer=outputPort->buffer();
-		const uint8_t *inputBuffer=inputPort->buffer();
-
+		const auto inputBuffer=inputPort->buffer();
+		size_t outCount;
 
 		if(outElems.length==0){
+			elemSize=inputPort->dtype().size();
 			numElems=inputPort->elements();
-			outElems=Pothos::BufferChunk(Pothos::DType("uint8"),samps*numElems	);
+			outCount=numElems*samps;
+	
+//			outElems=Pothos::BufferChunk(inputPort->dtype(),outCount	);
+			outElems=Pothos::BufferChunk(inputPort->dtype(),1	);
 			for(size_t i=0;i<numElems;i++){
-				std::memset(outElems.as<void *>()+numElems*i*inputPort->dtype().elemSize(),*(inputBuffer+i),samps);
+				auto val=inputBuffer.as<const void *>()+(i*elemSize);
+				for(size_t j=0;j<samps;j++){
+					int offset=(j+i*samps)*elemSize;
+					std::memcpy(outElems.as<void *>()+offset,val,elemSize);
+				}
 			}
+	
 		}
 		const auto outElemCount=std::min(outElems.elements(),outputPort->elements());
 		std::memcpy(outputBuffer.as<void *>(),outElems.as<const void *>(),outElemCount);		
 		outputPort->produce(outElemCount);
 		outElems.address+=outElemCount;
-		outElems.length-=outElemCount;
+		//outElems.length-=outElemCount;
 		if(outElems.length==0){
 			inputPort->consume(numElems);
 		}
@@ -84,7 +127,8 @@ int samps=1;
 bool done=false;
     Pothos::BufferChunk outElems;
     int produced=0;
-    size_t numElems;
+    size_t numElems=0;
+    size_t elemSize=0;
 };
 static Pothos::BlockRegistry registerMyBlock(
     "/Custom/SymbolsToSamples", &SymbolsToSamples::make);
