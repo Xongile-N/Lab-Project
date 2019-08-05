@@ -59,6 +59,8 @@
 #include <complex>
 #include <cstring> //memcpy
 #include <algorithm> //min/max
+#include <iostream>
+
 class SymbolsToSamples: public Pothos::Block
 {
 public:
@@ -89,30 +91,34 @@ public:
 		auto inputPort = this->input(0);
 		auto outputPort=this->output(0);
 		auto outputBuffer=outputPort->buffer();
-		const auto inputBuffer=inputPort->buffer();
-		size_t outCount;
+		const uint8_t *inputBuffer=inputPort->buffer();
 
+		numElems=inputPort->elements();
+		if(numElems==0)return;
 		if(outElems.length==0){
-			elemSize=inputPort->dtype().size();
-			numElems=inputPort->elements();
-			outCount=numElems*samps;
+			elemSize=outputPort->dtype().size();
+			//elemSize=2;
+			size_t outCount=0;
+			outCount=numElems*samps*elemSize;
 	
-//			outElems=Pothos::BufferChunk(inputPort->dtype(),outCount	);
-			outElems=Pothos::BufferChunk(inputPort->dtype(),1	);
+			outElems=Pothos::BufferChunk(Pothos::DType("uint8"),outCount	);
+			//outElems=Pothos::BufferChunk(inputPort->dtype(),samps	);
 			for(size_t i=0;i<numElems;i++){
-				auto val=inputBuffer.as<const void *>()+(i*elemSize);
-				for(size_t j=0;j<samps;j++){
-					int offset=(j+i*samps)*elemSize;
+				//auto val=inputBuffer.as<const void *>()+(i*elemSize);
+				const void* val=inputBuffer+(i*elemSize);
+				for(int j=0;j<samps;j++){
+					size_t offset=(j+i*samps)*elemSize;
 					std::memcpy(outElems.as<void *>()+offset,val,elemSize);
 				}
 			}
-	
+
 		}
+
 		const auto outElemCount=std::min(outElems.elements(),outputPort->elements());
 		std::memcpy(outputBuffer.as<void *>(),outElems.as<const void *>(),outElemCount);		
-		outputPort->produce(outElemCount);
+		outputPort->produce(outElemCount/elemSize);
 		outElems.address+=outElemCount;
-		//outElems.length-=outElemCount;
+		outElems.length-=outElemCount;
 		if(outElems.length==0){
 			inputPort->consume(numElems);
 		}
