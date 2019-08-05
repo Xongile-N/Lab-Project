@@ -1,0 +1,1 @@
+/usr/local/lib/Pothos/modules0.6/blocks/Custom/libSymbolsToSamples.so
