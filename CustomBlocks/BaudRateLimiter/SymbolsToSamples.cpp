@@ -46,7 +46,7 @@
  * |option 625000
  * |option 1250000
  * |param dtype[Data Type] The data type.
- * |widget DTypeChooser(float=1,cfloat=1,int=1,cint=1,dim=1)
+ * |widget DTypeChooser(float=1,int=1,dim=1)
  * |default "complex_float64"
  * |preview disable
  * |factory /Custom/SymbolsToSamples(dtype)
