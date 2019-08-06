@@ -419,7 +419,7 @@
                         },
                         {
                             "key": "factor",
-                            "value": "100"
+                            "value": "80"
                         },
                         {
                             "key": "labelId",
@@ -427,9 +427,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 1373
+                    "zValue": 1406
                 },
                 {
                     "affinityZone": "",
@@ -3307,7 +3307,7 @@
                         },
                         {
                             "key": "wave",
-                            "value": "\"CONST\""
+                            "value": "\"SINE\""
                         },
                         {
                             "key": "rate",
@@ -3333,7 +3333,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1400
+                    "zValue": 1405
                 },
                 {
                     "affinityZone": "",
@@ -3725,16 +3725,16 @@
                 {
                     "blockId": "WaveMonitor5",
                     "enabled": true,
-                    "height": 373,
+                    "height": 391,
                     "id": "WidgetWaveMonitor5",
                     "positionX": 0,
-                    "positionY": 75,
+                    "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAFCwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "selected": true,
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAFCwAAAAoAcwB0AGEAYwBrAAAACQAAAAADAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/o24uscQy1AAAAAAAAAAAAAABQAP90sAxVjt7i/5lstlstltD/qwIus+rV0P/q9Xq9Xq9YAAAAUAD/rWDxHh/Niv+S1NAa5uAw/zrsMGWmC+D/yxdMhrOR6AAAACgBpAG4AZABlAHgAAAADAAAAAAI=",
                     "what": "Widget",
                     "width": 884,
-                    "zValue": 331
+                    "zValue": 339
                 }
             ],
             "pageName": "Display",
