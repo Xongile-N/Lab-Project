@@ -1,0 +1,285 @@
+{
+    "config": {
+        "graphHeight": 1024,
+        "graphWidth": 1280
+    },
+    "pages": [
+        {
+            "graphObjects": [
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "BinaryFileSink1",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEnabled",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setEnabled",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_sink",
+                    "positionX": 719.25,
+                    "positionY": 124,
+                    "properties": [
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/PothosDecoderTest.dat\""
+                        },
+                        {
+                            "key": "enabled",
+                            "value": "true"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 350
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "BinaryFileSource0",
+                    "inputDesc": [
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAutoRewind",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAutoRewind",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_source",
+                    "positionX": 29,
+                    "positionY": 171,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"uint8\""
+                        },
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/PothosEncoderTest.dat\""
+                        },
+                        {
+                            "key": "rewind",
+                            "value": "false"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 359
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "ConvolutionCodeDecoder0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setPolyF",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setPolyF",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setPolyS",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setPolyS",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setConstraint",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setConstraint",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFrameLength",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFrameLength",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/Custom/CCDecoder",
+                    "positionX": 466,
+                    "positionY": 179,
+                    "properties": [
+                        {
+                            "key": "polyF",
+                            "value": "15"
+                        },
+                        {
+                            "key": "polyS",
+                            "value": "11"
+                        },
+                        {
+                            "key": "constraint",
+                            "value": "4"
+                        },
+                        {
+                            "key": "frameLen",
+                            "value": "1"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": true,
+                    "what": "Block",
+                    "zValue": 363
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "Pacer1",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "actualRateTriggered",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "actualRateTriggered",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "probeActualRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "probeActualRate",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/pacer",
+                    "positionX": 252,
+                    "positionY": 225,
+                    "properties": [
+                        {
+                            "key": "rate",
+                            "value": "1e10"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 319
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_BinaryFileSource00_Pacer10",
+                    "inputId": "Pacer1",
+                    "inputKey": "0",
+                    "outputId": "BinaryFileSource0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_ConvolutionCodeDecoder00_BinaryFileSink10",
+                    "inputId": "BinaryFileSink1",
+                    "inputKey": "0",
+                    "outputId": "ConvolutionCodeDecoder0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_Pacer10_ConvolutionCodeDecoder00",
+                    "inputId": "ConvolutionCodeDecoder0",
+                    "inputKey": "0",
+                    "outputId": "Pacer1",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                }
+            ],
+            "pageName": "Main",
+            "selected": true
+        }
+    ]
+}

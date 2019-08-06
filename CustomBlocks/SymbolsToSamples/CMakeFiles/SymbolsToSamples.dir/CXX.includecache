@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamples.cpp
+Pothos/Framework.hpp
+-
+math.h
+-
+stdlib.h
+-
+vector
+-
+complex
+-
+cstring
+-
+algorithm
+-
+iostream
+-
+
+/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamplesDocs.cpp
+Pothos/Framework.hpp
+-
+Pothos/Plugin.hpp
+-
+
