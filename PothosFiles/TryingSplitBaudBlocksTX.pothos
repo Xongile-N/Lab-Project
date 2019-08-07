@@ -49,7 +49,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 479
+                    "zValue": 520
                 },
                 {
                     "affinityZone": "",
@@ -191,8 +191,8 @@
                         }
                     ],
                     "path": "/blocks/pacer",
-                    "positionX": 208,
-                    "positionY": 256,
+                    "positionX": 224,
+                    "positionY": 245,
                     "properties": [
                         {
                             "key": "rate",
@@ -202,7 +202,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 503
+                    "zValue": 569
                 },
                 {
                     "affinityZone": "",
@@ -211,7 +211,7 @@
                     "inputDesc": [
                         {
                             "alias": "0",
-                            "dtype": "uint8",
+                            "dtype": "int8",
                             "isSigSlot": false,
                             "name": "0",
                             "size": 1
@@ -227,25 +227,29 @@
                     "outputDesc": [
                         {
                             "alias": "0",
-                            "dtype": "uint8",
+                            "dtype": "int8",
                             "isSigSlot": false,
                             "name": "0",
                             "size": 1
                         }
                     ],
                     "path": "/Custom/SymbolsToSamples",
-                    "positionX": 410,
-                    "positionY": 225,
+                    "positionX": 412,
+                    "positionY": 226,
                     "properties": [
                         {
                             "key": "samps",
-                            "value": "8"
+                            "value": "400"
+                        },
+                        {
+                            "key": "dtype",
+                            "value": "\"int8\""
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 511
+                    "zValue": 572
                 },
                 {
                     "enabled": true,

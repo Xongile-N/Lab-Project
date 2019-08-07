@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter
+CMAKE_SOURCE_DIR = /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter
+CMAKE_BINARY_DIR = /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SymbolsToSamples.dir/depend.make
@@ -58,21 +58,21 @@ include CMakeFiles/SymbolsToSamples.dir/progress.make
 include CMakeFiles/SymbolsToSamples.dir/flags.make
 
 SymbolsToSamplesDocs.cpp: SymbolsToSamples.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating SymbolsToSamplesDocs.cpp"
-	./PothosUtil.sh --doc-parse SymbolsToSamples.cpp --output /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamplesDocs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating SymbolsToSamplesDocs.cpp"
+	./PothosUtil.sh --doc-parse SymbolsToSamples.cpp --output /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamplesDocs.cpp
 
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o: CMakeFiles/SymbolsToSamples.dir/flags.make
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o: SymbolsToSamples.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o -c /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamples.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o -c /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamples.cpp
 
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamples.cpp > CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamples.cpp > CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.i
 
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamples.cpp -o CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamples.cpp -o CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.s
 
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o.requires:
 
@@ -87,16 +87,16 @@ CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.o: CMakeFiles/SymbolsToSamples.dir/flags.make
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.o: SymbolsToSamplesDocs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.o -c /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamplesDocs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.o -c /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamplesDocs.cpp
 
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamplesDocs.cpp > CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamplesDocs.cpp > CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.i
 
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamplesDocs.cpp -o CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamplesDocs.cpp -o CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.s
 
 CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.o.requires:
 
@@ -130,7 +130,7 @@ libSymbolsToSamples.so: /usr/lib/libPocoFoundation.so.50
 libSymbolsToSamples.so: /usr/lib/x86_64-linux-gnu/libpcre.so
 libSymbolsToSamples.so: /usr/lib/x86_64-linux-gnu/libz.so
 libSymbolsToSamples.so: CMakeFiles/SymbolsToSamples.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module libSymbolsToSamples.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module libSymbolsToSamples.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SymbolsToSamples.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -148,6 +148,6 @@ CMakeFiles/SymbolsToSamples.dir/clean:
 .PHONY : CMakeFiles/SymbolsToSamples.dir/clean
 
 CMakeFiles/SymbolsToSamples.dir/depend: SymbolsToSamplesDocs.cpp
-	cd /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/CMakeFiles/SymbolsToSamples.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/CMakeFiles/SymbolsToSamples.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SymbolsToSamples.dir/depend
 

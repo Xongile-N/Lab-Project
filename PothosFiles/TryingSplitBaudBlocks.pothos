@@ -34,8 +34,8 @@
                         }
                     ],
                     "path": "/blocks/binary_file_sink",
-                    "positionX": 467.4375,
-                    "positionY": 171,
+                    "positionX": 625.4375,
+                    "positionY": 57,
                     "properties": [
                         {
                             "key": "path",
@@ -49,7 +49,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 514
+                    "zValue": 562
                 },
                 {
                     "affinityZone": "",
@@ -157,12 +157,12 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 520
+                    "zValue": 538
                 },
                 {
                     "affinityZone": "",
                     "enabled": true,
-                    "id": "SamplesToSymbols0",
+                    "id": "SamplesToSymbols1",
                     "inputDesc": [
                         {
                             "alias": "0",
@@ -189,12 +189,12 @@
                         }
                     ],
                     "path": "/Custom/SamplesToSymbols",
-                    "positionX": 611,
-                    "positionY": 280,
+                    "positionX": 412,
+                    "positionY": 164,
                     "properties": [
                         {
                             "key": "samps",
-                            "value": "8"
+                            "value": "16"
                         },
                         {
                             "key": "dtype",
@@ -202,9 +202,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Block",
-                    "zValue": 522
+                    "zValue": 560
                 },
                 {
                     "enabled": true,
@@ -222,8 +222,8 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_Pacer00_SamplesToSymbols00",
-                    "inputId": "SamplesToSymbols0",
+                    "id": "Connection_Pacer00_SamplesToSymbols10",
+                    "inputId": "SamplesToSymbols1",
                     "inputKey": "0",
                     "outputId": "Pacer0",
                     "outputKey": "0",
@@ -236,10 +236,10 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_SamplesToSymbols00_BinaryFileSink10",
+                    "id": "Connection_SamplesToSymbols10_BinaryFileSink10",
                     "inputId": "BinaryFileSink1",
                     "inputKey": "0",
-                    "outputId": "SamplesToSymbols0",
+                    "outputId": "SamplesToSymbols1",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,

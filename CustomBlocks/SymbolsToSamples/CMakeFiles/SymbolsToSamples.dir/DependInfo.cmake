@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamples.cpp" "/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o"
-  "/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamplesDocs.cpp" "/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.o"
+  "/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamples.cpp" "/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/CMakeFiles/SymbolsToSamples.dir/SymbolsToSamples.cpp.o"
+  "/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamplesDocs.cpp" "/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/CMakeFiles/SymbolsToSamples.dir/SymbolsToSamplesDocs.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

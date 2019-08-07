@@ -1,4 +1,4 @@
-# Install script for directory: /home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter
+# Install script for directory: /home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/Pothos/modules0.6/blocks/Custom/libSymbolsToSamples.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Pothos/modules0.6/blocks/Custom" TYPE MODULE FILES "/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/libSymbolsToSamples.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Pothos/modules0.6/blocks/Custom" TYPE MODULE FILES "/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/libSymbolsToSamples.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/Pothos/modules0.6/blocks/Custom/libSymbolsToSamples.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/Pothos/modules0.6/blocks/Custom/libSymbolsToSamples.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -61,5 +61,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

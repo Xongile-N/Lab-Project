@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamples.cpp
+/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamples.cpp
 Pothos/Framework.hpp
 -
 math.h
@@ -24,7 +24,7 @@ algorithm
 iostream
 -
 
-/home/xongile/Lab-Project/CustomBlocks/BaudRateLimiter/SymbolsToSamplesDocs.cpp
+/home/xongile/Lab-Project/CustomBlocks/SymbolsToSamples/SymbolsToSamplesDocs.cpp
 Pothos/Framework.hpp
 -
 Pothos/Plugin.hpp
