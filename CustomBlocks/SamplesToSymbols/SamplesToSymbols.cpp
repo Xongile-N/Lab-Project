@@ -82,6 +82,7 @@ public:
     void activate(void)
     {
         outElems = Pothos::BufferChunk();
+        tempBuffer= Pothos::BufferChunk();
     }
 	void work(void){
 		if(done){
@@ -91,37 +92,37 @@ public:
 		auto inputPort = this->input(0);
 		auto outputPort=this->output(0);
 		auto outputBuffer=outputPort->buffer();
-		const uint8_t *inputBuffer=inputPort->buffer();
-
+		auto inputBuffer=inputPort->buffer();
 		numElems=inputPort->elements();
 		if(numElems==0)return;
 		if(outElems.length==0){
 			elemSize=outputPort->dtype().size();
-			//elemSize=2;
+			tempBuffer.append(inputBuffer);
 			size_t outCount=0;
-			outCount=numElems*elemSize/samps;
-			numElems=numElems-numElems%samps;
-			//std::cout<<"outcount "<<outCount<<" numElems "<<numElems<<" elemSize"<<elemSize<<std::endl;
+			outCount=(tempBuffer.length)*elemSize/samps;
 			outElems=Pothos::BufferChunk(Pothos::DType("uint8"),outCount	);
 			size_t offset=0;
-			for(size_t i=0;i<numElems;i++){
-				if(i%samps==0){
-				//std::cout<<"here"<<i<<" "<<samps<<" " <<i*elemSize<<" "<<elemSize<<std::endl;
-					const void* val=inputBuffer+(i*elemSize);
-					std::memcpy(outElems.as<void *>()+offset,val,elemSize);
+			std::cout<<tempBuffer.length<<" "<<samps*elemSize<<std::endl;
+			while(tempBuffer.length>=samps*elemSize){
+					std::memcpy(outElems.as<void *>()+offset,tempBuffer.as<void *>(),elemSize);
+					tempBuffer.address+=samps*elemSize;
+					tempBuffer.length-=samps;
 					offset+=elemSize;
-				}
+
+					produced=true;
 			}
 
-		}
 
-		const auto outElemCount=std::min(outElems.elements(),outputPort->elements());
-		std::memcpy(outputBuffer.as<void *>(),outElems.as<const void *>(),outElemCount);		
-		outputPort->produce(outElemCount/elemSize);
-		outElems.address+=outElemCount;
-		outElems.length-=outElemCount;
-		if(outElems.length==0){
-			inputPort->consume(numElems);
+		}
+		//std::cout<<produced<<" "<<inputPort->totalBuffers()<<" "<<tempBuffer.length<<"length "<<outElems.length<<std::endl;
+
+		outputPort->postBuffer(outElems);
+		outElems.length=0;
+		if(produced){
+			inputPort->consume(inputPort->elements());
+	
+			produced=false;
+
 		}
 
 	}
@@ -133,7 +134,8 @@ private:
 int samps=1;
 bool done=false;
     Pothos::BufferChunk outElems;
-    int produced=0;
+    Pothos::BufferChunk tempBuffer;
+    bool produced=false;
     size_t numElems=0;
     size_t elemSize=0;
 };

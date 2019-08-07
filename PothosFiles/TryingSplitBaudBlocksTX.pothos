@@ -239,7 +239,7 @@
                     "properties": [
                         {
                             "key": "samps",
-                            "value": "400"
+                            "value": "40"
                         },
                         {
                             "key": "dtype",
@@ -249,7 +249,7 @@
                     "rotation": 0,
                     "selected": true,
                     "what": "Block",
-                    "zValue": 572
+                    "zValue": 574
                 },
                 {
                     "enabled": true,
