@@ -102,11 +102,10 @@ public:
 			outCount=(tempBuffer.length)*elemSize/samps;
 			outElems=Pothos::BufferChunk(Pothos::DType("uint8"),outCount	);
 			size_t offset=0;
-			std::cout<<tempBuffer.length<<" "<<samps*elemSize<<std::endl;
 			while(tempBuffer.length>=samps*elemSize){
 					std::memcpy(outElems.as<void *>()+offset,tempBuffer.as<void *>(),elemSize);
 					tempBuffer.address+=samps*elemSize;
-					tempBuffer.length-=samps;
+					tempBuffer.length-=samps*elemSize;
 					offset+=elemSize;
 
 					produced=true;

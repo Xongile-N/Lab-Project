@@ -23,7 +23,7 @@
                 {
                     "blockId": "ChatBox0",
                     "enabled": true,
-                    "height": 393,
+                    "height": 411,
                     "id": "WidgetChatBox0",
                     "positionX": 288,
                     "positionY": 328,
@@ -118,7 +118,7 @@
                 }
             ],
             "pageName": "Display",
-            "selected": false
+            "selected": true
         },
         {
             "graphObjects": [
@@ -159,8 +159,8 @@
                         }
                     ],
                     "path": "/comms/bytes_to_symbols",
-                    "positionX": 285,
-                    "positionY": 70,
+                    "positionX": 107,
+                    "positionY": 168,
                     "properties": [
                         {
                             "key": "N",
@@ -174,7 +174,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2716
+                    "zValue": 2741
                 },
                 {
                     "affinityZone": "",
@@ -344,8 +344,8 @@
                         }
                     ],
                     "path": "/comms/fir_designer",
-                    "positionX": 1064,
-                    "positionY": 511,
+                    "positionX": 942,
+                    "positionY": 449,
                     "properties": [
                         {
                             "key": "type",
@@ -401,9 +401,9 @@
                         }
                     ],
                     "rotation": 180,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 2735
+                    "zValue": 2754
                 },
                 {
                     "affinityZone": "",
@@ -471,7 +471,7 @@
                     ],
                     "path": "/comms/fir_filter",
                     "positionX": 866,
-                    "positionY": 258,
+                    "positionY": 259,
                     "properties": [
                         {
                             "key": "dtype",
@@ -507,9 +507,9 @@
                         }
                     ],
                     "rotation": 180,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 2710
+                    "zValue": 2761
                 },
                 {
                     "affinityZone": "",
@@ -577,7 +577,7 @@
                     ],
                     "path": "/comms/frame_insert",
                     "positionX": 874,
-                    "positionY": 83,
+                    "positionY": 84,
                     "properties": [
                         {
                             "key": "dtype",
@@ -611,7 +611,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2700
+                    "zValue": 2759
                 },
                 {
                     "affinityZone": "",
@@ -650,7 +650,7 @@
                         }
                     ],
                     "path": "/blocks/packet_to_stream",
-                    "positionX": 494,
+                    "positionX": 363,
                     "positionY": 50,
                     "properties": [
                         {
@@ -665,7 +665,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2698
+                    "zValue": 2740
                 },
                 {
                     "affinityZone": "",
@@ -1457,8 +1457,8 @@
                         }
                     ],
                     "path": "/comms/symbol_mapper",
-                    "positionX": 693,
-                    "positionY": 55,
+                    "positionX": 648,
+                    "positionY": 43,
                     "properties": [
                         {
                             "key": "dtype",
@@ -1472,7 +1472,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2699
+                    "zValue": 2747
                 },
                 {
                     "affinityZone": "",
@@ -1707,8 +1707,8 @@
                         }
                     ],
                     "path": "/plotters/wave_monitor",
-                    "positionX": 482,
-                    "positionY": 122,
+                    "positionX": 322,
+                    "positionY": 174,
                     "properties": [
                         {
                             "key": "title",
@@ -1826,7 +1826,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 2723
+                    "zValue": 2742
                 },
                 {
                     "affinityZone": "",
@@ -1990,7 +1990,7 @@
                     ],
                     "path": "/plotters/wave_monitor",
                     "positionX": 636,
-                    "positionY": 194,
+                    "positionY": 195,
                     "properties": [
                         {
                             "key": "title",
@@ -2106,9 +2106,9 @@
                         }
                     ],
                     "rotation": 180,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 2721
+                    "zValue": 2760
                 },
                 {
                     "enabled": true,
@@ -2292,7 +2292,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "sigSlots": [
                         [
                             "triggered",
@@ -2356,7 +2356,7 @@
                 }
             ],
             "pageName": "TxData",
-            "selected": true
+            "selected": false
         },
         {
             "graphObjects": [
@@ -2670,8 +2670,8 @@
                         }
                     ],
                     "path": "/comms/fir_filter",
-                    "positionX": 609,
-                    "positionY": 249,
+                    "positionX": 528,
+                    "positionY": 227,
                     "properties": [
                         {
                             "key": "dtype",
@@ -2707,9 +2707,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 3344
+                    "zValue": 3354
                 },
                 {
                     "affinityZone": "",
@@ -2804,7 +2804,7 @@
                         }
                     ],
                     "path": "/comms/frame_sync",
-                    "positionX": 853,
+                    "positionX": 852,
                     "positionY": 239,
                     "properties": [
                         {
@@ -2855,7 +2855,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 3301
+                    "zValue": 3352
                 },
                 {
                     "activeEditTab": "Streaming",
@@ -4320,7 +4320,7 @@
                     "positionX": 578,
                     "positionY": 143,
                     "rotation": 180,
-                    "selected": true,
+                    "selected": false,
                     "what": "Breaker",
                     "zValue": 3346
                 },

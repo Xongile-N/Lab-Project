@@ -53,35 +53,35 @@
                         },
                         {
                             "alias": "0",
-                            "dtype": "float32",
+                            "dtype": "complex_float32",
                             "isSigSlot": false,
                             "name": "0",
-                            "size": 4
+                            "size": 8
                         },
                         {
                             "alias": "1",
-                            "dtype": "float32",
+                            "dtype": "complex_float32",
                             "isSigSlot": false,
                             "name": "1",
-                            "size": 4
+                            "size": 8
                         }
                     ],
                     "outputDesc": [
                         {
                             "alias": "0",
-                            "dtype": "float32",
+                            "dtype": "complex_float32",
                             "isSigSlot": false,
                             "name": "0",
-                            "size": 4
+                            "size": 8
                         }
                     ],
                     "path": "/comms/arithmetic",
-                    "positionX": 553,
-                    "positionY": 405,
+                    "positionX": 527,
+                    "positionY": 478,
                     "properties": [
                         {
                             "key": "dtype",
-                            "value": "\"float32\""
+                            "value": "\"complex_float32\""
                         },
                         {
                             "key": "operation",
@@ -99,7 +99,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1681
+                    "zValue": 2904
                 },
                 {
                     "affinityZone": "",
@@ -122,35 +122,35 @@
                         },
                         {
                             "alias": "0",
-                            "dtype": "float32",
+                            "dtype": "complex_float32",
                             "isSigSlot": false,
                             "name": "0",
-                            "size": 4
+                            "size": 8
                         },
                         {
                             "alias": "1",
-                            "dtype": "float32",
+                            "dtype": "complex_float32",
                             "isSigSlot": false,
                             "name": "1",
-                            "size": 4
+                            "size": 8
                         }
                     ],
                     "outputDesc": [
                         {
                             "alias": "0",
-                            "dtype": "float32",
+                            "dtype": "complex_float32",
                             "isSigSlot": false,
                             "name": "0",
-                            "size": 4
+                            "size": 8
                         }
                     ],
                     "path": "/comms/arithmetic",
-                    "positionX": 389,
-                    "positionY": 549,
+                    "positionX": 765,
+                    "positionY": 363,
                     "properties": [
                         {
                             "key": "dtype",
-                            "value": "\"float32\""
+                            "value": "\"complex_float32\""
                         },
                         {
                             "key": "operation",
@@ -168,7 +168,76 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1680
+                    "zValue": 2876
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "Arithmetic3",
+                    "inputDesc": [
+                        {
+                            "alias": "setNumInputs",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setNumInputs",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setPreload",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setPreload",
+                            "size": 1
+                        },
+                        {
+                            "alias": "0",
+                            "dtype": "complex_float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 8
+                        },
+                        {
+                            "alias": "1",
+                            "dtype": "complex_float32",
+                            "isSigSlot": false,
+                            "name": "1",
+                            "size": 8
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "complex_float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 8
+                        }
+                    ],
+                    "path": "/comms/arithmetic",
+                    "positionX": 456,
+                    "positionY": 601,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"complex_float32\""
+                        },
+                        {
+                            "key": "operation",
+                            "value": "\"ADD\""
+                        },
+                        {
+                            "key": "numInputs",
+                            "value": "2"
+                        },
+                        {
+                            "key": "preload",
+                            "value": "[]"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 2884
                 },
                 {
                     "affinityZone": "",
@@ -209,7 +278,7 @@
                         },
                         {
                             "key": "path",
-                            "value": "\"/home/xongile/Lab-Project/TestSources/5MB.jpg\""
+                            "value": "\"/home/xongile/Lab-Project/TestSources/LargeTest.jpg\""
                         },
                         {
                             "key": "rewind",
@@ -219,7 +288,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1659
+                    "zValue": 2896
                 },
                 {
                     "affinityZone": "",
@@ -258,8 +327,8 @@
                         }
                     ],
                     "path": "/comms/bytes_to_symbols",
-                    "positionX": 161,
-                    "positionY": 150,
+                    "positionX": 336,
+                    "positionY": 24,
                     "properties": [
                         {
                             "key": "N",
@@ -273,12 +342,12 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1664
+                    "zValue": 2865
                 },
                 {
                     "affinityZone": "",
                     "enabled": true,
-                    "id": "CombineComplex0",
+                    "id": "CombineComplex1",
                     "inputDesc": [
                         {
                             "alias": "re",
@@ -305,8 +374,8 @@
                         }
                     ],
                     "path": "/comms/combine_complex",
-                    "positionX": 621,
-                    "positionY": 636,
+                    "positionX": 368,
+                    "positionY": 274,
                     "properties": [
                         {
                             "key": "dtype",
@@ -316,7 +385,50 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1703
+                    "zValue": 2900
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "CombineComplex2",
+                    "inputDesc": [
+                        {
+                            "alias": "re",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "re",
+                            "size": 4
+                        },
+                        {
+                            "alias": "im",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "im",
+                            "size": 4
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "complex_float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 8
+                        }
+                    ],
+                    "path": "/comms/combine_complex",
+                    "positionX": 317,
+                    "positionY": 500,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"float32\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 2905
                 },
                 {
                     "affinityZone": "",
@@ -362,8 +474,8 @@
                         }
                     ],
                     "path": "/blocks/pacer",
-                    "positionX": 546,
-                    "positionY": 140,
+                    "positionX": 502,
+                    "positionY": 96,
                     "properties": [
                         {
                             "key": "rate",
@@ -373,12 +485,12 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1691
+                    "zValue": 2867
                 },
                 {
                     "affinityZone": "",
                     "enabled": true,
-                    "id": "Scale2",
+                    "id": "Scale3",
                     "inputDesc": [
                         {
                             "alias": "setFactor",
@@ -396,28 +508,28 @@
                         },
                         {
                             "alias": "0",
-                            "dtype": "float32",
+                            "dtype": "complex_float32",
                             "isSigSlot": false,
                             "name": "0",
-                            "size": 4
+                            "size": 8
                         }
                     ],
                     "outputDesc": [
                         {
                             "alias": "0",
-                            "dtype": "float32",
+                            "dtype": "complex_float32",
                             "isSigSlot": false,
                             "name": "0",
-                            "size": 4
+                            "size": 8
                         }
                     ],
                     "path": "/comms/scale",
-                    "positionX": 568,
-                    "positionY": 545,
+                    "positionX": 566,
+                    "positionY": 621,
                     "properties": [
                         {
                             "key": "dtype",
-                            "value": "\"float32\""
+                            "value": "\"complex_float32\""
                         },
                         {
                             "key": "factor",
@@ -431,7 +543,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1679
+                    "zValue": 2891
                 },
                 {
                     "activeEditTab": "Channels",
@@ -1045,8 +1157,8 @@
                         }
                     ],
                     "path": "/soapy/sink",
-                    "positionX": 944.5105454264524,
-                    "positionY": 465,
+                    "positionX": 928.5105454264524,
+                    "positionY": 553,
                     "properties": [
                         {
                             "key": "deviceArgs",
@@ -1144,7 +1256,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1702
+                    "zValue": 2820
                 },
                 {
                     "affinityZone": "",
@@ -1176,12 +1288,12 @@
                         }
                     ],
                     "path": "/Custom/SymbolsToSamples",
-                    "positionX": 358,
-                    "positionY": 157,
+                    "positionX": 528,
+                    "positionY": 29,
                     "properties": [
                         {
                             "key": "samps",
-                            "value": "16"
+                            "value": "125"
                         },
                         {
                             "key": "dtype",
@@ -1191,7 +1303,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1714
+                    "zValue": 2895
                 },
                 {
                     "affinityZone": "",
@@ -1216,376 +1328,14 @@
                         }
                     ],
                     "path": "/gr/blocks/uchar_to_float",
-                    "positionX": 477,
-                    "positionY": 259,
+                    "positionX": 423,
+                    "positionY": 159,
                     "properties": [
                     ],
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1693
-                },
-                {
-                    "affinityZone": "",
-                    "enabled": false,
-                    "id": "VectorSource0",
-                    "inputDesc": [
-                        {
-                            "alias": "setElements",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setElements",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setMode",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setMode",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setStartId",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setStartId",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setEndId",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setEndId",
-                            "size": 1
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 4
-                        }
-                    ],
-                    "path": "/blocks/vector_source",
-                    "positionX": 0,
-                    "positionY": 233,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"float32\""
-                        },
-                        {
-                            "key": "mode",
-                            "value": "\"REPEAT\""
-                        },
-                        {
-                            "key": "elements",
-                            "value": "[1]"
-                        },
-                        {
-                            "key": "startId",
-                            "value": "\"\""
-                        },
-                        {
-                            "key": "endId",
-                            "value": "\"\""
-                        }
-                    ],
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 1573
-                },
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "WaveMonitor4",
-                    "inputDesc": [
-                        {
-                            "alias": "clearChannels",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "clearChannels",
-                            "size": 1
-                        },
-                        {
-                            "alias": "enableXAxis",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "enableXAxis",
-                            "size": 1
-                        },
-                        {
-                            "alias": "enableYAxis",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "enableYAxis",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setAutoScale",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setAutoScale",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setChannelLabel",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setChannelLabel",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setChannelStyle",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setChannelStyle",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setNumPoints",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setNumPoints",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setSampleRate",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setSampleRate",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setTitle",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTitle",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setYAxisTitle",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setYAxisTitle",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setYRange",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setYRange",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setAlignment",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setAlignment",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setEventRate",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setDisplayRate",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setHoldOff",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTriggerHoldOff",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setLabelId",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTriggerLabelId",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setLevel",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTriggerLevel",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setMode",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTriggerMode",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setPosition",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTriggerPosition",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setSlope",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTriggerSlope",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setSource",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTriggerSource",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setNumWindows",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTriggerWindows",
-                            "size": 1
-                        },
-                        {
-                            "alias": "0",
-                            "dtype": "unspecified",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 1
-                        },
-                        {
-                            "alias": "1",
-                            "dtype": "unspecified",
-                            "isSigSlot": false,
-                            "name": "1",
-                            "size": 1
-                        }
-                    ],
-                    "path": "/plotters/wave_monitor",
-                    "positionX": 798,
-                    "positionY": 357,
-                    "properties": [
-                        {
-                            "key": "title",
-                            "value": "\"CarrierMultScale\""
-                        },
-                        {
-                            "key": "numInputs",
-                            "value": "2"
-                        },
-                        {
-                            "key": "displayRate",
-                            "value": "10.0"
-                        },
-                        {
-                            "key": "sampleRate",
-                            "value": "rate"
-                        },
-                        {
-                            "key": "numPoints",
-                            "value": "1024"
-                        },
-                        {
-                            "key": "align",
-                            "value": "false"
-                        },
-                        {
-                            "key": "autoScale",
-                            "value": "false"
-                        },
-                        {
-                            "key": "yRange",
-                            "value": "[-1.0, 1.0]"
-                        },
-                        {
-                            "key": "enableXAxis",
-                            "value": "true"
-                        },
-                        {
-                            "key": "enableYAxis",
-                            "value": "true"
-                        },
-                        {
-                            "key": "yAxisTitle",
-                            "value": "\"\""
-                        },
-                        {
-                            "key": "triggerSource",
-                            "value": "0"
-                        },
-                        {
-                            "key": "triggerWindows",
-                            "value": "1"
-                        },
-                        {
-                            "key": "triggerHoldOff",
-                            "value": "0"
-                        },
-                        {
-                            "key": "triggerSlope",
-                            "value": "\"POS\""
-                        },
-                        {
-                            "key": "triggerMode",
-                            "value": "\"AUTOMATIC\""
-                        },
-                        {
-                            "key": "triggerLevel",
-                            "value": "0.0"
-                        },
-                        {
-                            "key": "triggerPosition",
-                            "value": "0"
-                        },
-                        {
-                            "key": "triggerLabelId",
-                            "value": "\"\""
-                        },
-                        {
-                            "key": "label0",
-                            "value": "\"\""
-                        },
-                        {
-                            "key": "style0",
-                            "value": "\"LINE\""
-                        },
-                        {
-                            "key": "label1",
-                            "value": "\"\""
-                        },
-                        {
-                            "key": "style1",
-                            "value": "\"LINE\""
-                        },
-                        {
-                            "key": "label2",
-                            "value": "\"\""
-                        },
-                        {
-                            "key": "style2",
-                            "value": "\"LINE\""
-                        },
-                        {
-                            "key": "label3",
-                            "value": "\"\""
-                        },
-                        {
-                            "key": "style3",
-                            "value": "\"LINE\""
-                        },
-                        {
-                            "key": "rateLabelId",
-                            "value": "\"rxRate\""
-                        }
-                    ],
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 1717
+                    "zValue": 2868
                 },
                 {
                     "affinityZone": "",
@@ -1769,7 +1519,7 @@
                         },
                         {
                             "key": "numPoints",
-                            "value": "1024"
+                            "value": "8192"
                         },
                         {
                             "key": "align",
@@ -1867,39 +1617,60 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1700
+                    "zValue": 1766
                 },
                 {
                     "affinityZone": "",
                     "enabled": true,
-                    "id": "WaveformSource1",
+                    "id": "WaveMonitor7",
                     "inputDesc": [
                         {
-                            "alias": "setWaveform",
+                            "alias": "clearChannels",
                             "dtype": "unspecified",
                             "isSigSlot": true,
-                            "name": "setWaveform",
+                            "name": "clearChannels",
                             "size": 1
                         },
                         {
-                            "alias": "setOffset",
+                            "alias": "enableXAxis",
                             "dtype": "unspecified",
                             "isSigSlot": true,
-                            "name": "setOffset",
+                            "name": "enableXAxis",
                             "size": 1
                         },
                         {
-                            "alias": "setAmplitude",
+                            "alias": "enableYAxis",
                             "dtype": "unspecified",
                             "isSigSlot": true,
-                            "name": "setAmplitude",
+                            "name": "enableYAxis",
                             "size": 1
                         },
                         {
-                            "alias": "setFrequency",
+                            "alias": "setAutoScale",
                             "dtype": "unspecified",
                             "isSigSlot": true,
-                            "name": "setFrequency",
+                            "name": "setAutoScale",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setChannelLabel",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setChannelLabel",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setChannelStyle",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setChannelStyle",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setNumPoints",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setNumPoints",
                             "size": 1
                         },
                         {
@@ -1910,59 +1681,225 @@
                             "size": 1
                         },
                         {
-                            "alias": "setResolution",
+                            "alias": "setTitle",
                             "dtype": "unspecified",
                             "isSigSlot": true,
-                            "name": "setResolution",
+                            "name": "setTitle",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setYAxisTitle",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setYAxisTitle",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setYRange",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setYRange",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAlignment",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAlignment",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEventRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setDisplayRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setHoldOff",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerHoldOff",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setLabelId",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerLabelId",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setLevel",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerLevel",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setMode",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerMode",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setPosition",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerPosition",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSlope",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerSlope",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSource",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerSource",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setNumWindows",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerWindows",
+                            "size": 1
+                        },
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
                             "size": 1
                         }
                     ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 4
-                        }
-                    ],
-                    "path": "/comms/waveform_source",
-                    "positionX": 150,
-                    "positionY": 679,
+                    "path": "/plotters/wave_monitor",
+                    "positionX": 835,
+                    "positionY": 767,
                     "properties": [
                         {
-                            "key": "dtype",
-                            "value": "\"float32\""
+                            "key": "title",
+                            "value": "\"CarrierMultComp\""
                         },
                         {
-                            "key": "wave",
-                            "value": "\"CONST\""
+                            "key": "numInputs",
+                            "value": "1"
                         },
                         {
-                            "key": "rate",
+                            "key": "displayRate",
+                            "value": "10.0"
+                        },
+                        {
+                            "key": "sampleRate",
                             "value": "rate"
                         },
                         {
-                            "key": "freq",
-                            "value": "fc"
+                            "key": "numPoints",
+                            "value": "8192"
                         },
                         {
-                            "key": "ampl",
+                            "key": "align",
+                            "value": "false"
+                        },
+                        {
+                            "key": "autoScale",
+                            "value": "true"
+                        },
+                        {
+                            "key": "yRange",
+                            "value": "[-1.0, 1.0]"
+                        },
+                        {
+                            "key": "enableXAxis",
+                            "value": "true"
+                        },
+                        {
+                            "key": "enableYAxis",
+                            "value": "true"
+                        },
+                        {
+                            "key": "yAxisTitle",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "triggerSource",
                             "value": "0"
                         },
                         {
-                            "key": "offset",
+                            "key": "triggerWindows",
+                            "value": "1"
+                        },
+                        {
+                            "key": "triggerHoldOff",
+                            "value": "0"
+                        },
+                        {
+                            "key": "triggerSlope",
+                            "value": "\"POS\""
+                        },
+                        {
+                            "key": "triggerMode",
+                            "value": "\"AUTOMATIC\""
+                        },
+                        {
+                            "key": "triggerLevel",
                             "value": "0.0"
                         },
                         {
-                            "key": "res",
-                            "value": "0.0"
+                            "key": "triggerPosition",
+                            "value": "0"
+                        },
+                        {
+                            "key": "triggerLabelId",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "label0",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "style0",
+                            "value": "\"LINE\""
+                        },
+                        {
+                            "key": "label1",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "style1",
+                            "value": "\"LINE\""
+                        },
+                        {
+                            "key": "label2",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "style2",
+                            "value": "\"LINE\""
+                        },
+                        {
+                            "key": "label3",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "style3",
+                            "value": "\"LINE\""
+                        },
+                        {
+                            "key": "rateLabelId",
+                            "value": "\"rxRate\""
                         }
                     ],
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1695
+                    "zValue": 2819
                 },
                 {
                     "affinityZone": "",
@@ -2022,7 +1959,7 @@
                         }
                     ],
                     "path": "/comms/waveform_source",
-                    "positionX": 105,
+                    "positionX": 104,
                     "positionY": 411,
                     "properties": [
                         {
@@ -2043,7 +1980,102 @@
                         },
                         {
                             "key": "ampl",
-                            "value": "1.0"
+                            "value": "0.5"
+                        },
+                        {
+                            "key": "offset",
+                            "value": "0.0"
+                        },
+                        {
+                            "key": "res",
+                            "value": "0.0"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": true,
+                    "what": "Block",
+                    "zValue": 2906
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "WaveformSource3",
+                    "inputDesc": [
+                        {
+                            "alias": "setWaveform",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setWaveform",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setOffset",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setOffset",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAmplitude",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAmplitude",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFrequency",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFrequency",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSampleRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setSampleRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setResolution",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setResolution",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "complex_float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 8
+                        }
+                    ],
+                    "path": "/comms/waveform_source",
+                    "positionX": 452,
+                    "positionY": 357,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"complex_float32\""
+                        },
+                        {
+                            "key": "wave",
+                            "value": "\"CONST\""
+                        },
+                        {
+                            "key": "rate",
+                            "value": "rate"
+                        },
+                        {
+                            "key": "freq",
+                            "value": "fc"
+                        },
+                        {
+                            "key": "ampl",
+                            "value": "1"
                         },
                         {
                             "key": "offset",
@@ -2057,12 +2089,107 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1684
+                    "zValue": 2894
                 },
                 {
                     "affinityZone": "",
                     "enabled": true,
-                    "id": "WaveformSource3",
+                    "id": "WaveformSource4",
+                    "inputDesc": [
+                        {
+                            "alias": "setWaveform",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setWaveform",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setOffset",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setOffset",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAmplitude",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAmplitude",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFrequency",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFrequency",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSampleRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setSampleRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setResolution",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setResolution",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "complex_float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 8
+                        }
+                    ],
+                    "path": "/comms/waveform_source",
+                    "positionX": 240,
+                    "positionY": 600,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"complex_float32\""
+                        },
+                        {
+                            "key": "wave",
+                            "value": "\"CONST\""
+                        },
+                        {
+                            "key": "rate",
+                            "value": "rate"
+                        },
+                        {
+                            "key": "freq",
+                            "value": "fc"
+                        },
+                        {
+                            "key": "ampl",
+                            "value": "1"
+                        },
+                        {
+                            "key": "offset",
+                            "value": "0.0"
+                        },
+                        {
+                            "key": "res",
+                            "value": "0.0"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 2885
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "WaveformSource5",
                     "inputDesc": [
                         {
                             "alias": "setWaveform",
@@ -2117,8 +2244,8 @@
                         }
                     ],
                     "path": "/comms/waveform_source",
-                    "positionX": 107,
-                    "positionY": 533,
+                    "positionX": 146,
+                    "positionY": 288,
                     "properties": [
                         {
                             "key": "dtype",
@@ -2138,7 +2265,7 @@
                         },
                         {
                             "key": "ampl",
-                            "value": "1"
+                            "value": "0"
                         },
                         {
                             "key": "offset",
@@ -2152,12 +2279,107 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1682
+                    "zValue": 2855
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "WaveformSource6",
+                    "inputDesc": [
+                        {
+                            "alias": "setWaveform",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setWaveform",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setOffset",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setOffset",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAmplitude",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAmplitude",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFrequency",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFrequency",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSampleRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setSampleRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setResolution",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setResolution",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        }
+                    ],
+                    "path": "/comms/waveform_source",
+                    "positionX": 121,
+                    "positionY": 529,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"float32\""
+                        },
+                        {
+                            "key": "wave",
+                            "value": "\"CONST\""
+                        },
+                        {
+                            "key": "rate",
+                            "value": "rate"
+                        },
+                        {
+                            "key": "freq",
+                            "value": "fc"
+                        },
+                        {
+                            "key": "ampl",
+                            "value": "0"
+                        },
+                        {
+                            "key": "offset",
+                            "value": "0.0"
+                        },
+                        {
+                            "key": "res",
+                            "value": "0.0"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 2901
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_Arithmetic10_Arithmetic20",
-                    "inputId": "Arithmetic2",
+                    "id": "Connection_Arithmetic10_Arithmetic30",
+                    "inputId": "Arithmetic3",
                     "inputKey": "0",
                     "outputId": "Arithmetic1",
                     "outputKey": "0",
@@ -2170,10 +2392,24 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_Arithmetic20_Scale20",
-                    "inputId": "Scale2",
+                    "id": "Connection_Arithmetic20_Arithmetic10",
+                    "inputId": "Arithmetic1",
                     "inputKey": "0",
                     "outputId": "Arithmetic2",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_Arithmetic30_Scale30",
+                    "inputId": "Scale3",
+                    "inputKey": "0",
+                    "outputId": "Arithmetic3",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
@@ -2208,14 +2444,14 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Connection",
-                    "zValue": 0
+                    "zValue": 2840
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_CombineComplex00_SoapySDRSink00",
-                    "inputId": "SoapySDRSink0",
+                    "id": "Connection_CombineComplex10_Arithmetic20",
+                    "inputId": "Arithmetic2",
                     "inputKey": "0",
-                    "outputId": "CombineComplex0",
+                    "outputId": "CombineComplex1",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
@@ -2226,17 +2462,17 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_CombineComplex00_WaveMonitor40",
-                    "inputId": "WaveMonitor4",
-                    "inputKey": "0",
-                    "outputId": "CombineComplex0",
+                    "id": "Connection_CombineComplex20_Arithmetic11",
+                    "inputId": "Arithmetic1",
+                    "inputKey": "1",
+                    "outputId": "CombineComplex2",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
                     "selected": false,
                     "what": "Connection",
-                    "zValue": 1687
+                    "zValue": 0
                 },
                 {
                     "enabled": true,
@@ -2254,10 +2490,10 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_Pacer00_WaveMonitor41",
-                    "inputId": "WaveMonitor4",
-                    "inputKey": "1",
-                    "outputId": "Pacer0",
+                    "id": "Connection_Scale30_SoapySDRSink00",
+                    "inputId": "SoapySDRSink0",
+                    "inputKey": "0",
+                    "outputId": "Scale3",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
@@ -2268,17 +2504,17 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_Scale20_CombineComplex0",
-                    "inputId": "CombineComplex0",
-                    "inputKey": "re",
-                    "outputId": "Scale2",
+                    "id": "Connection_Scale30_WaveMonitor70",
+                    "inputId": "WaveMonitor7",
+                    "inputKey": "0",
+                    "outputId": "Scale3",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
                     "selected": false,
                     "what": "Connection",
-                    "zValue": 1393
+                    "zValue": 0
                 },
                 {
                     "enabled": true,
@@ -2296,9 +2532,9 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_UCharToFloat00_Arithmetic10",
-                    "inputId": "Arithmetic1",
-                    "inputKey": "0",
+                    "id": "Connection_UCharToFloat00_CombineComplex1",
+                    "inputId": "CombineComplex1",
+                    "inputKey": "re",
                     "outputId": "UCharToFloat0",
                     "outputKey": "0",
                     "positionX": 0,
@@ -2310,23 +2546,9 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_WaveformSource10_CombineComplex0",
-                    "inputId": "CombineComplex0",
-                    "inputKey": "im",
-                    "outputId": "WaveformSource1",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_WaveformSource20_Arithmetic11",
-                    "inputId": "Arithmetic1",
-                    "inputKey": "1",
+                    "id": "Connection_WaveformSource20_CombineComplex2",
+                    "inputId": "CombineComplex2",
+                    "inputKey": "re",
                     "outputId": "WaveformSource2",
                     "outputKey": "0",
                     "positionX": 0,
@@ -2348,7 +2570,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Connection",
-                    "zValue": 0
+                    "zValue": 1741
                 },
                 {
                     "enabled": true,
@@ -2356,6 +2578,48 @@
                     "inputId": "Arithmetic2",
                     "inputKey": "1",
                     "outputId": "WaveformSource3",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_WaveformSource40_Arithmetic31",
+                    "inputId": "Arithmetic3",
+                    "inputKey": "1",
+                    "outputId": "WaveformSource4",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_WaveformSource50_CombineComplex1",
+                    "inputId": "CombineComplex1",
+                    "inputKey": "im",
+                    "outputId": "WaveformSource5",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_WaveformSource60_CombineComplex2",
+                    "inputId": "CombineComplex2",
+                    "inputKey": "im",
+                    "outputId": "WaveformSource6",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
@@ -2375,14 +2639,14 @@
                     "enabled": true,
                     "height": 48,
                     "id": "WidgetNumericEntry3",
-                    "positionX": 103,
-                    "positionY": 505,
+                    "positionX": 150,
+                    "positionY": 419,
                     "rotation": 0,
                     "selected": false,
                     "state": "AAAABgBAaQAAAAAAAA==",
                     "what": "Widget",
                     "width": 184,
-                    "zValue": 443
+                    "zValue": 501
                 },
                 {
                     "blockId": "NumericEntry4",
@@ -2396,63 +2660,77 @@
                     "state": "AAAABgBAWQAAAAAAAA==",
                     "what": "Widget",
                     "width": 183,
-                    "zValue": 444
+                    "zValue": 495
                 },
                 {
                     "blockId": "WaveMonitor0",
                     "enabled": true,
                     "height": 220,
                     "id": "WidgetWaveMonitor0",
-                    "positionX": 364,
+                    "positionX": 365,
                     "positionY": 2,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP+o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP+o24uscQy1ACAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 310,
-                    "zValue": 451
+                    "zValue": 539
                 },
                 {
                     "blockId": "WaveMonitor1",
                     "enabled": true,
                     "height": 225,
                     "id": "WidgetWaveMonitor1",
-                    "positionX": 14,
+                    "positionX": 15,
                     "positionY": 4,
+                    "rotation": 0,
+                    "selected": false,
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP+o24uscQy1ACAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "what": "Widget",
+                    "width": 359,
+                    "zValue": 518
+                },
+                {
+                    "blockId": "WaveMonitor2",
+                    "enabled": true,
+                    "height": 239,
+                    "id": "WidgetWaveMonitor2",
+                    "positionX": 388,
+                    "positionY": 227,
                     "rotation": 0,
                     "selected": false,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP+o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
-                    "width": 359,
-                    "zValue": 434
-                },
-                {
-                    "blockId": "WaveMonitor4",
-                    "enabled": true,
-                    "height": 176,
-                    "id": "WidgetWaveMonitor4",
-                    "positionX": 43,
-                    "positionY": 386,
-                    "rotation": 0,
-                    "selected": true,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAEDwAAAAoAcwB0AGEAYwBrAAAACQAAAAADAAAAFAAAAAAAAAAAAL/wAAAAAAAAP+o24uscQy1AAAAAAAAAAAAAABQAP9ZHpYwazE6/4rOIT8rOID/RcdWAN9eGP/sDUx3sDUwAAAAUAD/g6arJIjFpP7LIQfmyMbA/qTyE8uP+0D/nJ2vQgS/4AAAACgBpAG4AZABlAHgAAAADAAAAAAA=",
-                    "what": "Widget",
-                    "width": 657,
-                    "zValue": 454
+                    "width": 403,
+                    "zValue": 540
                 },
                 {
                     "blockId": "WaveMonitor5",
                     "enabled": true,
                     "height": 158,
                     "id": "WidgetWaveMonitor5",
-                    "positionX": 144,
-                    "positionY": 214,
+                    "positionX": 86,
+                    "positionY": 295,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP+o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQBo24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
-                    "zValue": 429
+                    "zValue": 572
+                },
+                {
+                    "blockId": "WaveMonitor7",
+                    "enabled": true,
+                    "height": 158,
+                    "id": "WidgetWaveMonitor7",
+                    "positionX": 138,
+                    "positionY": 166,
+                    "rotation": 0,
+                    "selected": false,
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAGAQAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAQBo24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "what": "Widget",
+                    "width": 308,
+                    "zValue": 568
                 }
             ],
             "pageName": "Display",
@@ -2460,6 +2738,51 @@
         },
         {
             "graphObjects": [
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "BinaryFileSink0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEnabled",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setEnabled",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_sink",
+                    "positionX": 1089.9375,
+                    "positionY": 184,
+                    "properties": [
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestFullOOKLoop.dat\""
+                        },
+                        {
+                            "key": "enabled",
+                            "value": "true"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 4560
+                },
                 {
                     "affinityZone": "",
                     "enabled": true,
@@ -2497,8 +2820,8 @@
                         }
                     ],
                     "path": "/comms/dc_removal",
-                    "positionX": 422,
-                    "positionY": 329,
+                    "positionX": 165,
+                    "positionY": 174,
                     "properties": [
                         {
                             "key": "dtype",
@@ -2514,9 +2837,67 @@
                         }
                     ],
                     "rotation": 0,
+                    "selected": true,
+                    "what": "Block",
+                    "zValue": 4611
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "DCRemoval1",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        },
+                        {
+                            "alias": "setAverageSize",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAverageSize",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setCascadeSize",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setCascadeSize",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        }
+                    ],
+                    "path": "/comms/dc_removal",
+                    "positionX": 805,
+                    "positionY": 251,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"float32\""
+                        },
+                        {
+                            "key": "averageSize",
+                            "value": "512"
+                        },
+                        {
+                            "key": "cascadeSize",
+                            "value": "2"
+                        }
+                    ],
+                    "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 4505
+                    "zValue": 4606
                 },
                 {
                     "affinityZone": "",
@@ -2548,8 +2929,8 @@
                         }
                     ],
                     "path": "/gr/filter/fir_filter",
-                    "positionX": 929.515625,
-                    "positionY": 247,
+                    "positionX": 653.515625,
+                    "positionY": 327,
                     "properties": [
                         {
                             "key": "type",
@@ -2567,7 +2948,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 4483
+                    "zValue": 4600
                 },
                 {
                     "affinityZone": "",
@@ -2613,8 +2994,8 @@
                         }
                     ],
                     "path": "/comms/envelope_detector",
-                    "positionX": 533,
-                    "positionY": 210,
+                    "positionX": 314,
+                    "positionY": 220,
                     "properties": [
                         {
                             "key": "dtype",
@@ -2636,7 +3017,54 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 4506
+                    "zValue": 4573
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "FloatToChar0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        },
+                        {
+                            "alias": "set_scale",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "set_scale",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/gr/blocks/float_to_char",
+                    "positionX": 764,
+                    "positionY": 45,
+                    "properties": [
+                        {
+                            "key": "vlen",
+                            "value": "1"
+                        },
+                        {
+                            "key": "scale",
+                            "value": "1"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 4556
                 },
                 {
                     "affinityZone": "",
@@ -2703,8 +3131,8 @@
                         }
                     ],
                     "path": "/widgets/numeric_entry",
-                    "positionX": 533,
-                    "positionY": 463,
+                    "positionX": 287,
+                    "positionY": 465,
                     "properties": [
                         {
                             "key": "title",
@@ -2805,8 +3233,8 @@
                         }
                     ],
                     "path": "/widgets/numeric_entry",
-                    "positionX": 215,
-                    "positionY": 84,
+                    "positionX": 0,
+                    "positionY": 86,
                     "properties": [
                         {
                             "key": "title",
@@ -2845,6 +3273,53 @@
                 {
                     "affinityZone": "",
                     "enabled": true,
+                    "id": "SamplesToSymbols0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSamps",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setSamps",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/Custom/SamplesToSymbols",
+                    "positionX": 937,
+                    "positionY": 62,
+                    "properties": [
+                        {
+                            "key": "samps",
+                            "value": "40"
+                        },
+                        {
+                            "key": "dtype",
+                            "value": "\"int8\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 4609
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
                     "id": "Scale0",
                     "inputDesc": [
                         {
@@ -2879,8 +3354,8 @@
                         }
                     ],
                     "path": "/comms/scale",
-                    "positionX": 647,
-                    "positionY": 150,
+                    "positionX": 524,
+                    "positionY": 256,
                     "properties": [
                         {
                             "key": "dtype",
@@ -2898,7 +3373,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 4507
+                    "zValue": 4596
                 },
                 {
                     "affinityZone": "",
@@ -2937,8 +3412,8 @@
                         }
                     ],
                     "path": "/comms/scale",
-                    "positionX": 477,
-                    "positionY": 42,
+                    "positionX": 231,
+                    "positionY": 44,
                     "properties": [
                         {
                             "key": "dtype",
@@ -3570,8 +4045,8 @@
                         }
                     ],
                     "path": "/soapy/source",
-                    "positionX": 137,
-                    "positionY": 304,
+                    "positionX": 0,
+                    "positionY": 306,
                     "properties": [
                         {
                             "key": "deviceArgs",
@@ -3670,6 +4145,125 @@
                     "selected": false,
                     "what": "Block",
                     "zValue": 4504
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "SymbolstoBytes0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setModulus",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setModulus",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setBitOrder",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setBitOrder",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/comms/symbols_to_bytes",
+                    "positionX": 1071.65625,
+                    "positionY": 94,
+                    "properties": [
+                        {
+                            "key": "N",
+                            "value": "1"
+                        },
+                        {
+                            "key": "bitOrder",
+                            "value": "\"MSBit\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 4579
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "Threshold1",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        },
+                        {
+                            "alias": "set_lo",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "set_lo",
+                            "size": 1
+                        },
+                        {
+                            "alias": "set_hi",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "set_hi",
+                            "size": 1
+                        },
+                        {
+                            "alias": "set_last_state",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "set_last_state",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        }
+                    ],
+                    "path": "/gr/blocks/threshold_ff",
+                    "positionX": 584,
+                    "positionY": 92,
+                    "properties": [
+                        {
+                            "key": "low",
+                            "value": "-0.05"
+                        },
+                        {
+                            "key": "high",
+                            "value": "0.05"
+                        },
+                        {
+                            "key": "init",
+                            "value": "0"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 4610
                 },
                 {
                     "activeEditTab": "Axis",
@@ -3833,8 +4427,8 @@
                         }
                     ],
                     "path": "/plotters/wave_monitor",
-                    "positionX": 1136.015625,
-                    "positionY": 166,
+                    "positionX": 864.015625,
+                    "positionY": 394,
                     "properties": [
                         {
                             "key": "title",
@@ -3850,7 +4444,7 @@
                         },
                         {
                             "key": "sampleRate",
-                            "value": "1e6"
+                            "value": "samp"
                         },
                         {
                             "key": "numPoints",
@@ -3866,7 +4460,7 @@
                         },
                         {
                             "key": "yRange",
-                            "value": "[-1.0, 1.0]"
+                            "value": "[-1, 2.0]"
                         },
                         {
                             "key": "enableXAxis",
@@ -3952,7 +4546,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 4485
+                    "zValue": 4602
                 },
                 {
                     "activeEditTab": "Axis",
@@ -4116,8 +4710,8 @@
                         }
                     ],
                     "path": "/plotters/wave_monitor",
-                    "positionX": 633,
-                    "positionY": 50,
+                    "positionX": 387,
+                    "positionY": 52,
                     "properties": [
                         {
                             "key": "title",
@@ -4133,7 +4727,7 @@
                         },
                         {
                             "key": "sampleRate",
-                            "value": "1e6"
+                            "value": "samp"
                         },
                         {
                             "key": "numPoints",
@@ -4149,7 +4743,7 @@
                         },
                         {
                             "key": "yRange",
-                            "value": "[-1.0, 1.0]"
+                            "value": "[-1, 2.0]"
                         },
                         {
                             "key": "enableXAxis",
@@ -4235,7 +4829,297 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 4499
+                    "zValue": 4574
+                },
+                {
+                    "activeEditTab": "Axis",
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "WaveMonitor2",
+                    "inputDesc": [
+                        {
+                            "alias": "clearChannels",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "clearChannels",
+                            "size": 1
+                        },
+                        {
+                            "alias": "enableXAxis",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "enableXAxis",
+                            "size": 1
+                        },
+                        {
+                            "alias": "enableYAxis",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "enableYAxis",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAutoScale",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAutoScale",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setChannelLabel",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setChannelLabel",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setChannelStyle",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setChannelStyle",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setNumPoints",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setNumPoints",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSampleRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setSampleRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setTitle",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTitle",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setYAxisTitle",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setYAxisTitle",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setYRange",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setYRange",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAlignment",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAlignment",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEventRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setDisplayRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setHoldOff",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerHoldOff",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setLabelId",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerLabelId",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setLevel",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerLevel",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setMode",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerMode",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setPosition",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerPosition",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSlope",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerSlope",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSource",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerSource",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setNumWindows",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setTriggerWindows",
+                            "size": 1
+                        },
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "1",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "1",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/plotters/wave_monitor",
+                    "positionX": 1130.984375,
+                    "positionY": 236,
+                    "properties": [
+                        {
+                            "key": "title",
+                            "value": "\"Thresh\""
+                        },
+                        {
+                            "key": "numInputs",
+                            "value": "2"
+                        },
+                        {
+                            "key": "displayRate",
+                            "value": "10.0"
+                        },
+                        {
+                            "key": "sampleRate",
+                            "value": "samp"
+                        },
+                        {
+                            "key": "numPoints",
+                            "value": "1024"
+                        },
+                        {
+                            "key": "align",
+                            "value": "false"
+                        },
+                        {
+                            "key": "autoScale",
+                            "value": "false"
+                        },
+                        {
+                            "key": "yRange",
+                            "value": "[-1, 1.0]"
+                        },
+                        {
+                            "key": "enableXAxis",
+                            "value": "true"
+                        },
+                        {
+                            "key": "enableYAxis",
+                            "value": "true"
+                        },
+                        {
+                            "key": "yAxisTitle",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "triggerSource",
+                            "value": "0"
+                        },
+                        {
+                            "key": "triggerWindows",
+                            "value": "1"
+                        },
+                        {
+                            "key": "triggerHoldOff",
+                            "value": "0"
+                        },
+                        {
+                            "key": "triggerSlope",
+                            "value": "\"POS\""
+                        },
+                        {
+                            "key": "triggerMode",
+                            "value": "\"AUTOMATIC\""
+                        },
+                        {
+                            "key": "triggerLevel",
+                            "value": "0.0"
+                        },
+                        {
+                            "key": "triggerPosition",
+                            "value": "0"
+                        },
+                        {
+                            "key": "triggerLabelId",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "label0",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "style0",
+                            "value": "\"LINE\""
+                        },
+                        {
+                            "key": "label1",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "style1",
+                            "value": "\"LINE\""
+                        },
+                        {
+                            "key": "label2",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "style2",
+                            "value": "\"LINE\""
+                        },
+                        {
+                            "key": "label3",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "style3",
+                            "value": "\"LINE\""
+                        },
+                        {
+                            "key": "rateLabelId",
+                            "value": "\"rxRate\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 4532
                 },
                 {
                     "enabled": true,
@@ -4253,8 +5137,64 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_DecimatingFIRFilter00_WaveMonitor00",
+                    "id": "Connection_DCRemoval00_Scale10",
+                    "inputId": "Scale1",
+                    "inputKey": "0",
+                    "outputId": "DCRemoval0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_DCRemoval10_Threshold10",
+                    "inputId": "Threshold1",
+                    "inputKey": "0",
+                    "outputId": "DCRemoval1",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_DCRemoval10_WaveMonitor00",
                     "inputId": "WaveMonitor0",
+                    "inputKey": "0",
+                    "outputId": "DCRemoval1",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_DCRemoval10_WaveMonitor21",
+                    "inputId": "WaveMonitor2",
+                    "inputKey": "1",
+                    "outputId": "DCRemoval1",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_DecimatingFIRFilter00_DCRemoval10",
+                    "inputId": "DCRemoval1",
                     "inputKey": "0",
                     "outputId": "DecimatingFIRFilter0",
                     "outputKey": "0",
@@ -4271,6 +5211,20 @@
                     "inputId": "Scale0",
                     "inputKey": "0",
                     "outputId": "EnvelopeDetector0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_FloatToChar00_SamplesToSymbols00",
+                    "inputId": "SamplesToSymbols0",
+                    "inputKey": "0",
+                    "outputId": "FloatToChar0",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
@@ -4321,6 +5275,20 @@
                 },
                 {
                     "enabled": true,
+                    "id": "Connection_SamplesToSymbols00_SymbolstoBytes00",
+                    "inputId": "SymbolstoBytes0",
+                    "inputKey": "0",
+                    "outputId": "SamplesToSymbols0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
                     "id": "Connection_Scale00_DecimatingFIRFilter00",
                     "inputId": "DecimatingFIRFilter0",
                     "inputKey": "0",
@@ -4343,7 +5311,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Connection",
                     "zValue": 4509
                 },
@@ -4363,10 +5331,38 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_SoapySDRSource10_Scale10",
-                    "inputId": "Scale1",
+                    "id": "Connection_SymbolstoBytes00_BinaryFileSink00",
+                    "inputId": "BinaryFileSink0",
                     "inputKey": "0",
-                    "outputId": "SoapySDRSource1",
+                    "outputId": "SymbolstoBytes0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_Threshold10_FloatToChar00",
+                    "inputId": "FloatToChar0",
+                    "inputKey": "0",
+                    "outputId": "Threshold1",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_Threshold10_WaveMonitor20",
+                    "inputId": "WaveMonitor2",
+                    "inputKey": "0",
+                    "outputId": "Threshold1",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,

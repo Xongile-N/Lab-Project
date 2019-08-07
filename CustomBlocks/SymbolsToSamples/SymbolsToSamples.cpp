@@ -100,7 +100,6 @@ public:
 			//elemSize=2;
 			size_t outCount=0;
 			outCount=numElems*samps*elemSize;
-			std::cout<<"numElems"<<numElems<<" "<<outCount<<std::endl;
 			outElems=Pothos::BufferChunk(Pothos::DType("uint8"),outCount	);
 			//outElems=Pothos::BufferChunk(inputPort->dtype(),samps	);
 			for(size_t i=0;i<numElems;i++){
