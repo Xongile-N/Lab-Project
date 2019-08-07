@@ -1,0 +1,256 @@
+{
+    "config": {
+        "graphHeight": 1024,
+        "graphWidth": 1280
+    },
+    "pages": [
+        {
+            "graphObjects": [
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "BinaryFileSink1",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEnabled",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setEnabled",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_sink",
+                    "positionX": 467.4375,
+                    "positionY": 171,
+                    "properties": [
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/BaudTestFinal.dat\""
+                        },
+                        {
+                            "key": "enabled",
+                            "value": "true"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 514
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "BinaryFileSource0",
+                    "inputDesc": [
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAutoRewind",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAutoRewind",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_source",
+                    "positionX": 184,
+                    "positionY": 293,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"int8\""
+                        },
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/BaudTestSplit.dat\""
+                        },
+                        {
+                            "key": "rewind",
+                            "value": "false"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 476
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "Pacer0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setRate",
+                            "size": 1
+                        },
+                        {
+                            "alias": "actualRateTriggered",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "actualRateTriggered",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "probeActualRate",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "probeActualRate",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/pacer",
+                    "positionX": 417,
+                    "positionY": 293,
+                    "properties": [
+                        {
+                            "key": "rate",
+                            "value": "1.25e7"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 520
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "SamplesToSymbols0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSamps",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setSamps",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/Custom/SamplesToSymbols",
+                    "positionX": 611,
+                    "positionY": 280,
+                    "properties": [
+                        {
+                            "key": "samps",
+                            "value": "8"
+                        },
+                        {
+                            "key": "dtype",
+                            "value": "\"int8\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": true,
+                    "what": "Block",
+                    "zValue": 522
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_BinaryFileSource00_Pacer00",
+                    "inputId": "Pacer0",
+                    "inputKey": "0",
+                    "outputId": "BinaryFileSource0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_Pacer00_SamplesToSymbols00",
+                    "inputId": "SamplesToSymbols0",
+                    "inputKey": "0",
+                    "outputId": "Pacer0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_SamplesToSymbols00_BinaryFileSink10",
+                    "inputId": "BinaryFileSink1",
+                    "inputKey": "0",
+                    "outputId": "SamplesToSymbols0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                }
+            ],
+            "pageName": "Main",
+            "selected": true
+        }
+    ]
+}

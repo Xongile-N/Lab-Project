@@ -1,0 +1,207 @@
+{
+    "config": {
+        "graphHeight": 1024,
+        "graphWidth": 1280
+    },
+    "pages": [
+        {
+            "graphObjects": [
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "BinaryFileSink0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEnabled",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setEnabled",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_sink",
+                    "positionX": 753,
+                    "positionY": 233,
+                    "properties": [
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/BaudTest.dat\""
+                        },
+                        {
+                            "key": "enabled",
+                            "value": "true"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 171
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "SymbolsToSamples0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        },
+                        {
+                            "alias": "setSamps",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setSamps",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        }
+                    ],
+                    "path": "/Custom/SymbolsToSamples",
+                    "positionX": 385,
+                    "positionY": 280,
+                    "properties": [
+                        {
+                            "key": "samps",
+                            "value": "4"
+                        },
+                        {
+                            "key": "dtype",
+                            "value": "\"int32\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 176
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "VectorSource0",
+                    "inputDesc": [
+                        {
+                            "alias": "setElements",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setElements",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setMode",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setMode",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setStartId",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setStartId",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEndId",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setEndId",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 4
+                        }
+                    ],
+                    "path": "/blocks/vector_source",
+                    "positionX": 173,
+                    "positionY": 280,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"int32\""
+                        },
+                        {
+                            "key": "mode",
+                            "value": "\"ONCE\""
+                        },
+                        {
+                            "key": "elements",
+                            "value": "[165281]"
+                        },
+                        {
+                            "key": "startId",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "endId",
+                            "value": "\"\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 170
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_SymbolsToSamples00_BinaryFileSink00",
+                    "inputId": "BinaryFileSink0",
+                    "inputKey": "0",
+                    "outputId": "SymbolsToSamples0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_VectorSource00_SymbolsToSamples00",
+                    "inputId": "SymbolsToSamples0",
+                    "inputKey": "0",
+                    "outputId": "VectorSource0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                }
+            ],
+            "pageName": "Main",
+            "selected": true
+        }
+    ]
+}
