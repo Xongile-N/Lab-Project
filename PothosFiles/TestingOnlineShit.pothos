@@ -415,7 +415,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 3673
+                    "zValue": 3727
                 },
                 {
                     "affinityZone": "",
@@ -1183,114 +1183,6 @@
                     "selected": false,
                     "what": "Block",
                     "zValue": 3707
-                },
-                {
-                    "affinityZone": "",
-                    "enabled": true,
-                    "id": "FIRFilter2",
-                    "inputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 8
-                        },
-                        {
-                            "alias": "setTaps",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setTaps",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setDecimation",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setDecimation",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setInterpolation",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setInterpolation",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setWaitTaps",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setWaitTaps",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setFrameStartId",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setFrameStartId",
-                            "size": 1
-                        },
-                        {
-                            "alias": "setFrameEndId",
-                            "dtype": "unspecified",
-                            "isSigSlot": true,
-                            "name": "setFrameEndId",
-                            "size": 1
-                        }
-                    ],
-                    "outputDesc": [
-                        {
-                            "alias": "0",
-                            "dtype": "complex_float32",
-                            "isSigSlot": false,
-                            "name": "0",
-                            "size": 8
-                        }
-                    ],
-                    "path": "/comms/fir_filter",
-                    "positionX": 693,
-                    "positionY": 132,
-                    "properties": [
-                        {
-                            "key": "dtype",
-                            "value": "\"complex_float32\""
-                        },
-                        {
-                            "key": "tapsType",
-                            "value": "\"REAL\""
-                        },
-                        {
-                            "editMode": "raw",
-                            "key": "decim",
-                            "value": "1"
-                        },
-                        {
-                            "editMode": "raw",
-                            "key": "interp",
-                            "value": "sps"
-                        },
-                        {
-                            "key": "taps",
-                            "value": "[1.0]"
-                        },
-                        {
-                            "key": "waitTaps",
-                            "value": "false"
-                        },
-                        {
-                            "key": "frameStartId",
-                            "value": "\"\""
-                        },
-                        {
-                            "key": "frameEndId",
-                            "value": "\"\""
-                        }
-                    ],
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Block",
-                    "zValue": 3719
                 },
                 {
                     "affinityZone": "",
@@ -3019,7 +2911,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 3720
+                    "zValue": 3724
                 },
                 {
                     "affinityZone": "",
@@ -3067,6 +2959,54 @@
                     "selected": false,
                     "what": "Block",
                     "zValue": 3694
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "SymbolsToSamples0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setSamps",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setSamps",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "int8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/Custom/SymbolsToSamples",
+                    "positionX": 531,
+                    "positionY": 176,
+                    "properties": [
+                        {
+                            "editMode": "raw",
+                            "key": "samps",
+                            "value": "sps"
+                        },
+                        {
+                            "key": "dtype",
+                            "value": "\"int8\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 3729
                 },
                 {
                     "affinityZone": "",
@@ -4251,8 +4191,8 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_BytestoSymbols00_SymbolMapper00",
-                    "inputId": "SymbolMapper0",
+                    "id": "Connection_BytestoSymbols00_SymbolsToSamples00",
+                    "inputId": "SymbolsToSamples0",
                     "inputKey": "0",
                     "outputId": "BytestoSymbols0",
                     "outputKey": "0",
@@ -4339,20 +4279,6 @@
                     "inputId": "SymbolSlicer0",
                     "inputKey": "0",
                     "outputId": "FIRFilter1",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
-                    "id": "Connection_FIRFilter20_Arithmetic00",
-                    "inputId": "Arithmetic0",
-                    "inputKey": "0",
-                    "outputId": "FIRFilter2",
                     "outputKey": "0",
                     "positionX": 0,
                     "positionY": 0,
@@ -4461,8 +4387,8 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_SymbolMapper00_FIRFilter20",
-                    "inputId": "FIRFilter2",
+                    "id": "Connection_SymbolMapper00_Arithmetic00",
+                    "inputId": "Arithmetic0",
                     "inputKey": "0",
                     "outputId": "SymbolMapper0",
                     "outputKey": "0",
@@ -4486,6 +4412,20 @@
                     "selected": false,
                     "what": "Connection",
                     "zValue": 3690
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_SymbolsToSamples00_SymbolMapper00",
+                    "inputId": "SymbolMapper0",
+                    "inputKey": "0",
+                    "outputId": "SymbolsToSamples0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
                 },
                 {
                     "enabled": true,
@@ -4545,7 +4485,7 @@
                 }
             ],
             "pageName": "Main",
-            "selected": true
+            "selected": false
         },
         {
             "graphObjects": [
@@ -4648,7 +4588,7 @@
                 }
             ],
             "pageName": "Display",
-            "selected": false
+            "selected": true
         }
     ]
 }

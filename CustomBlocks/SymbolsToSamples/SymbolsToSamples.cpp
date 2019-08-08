@@ -93,14 +93,17 @@ public:
 		auto outputBuffer=outputPort->buffer();
 		const uint8_t *inputBuffer=inputPort->buffer();
 
-		numElems=inputPort->elements();
-		if(numElems==0)return;
+
+		//if(numElems==0)return;
 		if(outElems.length==0){
 			elemSize=outputPort->dtype().size();
-			//elemSize=2;
+			numElems=inputPort->elements();
+			if(numElems==0)return;
 			size_t outCount=0;
 			outCount=numElems*samps*elemSize;
 			outElems=Pothos::BufferChunk(Pothos::DType("uint8"),outCount	);
+			
+			//std::cout<<numElems<<std::endl;
 			//outElems=Pothos::BufferChunk(inputPort->dtype(),samps	);
 			for(size_t i=0;i<numElems;i++){
 				//auto val=inputBuffer.as<const void *>()+(i*elemSize);
@@ -112,17 +115,19 @@ public:
 			}
 
 		}
+/*
+		const auto outElemCount=std::min(outElems.elements(),outputPort->elements());
+		std::memcpy(outputBuffer.as<void *>(),outElems.as<const void *>(),outElemCount);		
+		outputPort->produce(outElemCount/elemSize);
 
-		//const auto outElemCount=std::min(outElems.elements(),outputPort->elements());
-		//std::memcpy(outputBuffer.as<void *>(),outElems.as<const void *>(),outElemCount);		
-		//outputPort->produce(outElemCount/elemSize);
-		//std::cout<<"outElem"<<outElemCount<<std::endl;
-		outputPort->postBuffer(outElems);
-		std::cout<<outElems.length<<std::endl;
-		//outElems.address+=outElemCount;
-		//outElems.length-=outElemCount;
+
+		outElems.address+=outElemCount;
+		outElems.length-=outElemCount;
+*/		
+				outputPort->postBuffer(outElems);
 				outElems.length=0;
 		if(outElems.length==0){
+		//std::cout<<"numElems"<<numElems<<std::endl;	
 			inputPort->consume(numElems);
 		}
 
