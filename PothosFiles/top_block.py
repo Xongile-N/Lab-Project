@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Thu Aug  8 12:00:43 2019
+# Generated: Thu Aug  8 15:13:00 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -69,7 +69,7 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.sps = sps = 2
+        self.sps = sps = 1
         self.taps_gain = taps_gain = 32
         self.taps_count = taps_count = 32*sps
         self.taps_bw = taps_bw = 0.35

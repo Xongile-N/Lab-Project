@@ -118,6 +118,7 @@ public:
 		//outputPort->produce(outElemCount/elemSize);
 		//std::cout<<"outElem"<<outElemCount<<std::endl;
 		outputPort->postBuffer(outElems);
+		std::cout<<outElems.length<<std::endl;
 		//outElems.address+=outElemCount;
 		//outElems.length-=outElemCount;
 				outElems.length=0;

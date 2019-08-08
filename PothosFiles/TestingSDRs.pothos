@@ -216,8 +216,8 @@
                         }
                     ],
                     "path": "/comms/combine_complex",
-                    "positionX": 635,
-                    "positionY": 383,
+                    "positionX": 677,
+                    "positionY": 368,
                     "properties": [
                         {
                             "key": "dtype",
@@ -227,7 +227,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1403
+                    "zValue": 1438
                 },
                 {
                     "affinityZone": "",
@@ -426,8 +426,8 @@
                         }
                     ],
                     "path": "/comms/scale",
-                    "positionX": 634,
-                    "positionY": 543,
+                    "positionX": 614,
+                    "positionY": 483,
                     "properties": [
                         {
                             "key": "dtype",
@@ -445,7 +445,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1419
+                    "zValue": 1441
                 },
                 {
                     "affinityZone": "",
@@ -2944,18 +2944,11 @@
                             "isSigSlot": false,
                             "name": "1",
                             "size": 1
-                        },
-                        {
-                            "alias": "2",
-                            "dtype": "unspecified",
-                            "isSigSlot": false,
-                            "name": "2",
-                            "size": 1
                         }
                     ],
                     "path": "/plotters/wave_monitor",
-                    "positionX": 857,
-                    "positionY": 512,
+                    "positionX": 887,
+                    "positionY": 502,
                     "properties": [
                         {
                             "key": "title",
@@ -2963,7 +2956,7 @@
                         },
                         {
                             "key": "numInputs",
-                            "value": "3"
+                            "value": "2"
                         },
                         {
                             "key": "displayRate",
@@ -3073,7 +3066,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1425
+                    "zValue": 1442
                 },
                 {
                     "affinityZone": "",
@@ -3332,7 +3325,7 @@
                         },
                         {
                             "key": "wave",
-                            "value": "\"SINE\""
+                            "value": "\"CONST\""
                         },
                         {
                             "key": "rate",
@@ -3356,9 +3349,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Block",
-                    "zValue": 1436
+                    "zValue": 1437
                 },
                 {
                     "affinityZone": "",
@@ -3631,20 +3624,6 @@
                 },
                 {
                     "enabled": true,
-                    "id": "Connection_WaveformSource00_WaveMonitor52",
-                    "inputId": "WaveMonitor5",
-                    "inputKey": "2",
-                    "outputId": "WaveformSource0",
-                    "outputKey": "0",
-                    "positionX": 0,
-                    "positionY": 0,
-                    "rotation": 0,
-                    "selected": false,
-                    "what": "Connection",
-                    "zValue": 0
-                },
-                {
-                    "enabled": true,
                     "id": "Connection_WaveformSource10_CombineComplex0",
                     "inputId": "CombineComplex0",
                     "inputKey": "im",
@@ -3722,16 +3701,16 @@
                 {
                     "blockId": "WaveMonitor2",
                     "enabled": true,
-                    "height": 158,
+                    "height": 176,
                     "id": "WidgetWaveMonitor2",
-                    "positionX": 0,
-                    "positionY": 241,
+                    "positionX": 807,
+                    "positionY": 143,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
-                    "zValue": 393
+                    "zValue": 416
                 },
                 {
                     "blockId": "WaveMonitor3",
@@ -3764,16 +3743,16 @@
                 {
                     "blockId": "WaveMonitor5",
                     "enabled": true,
-                    "height": 436,
+                    "height": 400,
                     "id": "WidgetWaveMonitor5",
-                    "positionX": 0,
-                    "positionY": 15,
+                    "positionX": 368,
+                    "positionY": 0,
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAGKwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
-                    "width": 1065,
-                    "zValue": 407
+                    "width": 519,
+                    "zValue": 415
                 }
             ],
             "pageName": "Display",
