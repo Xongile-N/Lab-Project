@@ -93,7 +93,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -435,7 +435,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>1</value>
+      <value>10</value>
     </param>
   </block>
   <block>
@@ -731,7 +731,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -778,7 +778,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -829,7 +829,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -880,7 +880,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1041,7 +1041,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1135,7 +1135,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1178,7 +1178,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1406,7 +1406,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(864, 856)</value>
+      <value>(840, 856)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1453,7 +1453,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1496,7 +1496,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1614,7 +1614,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>excess_bw</key>
@@ -1626,7 +1626,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(616, 692)</value>
+      <value>(328, 716)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2048,7 +2048,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(976, 564)</value>
+      <value>(1104, 580)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3747,7 +3747,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -4046,7 +4046,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -4054,7 +4054,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1072, 836)</value>
+      <value>(1120, 788)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -5031,11 +5031,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(544, 892)</value>
+      <value>(664, 932)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -5398,11 +5398,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 908)</value>
+      <value>(592, 940)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -5765,11 +5765,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(416, 900)</value>
+      <value>(400, 900)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -6277,6 +6277,12 @@
   <connection>
     <source_block_id>digital_pfb_clock_sync_xxx_0</source_block_id>
     <sink_block_id>digital_cma_equalizer_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_pfb_clock_sync_xxx_0</source_block_id>
+    <sink_block_id>qtgui_const_sink_x_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
