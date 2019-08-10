@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Sat Aug 10 15:22:42 2019
+# Generated: Sat Aug 10 15:34:26 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -32,7 +32,6 @@ from gnuradio import gr
 from gnuradio import qtgui
 from gnuradio.eng_option import eng_option
 from gnuradio.filter import firdes
-from gnuradio.qtgui import Range, RangeWidget
 from optparse import OptionParser
 from packet_rx import packet_rx  # grc-generated hier_block
 from packet_tx import packet_tx  # grc-generated hier_block
@@ -79,13 +78,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.taps_gain = taps_gain = 32
         self.taps_count = taps_count = 32*sps
         self.taps_bw = taps_bw = 0.35
-        self.samp_rate = samp_rate = 32000
+        self.samp_rate = samp_rate = 1e6
         self.rep = rep = 3
-        self.packetLength = packetLength = 150
         self.nfilts = nfilts = 32
         self.hdr_format = hdr_format = digital.header_format_counter(digital.packet_utils.default_access_code, 3, qpsk.bits_per_symbol())
         self.eb = eb = 0.35
-        self.HeaderLength = HeaderLength = 16
 
 
         self.variable_dummy_encoder_def_0 = variable_dummy_encoder_def_0 = fec.dummy_encoder_make(2048)
@@ -93,7 +90,6 @@ class top_block(gr.top_block, Qt.QWidget):
 
         self.tx_rrc_taps = tx_rrc_taps = firdes.root_raised_cosine(nfilts, nfilts, 1.0, eb, 5*sps*nfilts)
 
-        self.time_offset = time_offset = 1
         self.taps_0 = taps_0 = firdes.root_raised_cosine(taps_gain,samp_rate,sps,taps_bw,taps_count)
 
         self.rx_rrc_taps = rx_rrc_taps = firdes.root_raised_cosine(nfilts, sps*nfilts, 1.0, eb, 11*sps*nfilts)
@@ -101,9 +97,8 @@ class top_block(gr.top_block, Qt.QWidget):
 
         self.qpsk_0 = qpsk_0 = digital.constellation_qpsk().base()
 
-        self.noise_volt = noise_volt = 0100e-6
-        self.loopBW = loopBW = 62.8e-3
-        self.freq_offset = freq_offset = 0
+        self.packetLength = packetLength = 150
+        self.fc = fc = 100e3
 
 
         self.enc_hdr = enc_hdr = fec.repetition_encoder_make(8000, rep)
@@ -112,65 +107,10 @@ class top_block(gr.top_block, Qt.QWidget):
 
         self.dec_hdr = dec_hdr = fec.repetition_decoder.make(hdr_format.header_nbits(), rep, 0.5)
 
-        self.RecdPackLength = RecdPackLength = sps*(4*HeaderLength+4*packetLength+21+(5*sps-1)/2)
 
         ##################################################
         # Blocks
         ##################################################
-        self._time_offset_range = Range(999e-3, 1.001, 100e-6, 1, 200)
-        self._time_offset_win = RangeWidget(self._time_offset_range, self.set_time_offset, "time_offset", "counter_slider", float)
-        self.top_layout.addWidget(self._time_offset_win)
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1 = qtgui.time_sink_c(
-        	1024, #size
-        	samp_rate, #samp_rate
-        	'Corr', #name
-        	1 #number of inputs
-        )
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_update_time(0.10)
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_y_axis(-255, 255)
-
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_y_label('Amplitude', "")
-
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.enable_tags(-1, True)
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.enable_autoscale(True)
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.enable_grid(True)
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.enable_axis_labels(True)
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.enable_control_panel(False)
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.enable_stem_plot(False)
-
-        if not True:
-          self.qtgui_time_sink_x_1_0_0_0_0_0_1.disable_legend()
-
-        labels = ['', '', '', '', '',
-                  '', '', '', '', '']
-        widths = [1, 1, 1, 1, 1,
-                  1, 1, 1, 1, 1]
-        colors = ["blue", "red", "green", "black", "cyan",
-                  "magenta", "yellow", "dark red", "dark green", "blue"]
-        styles = [1, 1, 1, 1, 1,
-                  1, 1, 1, 1, 1]
-        markers = [-1, -1, -1, -1, -1,
-                   -1, -1, -1, -1, -1]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-                  1.0, 1.0, 1.0, 1.0, 1.0]
-
-        for i in xrange(2):
-            if len(labels[i]) == 0:
-                if(i % 2 == 0):
-                    self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_line_label(i, "Re{{Data {0}}}".format(i/2))
-                else:
-                    self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_line_label(i, "Im{{Data {0}}}".format(i/2))
-            else:
-                self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_line_label(i, labels[i])
-            self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_line_width(i, widths[i])
-            self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_line_color(i, colors[i])
-            self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_line_style(i, styles[i])
-            self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_line_marker(i, markers[i])
-            self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_line_alpha(i, alphas[i])
-
-        self._qtgui_time_sink_x_1_0_0_0_0_0_1_win = sip.wrapinstance(self.qtgui_time_sink_x_1_0_0_0_0_0_1.pyqwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_time_sink_x_1_0_0_0_0_0_1_win)
         self.qtgui_time_sink_x_1_0_0_0_0_0 = qtgui.time_sink_c(
         	1024, #size
         	samp_rate, #samp_rate
@@ -241,15 +181,6 @@ class top_block(gr.top_block, Qt.QWidget):
             psf_taps=rx_rrc_taps,
             sps=sps,
         )
-        self._noise_volt_range = Range(0, 1, 100e-6, 0100e-6, 200)
-        self._noise_volt_win = RangeWidget(self._noise_volt_range, self.set_noise_volt, "noise_volt", "counter_slider", float)
-        self.top_layout.addWidget(self._noise_volt_win)
-        self._loopBW_range = Range(0, 200e-3, 10e-3, 62.8e-3, 200)
-        self._loopBW_win = RangeWidget(self._loopBW_range, self.set_loopBW, "loopBW", "counter_slider", float)
-        self.top_layout.addWidget(self._loopBW_win)
-        self._freq_offset_range = Range(-100e-3, 100e-3, 1e-3, 0, 200)
-        self._freq_offset_win = RangeWidget(self._freq_offset_range, self.set_freq_offset, "freq_offset", "counter_slider", float)
-        self.top_layout.addWidget(self._freq_offset_win)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_char*1, samp_rate,True)
         self.blocks_tagged_stream_to_pdu_0 = blocks.tagged_stream_to_pdu(blocks.byte_t, 'packet_len')
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, packetLength, 'packet_len')
@@ -272,7 +203,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_pdu_to_tagged_stream_1, 0), (self.blocks_file_sink_1, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.blocks_tagged_stream_to_pdu_0, 0))
         self.connect((self.blocks_throttle_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))
-        self.connect((self.packet_rx_0, 4), (self.qtgui_time_sink_x_1_0_0_0_0_0_1, 0))
         self.connect((self.packet_tx_0, 0), (self.packet_rx_0, 0))
         self.connect((self.packet_tx_0, 0), (self.qtgui_time_sink_x_1_0_0_0_0_0, 0))
 
@@ -290,7 +220,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.set_taps_0(firdes.root_raised_cosine(self.taps_gain,self.samp_rate,self.sps,self.taps_bw,self.taps_count))
         self.packet_tx_0.set_sps(self.sps)
         self.packet_rx_0.set_sps(self.sps)
-        self.set_RecdPackLength(self.sps*(4*self.HeaderLength+4*self.packetLength+21+(5*self.sps-1)/2))
 
     def get_qpsk(self):
         return self.qpsk
@@ -329,7 +258,6 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.set_taps_0(firdes.root_raised_cosine(self.taps_gain,self.samp_rate,self.sps,self.taps_bw,self.taps_count))
-        self.qtgui_time_sink_x_1_0_0_0_0_0_1.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_1_0_0_0_0_0.set_samp_rate(self.samp_rate)
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
 
@@ -338,15 +266,6 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_rep(self, rep):
         self.rep = rep
-
-    def get_packetLength(self):
-        return self.packetLength
-
-    def set_packetLength(self, packetLength):
-        self.packetLength = packetLength
-        self.blocks_stream_to_tagged_stream_0.set_packet_len(self.packetLength)
-        self.blocks_stream_to_tagged_stream_0.set_packet_len_pmt(self.packetLength)
-        self.set_RecdPackLength(self.sps*(4*self.HeaderLength+4*self.packetLength+21+(5*self.sps-1)/2))
 
     def get_nfilts(self):
         return self.nfilts
@@ -369,13 +288,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.eb = eb
         self.packet_rx_0.set_eb(self.eb)
 
-    def get_HeaderLength(self):
-        return self.HeaderLength
-
-    def set_HeaderLength(self, HeaderLength):
-        self.HeaderLength = HeaderLength
-        self.set_RecdPackLength(self.sps*(4*self.HeaderLength+4*self.packetLength+21+(5*self.sps-1)/2))
-
     def get_variable_dummy_encoder_def_0(self):
         return self.variable_dummy_encoder_def_0
 
@@ -388,12 +300,6 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_tx_rrc_taps(self, tx_rrc_taps):
         self.tx_rrc_taps = tx_rrc_taps
         self.packet_tx_0.set_psf_taps(self.tx_rrc_taps)
-
-    def get_time_offset(self):
-        return self.time_offset
-
-    def set_time_offset(self, time_offset):
-        self.time_offset = time_offset
 
     def get_taps_0(self):
         return self.taps_0
@@ -414,23 +320,19 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_qpsk_0(self, qpsk_0):
         self.qpsk_0 = qpsk_0
 
-    def get_noise_volt(self):
-        return self.noise_volt
+    def get_packetLength(self):
+        return self.packetLength
 
-    def set_noise_volt(self, noise_volt):
-        self.noise_volt = noise_volt
+    def set_packetLength(self, packetLength):
+        self.packetLength = packetLength
+        self.blocks_stream_to_tagged_stream_0.set_packet_len(self.packetLength)
+        self.blocks_stream_to_tagged_stream_0.set_packet_len_pmt(self.packetLength)
 
-    def get_loopBW(self):
-        return self.loopBW
+    def get_fc(self):
+        return self.fc
 
-    def set_loopBW(self, loopBW):
-        self.loopBW = loopBW
-
-    def get_freq_offset(self):
-        return self.freq_offset
-
-    def set_freq_offset(self, freq_offset):
-        self.freq_offset = freq_offset
+    def set_fc(self, fc):
+        self.fc = fc
 
     def get_enc_hdr(self):
         return self.enc_hdr
@@ -445,12 +347,6 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_dec_hdr(self, dec_hdr):
         self.dec_hdr = dec_hdr
         self.packet_rx_0.set_hdr_dec(self.dec_hdr)
-
-    def get_RecdPackLength(self):
-        return self.RecdPackLength
-
-    def set_RecdPackLength(self, RecdPackLength):
-        self.RecdPackLength = RecdPackLength
 
 
 def main(top_block_cls=top_block, options=None):
