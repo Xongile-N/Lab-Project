@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Sun Aug 11 22:37:26 2019
+# Generated: Sun Aug 11 22:45:24 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -79,17 +79,19 @@ class top_block(gr.top_block, Qt.QWidget):
 
         self.tx_rrc_taps = tx_rrc_taps = firdes.root_raised_cosine(nfilts, nfilts, 1.0, eb, 15*sps*nfilts)
 
+        self.samp_rates = samp_rates = [2e4,5e4,1e5,2.5e5,5e5,1.25e6]
+        self.samp_index = samp_index = 0
         self.qpsk = qpsk = digital.constellation_rect(([0.707+0.707j, -0.707+0.707j, -0.707-0.707j, 0.707-0.707j]), ([0, 1,2,3]), 4, 2, 2, 1, 1).base()
         self.taps_per_filt = taps_per_filt = len(tx_rrc_taps)/nfilts
         self.taps_gain = taps_gain = 32
         self.taps_count = taps_count = 32*sps
         self.taps_bw = taps_bw = 0.35
-        self.samp_rate = samp_rate = 1e5
+        self.samp_rate = samp_rate = samp_rates[samp_index]
         self.rep = rep = 3
         self.hdr_format = hdr_format = digital.header_format_counter(digital.packet_utils.default_access_code, 3, qpsk.bits_per_symbol())
         self.time_offset = time_offset = 1
         self.taps_0 = taps_0 = firdes.root_raised_cosine(taps_gain,samp_rate,sps,taps_bw,taps_count)
-        self.sdr = sdr = "redpitaya=10.0.0.100:1001"
+        self.sdr = sdr = "redpitaya=192.168.88.17:1001"
 
         self.rx_rrc_taps = rx_rrc_taps = firdes.root_raised_cosine(nfilts, sps*nfilts, 1.0, eb, 11*sps*nfilts)
 
@@ -114,6 +116,57 @@ class top_block(gr.top_block, Qt.QWidget):
         self._time_offset_range = Range(999e-3, 1.001, 100e-6, 1, 200)
         self._time_offset_win = RangeWidget(self._time_offset_range, self.set_time_offset, "time_offset", "counter_slider", float)
         self.top_layout.addWidget(self._time_offset_win)
+        self.qtgui_time_sink_x_0_0 = qtgui.time_sink_c(
+        	1024, #size
+        	samp_rate, #samp_rate
+        	"Corr", #name
+        	1 #number of inputs
+        )
+        self.qtgui_time_sink_x_0_0.set_update_time(0.10)
+        self.qtgui_time_sink_x_0_0.set_y_axis(-500, 500)
+
+        self.qtgui_time_sink_x_0_0.set_y_label('Amplitude', "")
+
+        self.qtgui_time_sink_x_0_0.enable_tags(-1, True)
+        self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
+        self.qtgui_time_sink_x_0_0.enable_autoscale(True)
+        self.qtgui_time_sink_x_0_0.enable_grid(False)
+        self.qtgui_time_sink_x_0_0.enable_axis_labels(True)
+        self.qtgui_time_sink_x_0_0.enable_control_panel(False)
+        self.qtgui_time_sink_x_0_0.enable_stem_plot(False)
+
+        if not True:
+          self.qtgui_time_sink_x_0_0.disable_legend()
+
+        labels = ['', '', '', '', '',
+                  '', '', '', '', '']
+        widths = [1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+                  "magenta", "yellow", "dark red", "dark green", "blue"]
+        styles = [1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1]
+        markers = [-1, -1, -1, -1, -1,
+                   -1, -1, -1, -1, -1]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+
+        for i in xrange(2):
+            if len(labels[i]) == 0:
+                if(i % 2 == 0):
+                    self.qtgui_time_sink_x_0_0.set_line_label(i, "Re{{Data {0}}}".format(i/2))
+                else:
+                    self.qtgui_time_sink_x_0_0.set_line_label(i, "Im{{Data {0}}}".format(i/2))
+            else:
+                self.qtgui_time_sink_x_0_0.set_line_label(i, labels[i])
+            self.qtgui_time_sink_x_0_0.set_line_width(i, widths[i])
+            self.qtgui_time_sink_x_0_0.set_line_color(i, colors[i])
+            self.qtgui_time_sink_x_0_0.set_line_style(i, styles[i])
+            self.qtgui_time_sink_x_0_0.set_line_marker(i, markers[i])
+            self.qtgui_time_sink_x_0_0.set_line_alpha(i, alphas[i])
+
+        self._qtgui_time_sink_x_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0.pyqwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_time_sink_x_0_0_win)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_c(
         	1024, #size
         	samp_rate, #samp_rate
@@ -212,8 +265,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_repack_bits_bb_0_0 = blocks.repack_bits_bb(8, qpsk.bits_per_symbol(), "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0 = blocks.repack_bits_bb(8, qpsk.bits_per_symbol(), "", False, gr.GR_MSB_FIRST)
         self.blocks_pdu_to_tagged_stream_0_0 = blocks.pdu_to_tagged_stream(blocks.byte_t, 'packet_len')
-        self.blocks_message_debug_1 = blocks.message_debug()
-        self.blocks_message_debug_0 = blocks.message_debug()
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1 , '/home/xongile/Lab-Project/TestSinks/TestData.dat', True)
         self.blocks_file_sink_2 = blocks.file_sink(gr.sizeof_gr_complex*1, '/home/xongile/Lab-Project/TestSinks/TXN.dat', False)
         self.blocks_file_sink_2.set_unbuffered(False)
@@ -223,7 +274,6 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Connections
         ##################################################
-        self.msg_connect((self.packet_rx_0, 'pkt out'), (self.blocks_message_debug_0, 'print_pdu'))
         self.msg_connect((self.packet_rx_0, 'pkt out'), (self.blocks_pdu_to_tagged_stream_0_0, 'pdus'))
         self.connect((self.blocks_file_source_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.blocks_pdu_to_tagged_stream_0_0, 0), (self.blocks_file_sink_1_0, 0))
@@ -251,6 +301,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.fec_tagged_encoder_1, 0), (self.blocks_repack_bits_bb_0_0, 0))
         self.connect((self.fec_tagged_encoder_1, 0), (self.digital_protocol_formatter_bb_0, 0))
         self.connect((self.fec_tagged_encoder_2, 0), (self.blocks_repack_bits_bb_0_1_0, 0))
+        self.connect((self.packet_rx_0, 4), (self.qtgui_time_sink_x_0_0, 0))
         self.connect((self.pfb_arb_resampler_xxx_0, 0), (self.blocks_tagged_stream_multiply_length_0, 0))
 
     def closeEvent(self, event):
@@ -290,6 +341,20 @@ class top_block(gr.top_block, Qt.QWidget):
         self.tx_rrc_taps = tx_rrc_taps
         self.set_taps_per_filt(len(self.tx_rrc_taps)/self.nfilts)
         self.pfb_arb_resampler_xxx_0.set_taps((self.tx_rrc_taps))
+
+    def get_samp_rates(self):
+        return self.samp_rates
+
+    def set_samp_rates(self, samp_rates):
+        self.samp_rates = samp_rates
+        self.set_samp_rate(self.samp_rates[self.samp_index])
+
+    def get_samp_index(self):
+        return self.samp_index
+
+    def set_samp_index(self, samp_index):
+        self.samp_index = samp_index
+        self.set_samp_rate(self.samp_rates[self.samp_index])
 
     def get_qpsk(self):
         return self.qpsk
@@ -333,6 +398,7 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.set_taps_0(firdes.root_raised_cosine(self.taps_gain,self.samp_rate,self.sps,self.taps_bw,self.taps_count))
+        self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
 
