@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Sun Aug 11 15:20:01 2019
+# Generated: Sun Aug 11 15:25:36 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -231,16 +231,24 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_char*1, samp_rate,True)
         self.blocks_tagged_stream_to_pdu_0 = blocks.tagged_stream_to_pdu(blocks.byte_t, 'packet_len')
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, packetLength, 'packet_len')
+        self.blocks_pdu_to_tagged_stream_0 = blocks.pdu_to_tagged_stream(blocks.byte_t, 'packet_len')
         self.blocks_multiply_const_vxx_0_1 = blocks.multiply_const_vcc((1, ))
+        self.blocks_file_sink_2 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/OrigRand.dat', False)
+        self.blocks_file_sink_2.set_unbuffered(False)
+        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/QPSKRand.dat', False)
+        self.blocks_file_sink_0.set_unbuffered(False)
         self.analog_random_source_x_0 = blocks.vector_source_b(map(int, numpy.random.randint(0, 256, 100)), True)
 
         ##################################################
         # Connections
         ##################################################
         self.msg_connect((self.blocks_tagged_stream_to_pdu_0, 'pdus'), (self.packet_tx_0, 'in'))
+        self.msg_connect((self.packet_rx_0, 'pkt out'), (self.blocks_pdu_to_tagged_stream_0, 'pdus'))
+        self.connect((self.analog_random_source_x_0, 0), (self.blocks_file_sink_2, 0))
         self.connect((self.analog_random_source_x_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0_1, 0), (self.packet_rx_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0_1, 0), (self.qtgui_const_sink_x_0, 0))
+        self.connect((self.blocks_pdu_to_tagged_stream_0, 0), (self.blocks_file_sink_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.blocks_tagged_stream_to_pdu_0, 0))
         self.connect((self.blocks_throttle_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))
         self.connect((self.packet_tx_0, 0), (self.blocks_multiply_const_vxx_0_1, 0))
