@@ -42,7 +42,7 @@
         },
         {
             "name": "currrp",
-            "value": "rpx"
+            "value": "rpm"
         }
     ],
     "pages": [
@@ -285,7 +285,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1423
+                    "zValue": 1448
                 },
                 {
                     "affinityZone": "",
@@ -508,7 +508,7 @@
                 {
                     "activeEditTab": "Streaming",
                     "affinityZone": "",
-                    "enabled": true,
+                    "enabled": false,
                     "id": "SoapySDRSink0",
                     "inputDesc": [
                         {
@@ -1217,7 +1217,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1435
+                    "zValue": 1452
                 },
                 {
                     "activeEditTab": "Streaming",
@@ -1931,7 +1931,80 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1433
+                    "zValue": 1451
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": false,
+                    "id": "VectorSource0",
+                    "inputDesc": [
+                        {
+                            "alias": "setElements",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setElements",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setMode",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setMode",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setStartId",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setStartId",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEndId",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setEndId",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "complex_float32",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 8
+                        }
+                    ],
+                    "path": "/blocks/vector_source",
+                    "positionX": 208,
+                    "positionY": 506,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"complex_float32\""
+                        },
+                        {
+                            "key": "mode",
+                            "value": "\"REPEAT\""
+                        },
+                        {
+                            "key": "elements",
+                            "value": "[1.0, 2.0, 3.0]"
+                        },
+                        {
+                            "key": "startId",
+                            "value": "\"\""
+                        },
+                        {
+                            "key": "endId",
+                            "value": "\"\""
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": true,
+                    "what": "Block",
+                    "zValue": 1453
                 },
                 {
                     "affinityZone": "",
@@ -3066,7 +3139,7 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 1442
+                    "zValue": 1443
                 },
                 {
                     "affinityZone": "",
@@ -3596,6 +3669,20 @@
                 },
                 {
                     "enabled": true,
+                    "id": "Connection_VectorSource00_DCRemoval00",
+                    "inputId": "DCRemoval0",
+                    "inputKey": "0",
+                    "outputId": "VectorSource0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
                     "id": "Connection_WaveformSource00_Arithmetic10",
                     "inputId": "Arithmetic1",
                     "inputKey": "0",
@@ -3706,7 +3793,7 @@
                     "positionX": 807,
                     "positionY": 143,
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAADBwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 308,
@@ -3745,14 +3832,14 @@
                     "enabled": true,
                     "height": 400,
                     "id": "WidgetWaveMonitor5",
-                    "positionX": 368,
-                    "positionY": 0,
+                    "positionX": 129,
+                    "positionY": 26,
                     "rotation": 0,
                     "selected": false,
-                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAGKwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
+                    "state": "AAAACAAAAAADAAAADgB2AGkAcwBpAGIAbABlAAAADQAAAAAGIwAAAAoAcwB0AGEAYwBrAAAACQAAAAABAAAAFAAAAAAAAAAAAL/wAAAAAAAAP/o24uscQy1AAAAAAAAAAAAAAAoAaQBuAGQAZQB4AAAAAwAAAAAA",
                     "what": "Widget",
                     "width": 519,
-                    "zValue": 415
+                    "zValue": 418
                 }
             ],
             "pageName": "Display",
