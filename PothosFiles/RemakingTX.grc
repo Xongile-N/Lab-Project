@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.11'?>
+<?grc format='1' created='3.7.13'?>
 <flow_graph>
   <timestamp>Sun Aug 11 11:52:49 2019</timestamp>
   <block>
@@ -73,12 +73,20 @@
       <value>True</value>
     </param>
     <param>
+      <key>sizing_mode</key>
+      <value>fixed</value>
+    </param>
+    <param>
       <key>thread_safe_setters</key>
       <value></value>
     </param>
     <param>
       <key>title</key>
       <value></value>
+    </param>
+    <param>
+      <key>placement</key>
+      <value>(0,0)</value>
     </param>
   </block>
   <block>
@@ -783,6 +791,60 @@ Found empirically.</value>
     </param>
     <param>
       <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1448, 432)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pathl</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>"/home/xongile/Lab-Project/TestSinks/"</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1568, 576)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pathr</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>"C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks"</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
       <value>1</value>
     </param>
     <param>
@@ -909,7 +971,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>value</key>
-      <value>dqpsk</value>
+      <value>qpsk_1</value>
     </param>
   </block>
   <block>
@@ -1200,7 +1262,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>value</key>
-      <value>"redpitaya=192.168.88.18:1001"</value>
+      <value>"redpitaya=10.0.0.100:1001"</value>
     </param>
   </block>
   <block>
@@ -1339,69 +1401,6 @@ FEC is Repetition (x3)</value>
     </param>
   </block>
   <block>
-    <key>variable_qtgui_range</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(560, 20)</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>time_offset</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>min_len</key>
-      <value>200</value>
-    </param>
-    <param>
-      <key>orient</key>
-      <value>Qt.Horizontal</value>
-    </param>
-    <param>
-      <key>start</key>
-      <value>999e-3</value>
-    </param>
-    <param>
-      <key>step</key>
-      <value>100e-6</value>
-    </param>
-    <param>
-      <key>stop</key>
-      <value>1.001</value>
-    </param>
-    <param>
-      <key>rangeType</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>widget</key>
-      <value>counter_slider</value>
-    </param>
-  </block>
-  <block>
     <key>variable_rrc_filter_taps</key>
     <param>
       <key>comment</key>
@@ -1445,65 +1444,6 @@ FEC is Repetition (x3)</value>
     </param>
   </block>
   <block>
-    <key>variable_constellation_rect</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>const_points</key>
-      <value>[-1-1j, -1+1j, 1+1j, 1-1j]</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1704, 604)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>variable_constellation_rect_0</value>
-    </param>
-    <param>
-      <key>imag_sect</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>real_sect</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>rot_sym</key>
-      <value>4</value>
-    </param>
-    <param>
-      <key>soft_dec_lut</key>
-      <value>None</value>
-    </param>
-    <param>
-      <key>precision</key>
-      <value>8</value>
-    </param>
-    <param>
-      <key>sym_map</key>
-      <value>[0, 1, 3, 2]</value>
-    </param>
-    <param>
-      <key>w_imag_sect</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>w_real_sect</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
     <key>analog_random_source_x</key>
     <param>
       <key>alias</key>
@@ -1519,7 +1459,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1582,7 +1522,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>file</key>
@@ -1599,6 +1539,57 @@ FEC is Repetition (x3)</value>
     <param>
       <key>id</key>
       <value>blocks_file_sink_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks\OrigRand.dat</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(344, 532)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_0_0</value>
     </param>
     <param>
       <key>type</key>
@@ -1684,7 +1675,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>file</key>
@@ -1786,15 +1777,15 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>file</key>
-      <value>/home/xongile/Lab-Project/TestSinks/QPSKRandSync1.dat</value>
+      <value>C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks\QPSKRandSync1.dat</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2544, 716)</value>
+      <value>(2608, 724)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1841,11 +1832,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>file</key>
-      <value>/home/xongile/Lab-Project/TestSinks/QPSKRandSync.dat</value>
+      <value>C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks\QPSKRandSync.dat</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2832, 732)</value>
+      <value>(2856, 652)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1892,7 +1883,160 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>file</key>
-      <value>/home/xongile/Lab-Project/TestSinks/QPSKRandSyncWHeaders.dat</value>
+      <value>C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks\QPSKRandSync.dat</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(2992, 748)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_1_0_0_0_1_0_0_0_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/xongile/Lab-Project/TestSinks/QPSKRandSync1.dat</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(2512, 580)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_1_0_0_0_1_0_0_1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks\QPSKRandSync3.dat</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(2256, 740)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_1_0_0_0_1_0_0_2_0_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks\QPSKRandSyncWHeaders.dat</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1920,7 +2064,113 @@ FEC is Repetition (x3)</value>
     </param>
   </block>
   <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/xongile/Lab-Project/TestSinks/QPSKRandSyncWHeaders.dat</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(2320, 292)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_1_0_0_0_1_0_1_1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks\QPSKRandSyncHeader.dat</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(2120, 700)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_1_0_0_0_1_0_2</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_file_source</key>
+    <param>
+      <key>begin_tag</key>
+      <value>pmt.PMT_NIL</value>
+    </param>
     <param>
       <key>alias</key>
       <value></value>
@@ -1943,7 +2193,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(0, 476)</value>
+      <value>(56, 436)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1975,7 +2225,11 @@ FEC is Repetition (x3)</value>
     </param>
   </block>
   <block>
-    <key>blocks_float_to_char</key>
+    <key>blocks_file_source</key>
+    <param>
+      <key>begin_tag</key>
+      <value>pmt.PMT_NIL</value>
+    </param>
     <param>
       <key>alias</key>
       <value></value>
@@ -1990,11 +2244,15 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks\TestData.dat</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2392, 852)</value>
+      <value>(96, 444)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2002,7 +2260,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>id</key>
-      <value>blocks_float_to_char_0</value>
+      <value>blocks_file_source_0_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2013,12 +2271,16 @@ FEC is Repetition (x3)</value>
       <value>0</value>
     </param>
     <param>
-      <key>scale</key>
-      <value>1</value>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>repeat</key>
+      <value>True</value>
     </param>
     <param>
       <key>vlen</key>
-      <value>1</value>
+      <value>1 </value>
     </param>
   </block>
   <block>
@@ -2037,7 +2299,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2068,7 +2330,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2225,7 +2487,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 636)</value>
+      <value>(792, 796)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2304,6 +2566,100 @@ FEC is Repetition (x3)</value>
     </param>
   </block>
   <block>
+    <key>blocks_null_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bus_conns</key>
+      <value>[[0,],]</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(2976, 880)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_null_sink_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_null_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bus_conns</key>
+      <value>[[0,],]</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(2616, 792)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_null_sink_0_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_pack_k_bits_bb</key>
     <param>
       <key>alias</key>
@@ -2319,7 +2675,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2362,7 +2718,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2405,7 +2761,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2448,7 +2804,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2841,11 +3197,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2136, 992)</value>
+      <value>(2112, 1088)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2896,11 +3252,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2560, 880)</value>
+      <value>(2448, 896)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3234,7 +3590,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(80, 420)</value>
+      <value>(88, 372)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3270,6 +3626,45 @@ FEC is Repetition (x3)</value>
     </param>
   </block>
   <block>
+    <key>digital_binary_slicer_fb</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(2488, 976)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>digital_binary_slicer_fb_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>digital_burst_shaper_xx</key>
     <param>
       <key>alias</key>
@@ -3289,7 +3684,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(224, 556)</value>
+      <value>(224, 604)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3470,11 +3865,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2120, 916)</value>
+      <value>(2096, 972)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3513,7 +3908,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3556,7 +3951,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3650,7 +4045,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3705,7 +4100,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3756,11 +4151,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1840, 976)</value>
+      <value>(1952, 1024)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3807,11 +4202,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1944, 536)</value>
+      <value>(1944, 544)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3909,11 +4304,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2784, 836)</value>
+      <value>(2720, 836)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3968,7 +4363,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(768, 680)</value>
+      <value>(816, 856)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4078,11 +4473,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1512, 900)</value>
+      <value>(1576, 888)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4247,7 +4642,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>filter_size</key>
@@ -4255,7 +4650,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1280, 980)</value>
+      <value>(1336, 996)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4365,7 +4760,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>format</key>
@@ -4412,7 +4807,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4463,7 +4858,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -7099,16 +7494,8 @@ FEC is Repetition (x3)</value>
       <value></value>
     </param>
     <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
       <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>eb</key>
-      <value>eb</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -7119,20 +7506,28 @@ FEC is Repetition (x3)</value>
       <value>0</value>
     </param>
     <param>
-      <key>hdr_dec</key>
-      <value>dec_hdr</value>
+      <key>id</key>
+      <value>packet_rx_0</value>
     </param>
     <param>
-      <key>hdr_format</key>
-      <value>hdr_format</value>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>eb</key>
+      <value>eb</value>
     </param>
     <param>
       <key>hdr_const</key>
       <value>qpsk</value>
     </param>
     <param>
-      <key>id</key>
-      <value>packet_rx_0</value>
+      <key>hdr_dec</key>
+      <value>dec_hdr</value>
+    </param>
+    <param>
+      <key>hdr_format</key>
+      <value>hdr_format</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -7143,12 +7538,12 @@ FEC is Repetition (x3)</value>
       <value>0</value>
     </param>
     <param>
-      <key>pld_dec</key>
-      <value> fec.dummy_decoder.make(8000)</value>
-    </param>
-    <param>
       <key>pld_const</key>
       <value>qpsk</value>
+    </param>
+    <param>
+      <key>pld_dec</key>
+      <value> fec.dummy_decoder.make(8000)</value>
     </param>
     <param>
       <key>psf_taps</key>
@@ -7246,11 +7641,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2232, 1068)</value>
+      <value>(2160, 1188)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -7944,7 +8339,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2088, 716)</value>
+      <value>(2360, 708)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -8295,11 +8690,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2416, 1028)</value>
+      <value>(2688, 988)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -12105,7 +12500,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 652)</value>
+      <value>(856, 628)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -12322,6 +12717,12 @@ FEC is Repetition (x3)</value>
   </connection>
   <connection>
     <source_block_id>analog_random_source_x_0</source_block_id>
+    <sink_block_id>blocks_file_sink_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>analog_random_source_x_0</source_block_id>
     <sink_block_id>blocks_throttle_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -12333,8 +12734,8 @@ FEC is Repetition (x3)</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_float_to_char_0</source_block_id>
-    <sink_block_id>blocks_pack_k_bits_bb_0</sink_block_id>
+    <source_block_id>blocks_file_source_0_0</source_block_id>
+    <sink_block_id>blocks_throttle_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -12369,20 +12770,20 @@ FEC is Repetition (x3)</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_multiply_const_vxx_0_1_0_0</source_block_id>
-    <sink_block_id>packet_rx_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_multiply_const_vxx_0_1_0_1</source_block_id>
-    <sink_block_id>digital_corr_est_cc_0</sink_block_id>
+    <source_block_id>blocks_pack_k_bits_bb_0</source_block_id>
+    <sink_block_id>blocks_file_sink_1_0_0_0_1_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_pack_k_bits_bb_0</source_block_id>
-    <sink_block_id>blocks_file_sink_1_0_0_0_1_0_0</sink_block_id>
+    <sink_block_id>blocks_file_sink_1_0_0_0_1_0_0_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_pack_k_bits_bb_0</source_block_id>
+    <sink_block_id>blocks_null_sink_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -12399,8 +12800,20 @@ FEC is Repetition (x3)</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_pack_k_bits_bb_1</source_block_id>
+    <sink_block_id>blocks_file_sink_1_0_0_0_1_0_2</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_pack_k_bits_bb_1_0</source_block_id>
     <sink_block_id>blocks_file_sink_1_0_0_0_1_0_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_pack_k_bits_bb_1_0</source_block_id>
+    <sink_block_id>blocks_file_sink_1_0_0_0_1_0_1_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -12454,7 +12867,7 @@ FEC is Repetition (x3)</value>
   </connection>
   <connection>
     <source_block_id>blocks_tagged_stream_multiply_length_0_0</source_block_id>
-    <sink_block_id>blocks_float_to_char_0</sink_block_id>
+    <sink_block_id>digital_binary_slicer_fb_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -12507,6 +12920,12 @@ FEC is Repetition (x3)</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>digital_binary_slicer_fb_0</source_block_id>
+    <sink_block_id>blocks_pack_k_bits_bb_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>digital_burst_shaper_xx_0</source_block_id>
     <sink_block_id>pfb_arb_resampler_xxx_0</sink_block_id>
     <source_key>0</source_key>
@@ -12527,6 +12946,12 @@ FEC is Repetition (x3)</value>
   <connection>
     <source_block_id>digital_constellation_soft_decoder_cf_0</source_block_id>
     <sink_block_id>blocks_tagged_stream_multiply_length_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_constellation_soft_decoder_cf_0_0</source_block_id>
+    <sink_block_id>blocks_file_sink_1_0_0_0_1_0_0_2_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -12593,6 +13018,18 @@ FEC is Repetition (x3)</value>
   <connection>
     <source_block_id>digital_crc32_bb_1</source_block_id>
     <sink_block_id>blocks_file_sink_1_0_0_0_1_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_crc32_bb_1</source_block_id>
+    <sink_block_id>blocks_file_sink_1_0_0_0_1_0_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>digital_crc32_bb_1</source_block_id>
+    <sink_block_id>blocks_null_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -12707,13 +13144,19 @@ FEC is Repetition (x3)</value>
   <connection>
     <source_block_id>packet_rx_0</source_block_id>
     <sink_block_id>qtgui_time_sink_x_0_0_1</sink_block_id>
-    <source_key>4</source_key>
+    <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>packet_rx_0</source_block_id>
     <sink_block_id>digital_costas_loop_cc_0_0_1</sink_block_id>
-    <source_key>0</source_key>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>packet_rx_0</source_block_id>
+    <sink_block_id>qtgui_const_sink_x_0_0</sink_block_id>
+    <source_key>2</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
@@ -12727,12 +13170,6 @@ FEC is Repetition (x3)</value>
     <sink_block_id>blocks_pdu_to_tagged_stream_0_0</sink_block_id>
     <source_key>pkt out</source_key>
     <sink_key>pdus</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>packet_rx_0</source_block_id>
-    <sink_block_id>qtgui_const_sink_x_0_0</sink_block_id>
-    <source_key>2</source_key>
-    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>pfb_arb_resampler_xxx_0</source_block_id>
