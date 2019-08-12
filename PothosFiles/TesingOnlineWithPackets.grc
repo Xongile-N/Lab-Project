@@ -370,7 +370,61 @@
     </param>
     <param>
       <key>value</key>
+      <value>hdr_format_count</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(560, 684)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>hdr_format_count</value>
+    </param>
+    <param>
+      <key>value</key>
       <value>digital.header_format_counter(digital.packet_utils.default_access_code, 3, qpsk.bits_per_symbol())</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(608, 624)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>hdr_format_def</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>digital.header_format_default(digital.packet_utils.default_access_code, 0)</value>
     </param>
   </block>
   <block>
@@ -2969,11 +3023,11 @@
     </param>
     <param>
       <key>clock_source0</key>
-      <value>gpsdo</value>
+      <value></value>
     </param>
     <param>
       <key>time_source0</key>
-      <value>gpsdo</value>
+      <value></value>
     </param>
     <param>
       <key>clock_source1</key>
@@ -4479,7 +4533,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(616, 792)</value>
+      <value>(832, 792)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4546,7 +4600,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(664, 276)</value>
+      <value>(784, 332)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4621,7 +4675,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(552, 496)</value>
+      <value>(440, 500)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -5075,7 +5129,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1064, 252)</value>
+      <value>(1056, 324)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -5442,7 +5496,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(280, 580)</value>
+      <value>(280, 612)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -6241,12 +6295,6 @@
     <sink_block_id>blocks_message_debug_1</sink_block_id>
     <source_key>pkt out</source_key>
     <sink_key>print_pdu</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>packet_rx_0</source_block_id>
-    <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
-    <source_key>pkt out</source_key>
-    <sink_key>pdus</sink_key>
   </connection>
   <connection>
     <source_block_id>packet_rx_0</source_block_id>
