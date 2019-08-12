@@ -105,7 +105,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(248, 4)</value>
+      <value>(272, 44)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -144,7 +144,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(112, 124)</value>
+      <value>(128, 172)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -272,7 +272,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(160, 164)</value>
+      <value>(192, 196)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -343,7 +343,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>hdr_format_def</value>
+      <value>hdr_format_count</value>
     </param>
   </block>
   <block>
@@ -385,7 +385,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 4)</value>
+      <value>(304, 52)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -416,7 +416,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(232, 20)</value>
+      <value>(352, 60)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -541,7 +541,7 @@ Found empirically.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(904, 4)</value>
+      <value>(936, 4)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -568,7 +568,7 @@ Found empirically.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(184, 68)</value>
+      <value>(264, 92)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -799,7 +799,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(328, 4)</value>
+      <value>(384, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -885,7 +885,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(176, 76)</value>
+      <value>(312, 84)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -951,7 +951,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(136, 140)</value>
+      <value>(176, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1005,7 +1005,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(136, 36)</value>
+      <value>(248, 36)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1032,7 +1032,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(152, 20)</value>
+      <value>(232, 20)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1086,7 +1086,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(168, 4)</value>
+      <value>(248, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1113,7 +1113,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(0, 68)</value>
+      <value>(136, 228)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1167,7 +1167,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(0, 116)</value>
+      <value>(192, 172)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1194,7 +1194,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(0, 116)</value>
+      <value>(184, 116)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1225,7 +1225,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(168, 20)</value>
+      <value>(440, 60)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1288,7 +1288,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(328, 12)</value>
+      <value>(536, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1335,7 +1335,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>file</key>
@@ -1437,7 +1437,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>file</key>
@@ -1539,11 +1539,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1136, 752)</value>
+      <value>(1168, 752)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1625,7 +1625,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1774,7 +1774,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2682,7 +2682,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5574,7 +5574,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>eb</key>
@@ -5582,7 +5582,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(824, 776)</value>
+      <value>(896, 768)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5693,10 +5693,10 @@ FEC is Repetition (x3)</value>
     </param>
   </block>
   <block>
-    <key>qtgui_time_sink_x</key>
+    <key>qtgui_const_sink_x</key>
     <param>
       <key>autoscale</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>axislabels</key>
@@ -5711,16 +5711,8 @@ FEC is Repetition (x3)</value>
       <value></value>
     </param>
     <param>
-      <key>ctrlpanel</key>
-      <value>False</value>
-    </param>
-    <param>
       <key>affinity</key>
       <value></value>
-    </param>
-    <param>
-      <key>entags</key>
-      <value>True</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -5728,7 +5720,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(576, 940)</value>
+      <value>(1112, 860)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -5744,7 +5736,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>id</key>
-      <value>qtgui_time_sink_x_0</value>
+      <value>qtgui_const_sink_x_0</value>
     </param>
     <param>
       <key>legend</key>
@@ -5764,11 +5756,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker1</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style1</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width1</key>
@@ -5780,7 +5772,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>color10</key>
-      <value>"blue"</value>
+      <value>"red"</value>
     </param>
     <param>
       <key>label10</key>
@@ -5788,11 +5780,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker10</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style10</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width10</key>
@@ -5812,11 +5804,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker2</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style2</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width2</key>
@@ -5828,7 +5820,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>color3</key>
-      <value>"green"</value>
+      <value>"red"</value>
     </param>
     <param>
       <key>label3</key>
@@ -5836,11 +5828,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker3</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style3</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width3</key>
@@ -5852,7 +5844,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>color4</key>
-      <value>"black"</value>
+      <value>"red"</value>
     </param>
     <param>
       <key>label4</key>
@@ -5860,11 +5852,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker4</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style4</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width4</key>
@@ -5876,7 +5868,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>color5</key>
-      <value>"cyan"</value>
+      <value>"red"</value>
     </param>
     <param>
       <key>label5</key>
@@ -5884,11 +5876,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker5</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style5</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width5</key>
@@ -5900,7 +5892,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>color6</key>
-      <value>"magenta"</value>
+      <value>"red"</value>
     </param>
     <param>
       <key>label6</key>
@@ -5908,11 +5900,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker6</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style6</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width6</key>
@@ -5924,7 +5916,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>color7</key>
-      <value>"yellow"</value>
+      <value>"red"</value>
     </param>
     <param>
       <key>label7</key>
@@ -5932,11 +5924,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker7</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style7</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width7</key>
@@ -5948,7 +5940,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>color8</key>
-      <value>"dark red"</value>
+      <value>"red"</value>
     </param>
     <param>
       <key>label8</key>
@@ -5956,11 +5948,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker8</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style8</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width8</key>
@@ -5972,7 +5964,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>color9</key>
-      <value>"dark green"</value>
+      <value>"red"</value>
     </param>
     <param>
       <key>label9</key>
@@ -5980,11 +5972,11 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>marker9</key>
-      <value>-1</value>
+      <value>0</value>
     </param>
     <param>
       <key>style9</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>width9</key>
@@ -5992,7 +5984,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>name</key>
-      <value>"TXCorr"</value>
+      <value>""</value>
     </param>
     <param>
       <key>nconnections</key>
@@ -6003,19 +5995,7 @@ FEC is Repetition (x3)</value>
       <value>1024</value>
     </param>
     <param>
-      <key>srate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>stemplot</key>
-      <value>False</value>
-    </param>
-    <param>
       <key>tr_chan</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>tr_delay</key>
       <value>0</value>
     </param>
     <param>
@@ -6043,20 +6023,20 @@ FEC is Repetition (x3)</value>
       <value>0.10</value>
     </param>
     <param>
-      <key>ylabel</key>
-      <value>Amplitude</value>
+      <key>xmax</key>
+      <value>2</value>
     </param>
     <param>
-      <key>yunit</key>
-      <value>""</value>
+      <key>xmin</key>
+      <value>-2</value>
     </param>
     <param>
       <key>ymax</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>ymin</key>
-      <value>-1</value>
+      <value>-2</value>
     </param>
   </block>
   <block>
@@ -6091,7 +6071,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6458,7 +6438,7 @@ FEC is Repetition (x3)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -7434,6 +7414,12 @@ FEC is Repetition (x3)</value>
     <source_block_id>packet_rx_0</source_block_id>
     <sink_block_id>qtgui_time_sink_x_0_0_1</sink_block_id>
     <source_key>4</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>packet_rx_0</source_block_id>
+    <sink_block_id>qtgui_const_sink_x_0</sink_block_id>
+    <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
