@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Mpsk Stage6
-# Generated: Tue Aug 13 01:13:45 2019
+# Generated: Tue Aug 13 08:18:57 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -79,16 +79,16 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.timing_loop_bw = timing_loop_bw = 6.28/100.0
         self.time_offset = time_offset = 1.00
         self.taps = taps = [1.0, 0.25-0.25j, 0.50 + 0.10j, -0.3 + 0.2j]
-        self.samp_rate = samp_rate = 20e6
+        self.samp_rate = samp_rate = int(1.25e6)
         self.rrc_taps = rrc_taps = firdes.root_raised_cosine(nfilts, nfilts, 1.0/float(sps), 0.35, 11*sps*nfilts)
         self.qpsk = qpsk = digital.constellation_rect(([0.707+0.707j, -0.707+0.707j, -0.707-0.707j, 0.707-0.707j]), ([0, 1, 2, 3]), 4, 2, 2, 1, 1).base()
         self.phase_bw = phase_bw = 6.28/100.0
-        self.noise_volt = noise_volt = 0.0001
+        self.noise_volt = noise_volt = 0.000
         self.freq_offset = freq_offset = 0
         self.fc = fc = 5e6
         self.excess_bw = excess_bw = 0.35
         self.eq_gain = eq_gain = 0.01
-        self.delay = delay = 0
+        self.delay = delay = 58
         self.arity = arity = 4
 
         ##################################################
@@ -137,7 +137,7 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.controls_grid_layout_1.addWidget(self._phase_bw_win, 0, 2, 1, 1)
         [self.controls_grid_layout_1.setRowStretch(r,1) for r in range(0,1)]
         [self.controls_grid_layout_1.setColumnStretch(c,1) for c in range(2,3)]
-        self._noise_volt_range = Range(0, 1, 0.01, 0.0001, 200)
+        self._noise_volt_range = Range(0, 1, 0.01, 0.000, 200)
         self._noise_volt_win = RangeWidget(self._noise_volt_range, self.set_noise_volt, 'Noise Voltage', "counter_slider", float)
         self.controls_grid_layout_0.addWidget(self._noise_volt_win, 0, 0, 1, 1)
         [self.controls_grid_layout_0.setRowStretch(r,1) for r in range(0,1)]
@@ -152,7 +152,7 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.controls_grid_layout_1.addWidget(self._eq_gain_win, 0, 1, 1, 1)
         [self.controls_grid_layout_1.setRowStretch(r,1) for r in range(0,1)]
         [self.controls_grid_layout_1.setColumnStretch(c,1) for c in range(1,2)]
-        self._delay_range = Range(0, 200, 1, 0, 200)
+        self._delay_range = Range(0, 100000, 1, 58, 200)
         self._delay_win = RangeWidget(self._delay_range, self.set_delay, 'Delay', "counter_slider", float)
         self.top_grid_layout.addWidget(self._delay_win, 1, 0, 1, 1)
         [self.top_grid_layout.setRowStretch(r,1) for r in range(1,2)]
@@ -346,11 +346,11 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.top_layout.addWidget(self._fc_win)
         self.digital_pfb_clock_sync_xxx_0 = digital.pfb_clock_sync_ccf(sps, timing_loop_bw, (rrc_taps), nfilts, nfilts/2, 1.5, 2)
         self.digital_map_bb_0 = digital.map_bb(([0,1,3,2]))
-        self.digital_diff_decoder_bb_0 = digital.diff_decoder_bb(4)
         self.digital_costas_loop_cc_0 = digital.costas_loop_cc(phase_bw, arity, False)
+        self.digital_constellation_soft_decoder_cf_0_0 = digital.constellation_soft_decoder_cf(qpsk)
         self.digital_constellation_modulator_0 = digital.generic_mod(
           constellation=qpsk,
-          differential=True,
+          differential=False,
           samples_per_symbol=sps,
           pre_diff_code=True,
           excess_bw=excess_bw,
@@ -358,6 +358,7 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
           log=False,
           )
         self.digital_cma_equalizer_cc_0 = digital.cma_equalizer_cc(15, 1, eq_gain, 2)
+        self.digital_binary_slicer_fb_0_0 = digital.binary_slicer_fb()
         self.channels_channel_model_0 = channels.channel_model(
         	noise_voltage=noise_volt,
         	frequency_offset=freq_offset,
@@ -366,15 +367,21 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         	noise_seed=0,
         	block_tags=False
         )
-        self.blocks_vector_source_x_0_0 = blocks.vector_source_b(range(256), True, 1, [])
         self.blocks_unpack_k_bits_bb_0_0 = blocks.unpack_k_bits_bb(8)
         self.blocks_unpack_k_bits_bb_0 = blocks.unpack_k_bits_bb(2)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_sub_xx_0 = blocks.sub_ff(1)
+        self.blocks_pack_k_bits_bb_0_0 = blocks.pack_k_bits_bb(8)
+        self.blocks_pack_k_bits_bb_0 = blocks.pack_k_bits_bb(8)
+        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/TestData.dat', False)
+        self.blocks_file_sink_0_2_2_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/QPSKSimple3.dat', False)
+        self.blocks_file_sink_0_2_2_0.set_unbuffered(False)
+        self.blocks_file_sink_0_2_2 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/QPSKSimple2.dat', False)
+        self.blocks_file_sink_0_2_2.set_unbuffered(False)
+        self.blocks_file_sink_0_2_1 = blocks.file_sink(gr.sizeof_gr_complex*1, '/home/xongile/Lab-Project/TestSinks/QPSKSimplePM.dat', False)
+        self.blocks_file_sink_0_2_1.set_unbuffered(False)
         self.blocks_file_sink_0_2_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/QPSKSimple1.dat', False)
         self.blocks_file_sink_0_2_0.set_unbuffered(False)
-        self.blocks_file_sink_0_2 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/QPSKSimple.dat', False)
-        self.blocks_file_sink_0_2.set_unbuffered(False)
         self.blocks_delay_0 = blocks.delay(gr.sizeof_float*1, int(delay))
         self.blocks_char_to_float_0_0_0 = blocks.char_to_float(1, 1)
         self.blocks_char_to_float_0_0 = blocks.char_to_float(1, 1)
@@ -392,21 +399,26 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_char_to_float_0_0_0, 0), (self.blocks_delay_0, 0))
         self.connect((self.blocks_delay_0, 0), (self.blocks_sub_xx_0, 1))
         self.connect((self.blocks_delay_0, 0), (self.qtgui_time_sink_x_0_0, 1))
+        self.connect((self.blocks_file_source_0, 0), (self.blocks_unpack_k_bits_bb_0_0, 0))
+        self.connect((self.blocks_file_source_0, 0), (self.digital_constellation_modulator_0, 0))
+        self.connect((self.blocks_pack_k_bits_bb_0, 0), (self.blocks_file_sink_0_2_2, 0))
+        self.connect((self.blocks_pack_k_bits_bb_0_0, 0), (self.blocks_file_sink_0_2_2_0, 0))
         self.connect((self.blocks_sub_xx_0, 0), (self.qtgui_time_sink_x_0_0, 2))
         self.connect((self.blocks_throttle_0, 0), (self.channels_channel_model_0, 0))
         self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.blocks_char_to_float_0_0, 0))
-        self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.blocks_file_sink_0_2, 0))
+        self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.blocks_pack_k_bits_bb_0, 0))
         self.connect((self.blocks_unpack_k_bits_bb_0_0, 0), (self.blocks_char_to_float_0_0_0, 0))
         self.connect((self.blocks_unpack_k_bits_bb_0_0, 0), (self.blocks_file_sink_0_2_0, 0))
-        self.connect((self.blocks_vector_source_x_0_0, 0), (self.blocks_unpack_k_bits_bb_0_0, 0))
-        self.connect((self.blocks_vector_source_x_0_0, 0), (self.digital_constellation_modulator_0, 0))
         self.connect((self.channels_channel_model_0, 0), (self.digital_pfb_clock_sync_xxx_0, 0))
+        self.connect((self.digital_binary_slicer_fb_0_0, 0), (self.blocks_pack_k_bits_bb_0_0, 0))
         self.connect((self.digital_cma_equalizer_cc_0, 0), (self.digital_costas_loop_cc_0, 0))
         self.connect((self.digital_constellation_modulator_0, 0), (self.blocks_throttle_0, 0))
+        self.connect((self.digital_constellation_soft_decoder_cf_0_0, 0), (self.digital_binary_slicer_fb_0_0, 0))
         self.connect((self.digital_costas_loop_cc_0, 0), (self.MyQPSK_my_qpsk_demod_cb_0, 0))
+        self.connect((self.digital_costas_loop_cc_0, 0), (self.blocks_file_sink_0_2_1, 0))
+        self.connect((self.digital_costas_loop_cc_0, 0), (self.digital_constellation_soft_decoder_cf_0_0, 0))
         self.connect((self.digital_costas_loop_cc_0, 0), (self.qtgui_const_sink_x_0, 0))
-        self.connect((self.digital_diff_decoder_bb_0, 0), (self.blocks_unpack_k_bits_bb_0, 0))
-        self.connect((self.digital_map_bb_0, 0), (self.digital_diff_decoder_bb_0, 0))
+        self.connect((self.digital_map_bb_0, 0), (self.blocks_unpack_k_bits_bb_0, 0))
         self.connect((self.digital_pfb_clock_sync_xxx_0, 0), (self.digital_cma_equalizer_cc_0, 0))
         self.connect((self.digital_pfb_clock_sync_xxx_0, 0), (self.qtgui_const_sink_x_0_0, 0))
 
