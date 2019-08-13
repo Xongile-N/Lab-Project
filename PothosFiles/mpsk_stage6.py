@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Mpsk Stage6
-# Generated: Mon Aug 12 17:59:15 2019
+# Generated: Tue Aug 13 01:13:45 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -21,20 +21,18 @@ if __name__ == '__main__':
 from PyQt5 import Qt
 from PyQt5 import Qt, QtCore
 from gnuradio import blocks
+from gnuradio import channels
 from gnuradio import digital
 from gnuradio import eng_notation
 from gnuradio import gr
 from gnuradio import qtgui
-from gnuradio import uhd
 from gnuradio.eng_option import eng_option
 from gnuradio.filter import firdes
 from gnuradio.qtgui import Range, RangeWidget
 from optparse import OptionParser
 import MyQPSK
-import numpy
 import sip
 import sys
-import time
 from gnuradio import qtgui
 
 
@@ -115,6 +113,11 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.controls_grid_layout_1.addWidget(self._timing_loop_bw_win, 0, 0, 1, 1)
         [self.controls_grid_layout_1.setRowStretch(r,1) for r in range(0,1)]
         [self.controls_grid_layout_1.setColumnStretch(c,1) for c in range(0,1)]
+        self._time_offset_range = Range(0.999, 1.001, 0.0001, 1.00, 200)
+        self._time_offset_win = RangeWidget(self._time_offset_range, self.set_time_offset, 'Timing Offset', "counter_slider", float)
+        self.controls_grid_layout_0.addWidget(self._time_offset_win, 0, 2, 1, 1)
+        [self.controls_grid_layout_0.setRowStretch(r,1) for r in range(0,1)]
+        [self.controls_grid_layout_0.setColumnStretch(c,1) for c in range(2,3)]
         self.received = Qt.QTabWidget()
         self.received_widget_0 = Qt.QWidget()
         self.received_layout_0 = Qt.QBoxLayout(Qt.QBoxLayout.TopToBottom, self.received_widget_0)
@@ -134,9 +137,16 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.controls_grid_layout_1.addWidget(self._phase_bw_win, 0, 2, 1, 1)
         [self.controls_grid_layout_1.setRowStretch(r,1) for r in range(0,1)]
         [self.controls_grid_layout_1.setColumnStretch(c,1) for c in range(2,3)]
-        self._fc_range = Range(0, 60e6, 1, 5e6, 200)
-        self._fc_win = RangeWidget(self._fc_range, self.set_fc, 'Freq (Hz)', "counter_slider", float)
-        self.top_layout.addWidget(self._fc_win)
+        self._noise_volt_range = Range(0, 1, 0.01, 0.0001, 200)
+        self._noise_volt_win = RangeWidget(self._noise_volt_range, self.set_noise_volt, 'Noise Voltage', "counter_slider", float)
+        self.controls_grid_layout_0.addWidget(self._noise_volt_win, 0, 0, 1, 1)
+        [self.controls_grid_layout_0.setRowStretch(r,1) for r in range(0,1)]
+        [self.controls_grid_layout_0.setColumnStretch(c,1) for c in range(0,1)]
+        self._freq_offset_range = Range(-0.1, 0.1, 0.001, 0, 200)
+        self._freq_offset_win = RangeWidget(self._freq_offset_range, self.set_freq_offset, 'Frequency Offset', "counter_slider", float)
+        self.controls_grid_layout_0.addWidget(self._freq_offset_win, 0, 1, 1, 1)
+        [self.controls_grid_layout_0.setRowStretch(r,1) for r in range(0,1)]
+        [self.controls_grid_layout_0.setColumnStretch(c,1) for c in range(1,2)]
         self._eq_gain_range = Range(0.0, 0.1, 0.001, 0.01, 200)
         self._eq_gain_win = RangeWidget(self._eq_gain_range, self.set_eq_gain, 'Equalizer: rate', "slider", float)
         self.controls_grid_layout_1.addWidget(self._eq_gain_win, 0, 1, 1, 1)
@@ -147,31 +157,6 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.top_grid_layout.addWidget(self._delay_win, 1, 0, 1, 1)
         [self.top_grid_layout.setRowStretch(r,1) for r in range(1,2)]
         [self.top_grid_layout.setColumnStretch(c,1) for c in range(0,1)]
-        self.uhd_usrp_source_0 = uhd.usrp_source(
-        	",".join(("addr=192.168.10.3", "")),
-        	uhd.stream_args(
-        		cpu_format="fc32",
-        		channels=range(1),
-        	),
-        )
-        self.uhd_usrp_source_0.set_samp_rate(samp_rate)
-        self.uhd_usrp_source_0.set_center_freq(fc, 0)
-        self.uhd_usrp_source_0.set_gain(0, 0)
-        self.uhd_usrp_sink_0 = uhd.usrp_sink(
-        	",".join(("addr=192.168.10.3", "")),
-        	uhd.stream_args(
-        		cpu_format="fc32",
-        		channels=range(1),
-        	),
-        )
-        self.uhd_usrp_sink_0.set_samp_rate(samp_rate)
-        self.uhd_usrp_sink_0.set_center_freq(fc, 0)
-        self.uhd_usrp_sink_0.set_gain(0, 0)
-        self._time_offset_range = Range(0.999, 1.001, 0.0001, 1.00, 200)
-        self._time_offset_win = RangeWidget(self._time_offset_range, self.set_time_offset, 'Timing Offset', "counter_slider", float)
-        self.controls_grid_layout_0.addWidget(self._time_offset_win, 0, 2, 1, 1)
-        [self.controls_grid_layout_0.setRowStretch(r,1) for r in range(0,1)]
-        [self.controls_grid_layout_0.setColumnStretch(c,1) for c in range(2,3)]
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
         	500, #size
         	samp_rate, #samp_rate
@@ -225,7 +210,7 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0 = qtgui.time_sink_f(
         	500, #size
         	samp_rate, #samp_rate
-        	'', #name
+        	'Demod', #name
         	1 #number of inputs
         )
         self.qtgui_time_sink_x_0.set_update_time(0.10)
@@ -356,16 +341,9 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.received_grid_layout_0.addWidget(self._qtgui_const_sink_x_0_win, 0, 0, 1, 1)
         [self.received_grid_layout_0.setRowStretch(r,1) for r in range(0,1)]
         [self.received_grid_layout_0.setColumnStretch(c,1) for c in range(0,1)]
-        self._noise_volt_range = Range(0, 1, 0.01, 0.0001, 200)
-        self._noise_volt_win = RangeWidget(self._noise_volt_range, self.set_noise_volt, 'Noise Voltage', "counter_slider", float)
-        self.controls_grid_layout_0.addWidget(self._noise_volt_win, 0, 0, 1, 1)
-        [self.controls_grid_layout_0.setRowStretch(r,1) for r in range(0,1)]
-        [self.controls_grid_layout_0.setColumnStretch(c,1) for c in range(0,1)]
-        self._freq_offset_range = Range(-0.1, 0.1, 0.001, 0, 200)
-        self._freq_offset_win = RangeWidget(self._freq_offset_range, self.set_freq_offset, 'Frequency Offset', "counter_slider", float)
-        self.controls_grid_layout_0.addWidget(self._freq_offset_win, 0, 1, 1, 1)
-        [self.controls_grid_layout_0.setRowStretch(r,1) for r in range(0,1)]
-        [self.controls_grid_layout_0.setColumnStretch(c,1) for c in range(1,2)]
+        self._fc_range = Range(0, 60e6, 1, 5e6, 200)
+        self._fc_win = RangeWidget(self._fc_range, self.set_fc, 'Freq (Hz)', "counter_slider", float)
+        self.top_layout.addWidget(self._fc_win)
         self.digital_pfb_clock_sync_xxx_0 = digital.pfb_clock_sync_ccf(sps, timing_loop_bw, (rrc_taps), nfilts, nfilts/2, 1.5, 2)
         self.digital_map_bb_0 = digital.map_bb(([0,1,3,2]))
         self.digital_diff_decoder_bb_0 = digital.diff_decoder_bb(4)
@@ -380,15 +358,27 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
           log=False,
           )
         self.digital_cma_equalizer_cc_0 = digital.cma_equalizer_cc(15, 1, eq_gain, 2)
+        self.channels_channel_model_0 = channels.channel_model(
+        	noise_voltage=noise_volt,
+        	frequency_offset=freq_offset,
+        	epsilon=time_offset,
+        	taps=(taps),
+        	noise_seed=0,
+        	block_tags=False
+        )
+        self.blocks_vector_source_x_0_0 = blocks.vector_source_b(range(256), True, 1, [])
         self.blocks_unpack_k_bits_bb_0_0 = blocks.unpack_k_bits_bb(8)
         self.blocks_unpack_k_bits_bb_0 = blocks.unpack_k_bits_bb(2)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_sub_xx_0 = blocks.sub_ff(1)
+        self.blocks_file_sink_0_2_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/QPSKSimple1.dat', False)
+        self.blocks_file_sink_0_2_0.set_unbuffered(False)
+        self.blocks_file_sink_0_2 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/QPSKSimple.dat', False)
+        self.blocks_file_sink_0_2.set_unbuffered(False)
         self.blocks_delay_0 = blocks.delay(gr.sizeof_float*1, int(delay))
         self.blocks_char_to_float_0_0_0 = blocks.char_to_float(1, 1)
         self.blocks_char_to_float_0_0 = blocks.char_to_float(1, 1)
         self.blocks_char_to_float_0 = blocks.char_to_float(1, 1)
-        self.analog_random_source_x_0 = blocks.vector_source_b(map(int, numpy.random.randint(0, 256, 50)), True)
         self.MyQPSK_my_qpsk_demod_cb_0 = MyQPSK.my_qpsk_demod_cb(True)
 
         ##################################################
@@ -396,8 +386,6 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         ##################################################
         self.connect((self.MyQPSK_my_qpsk_demod_cb_0, 0), (self.blocks_char_to_float_0, 0))
         self.connect((self.MyQPSK_my_qpsk_demod_cb_0, 0), (self.digital_map_bb_0, 0))
-        self.connect((self.analog_random_source_x_0, 0), (self.blocks_unpack_k_bits_bb_0_0, 0))
-        self.connect((self.analog_random_source_x_0, 0), (self.digital_constellation_modulator_0, 0))
         self.connect((self.blocks_char_to_float_0, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.blocks_char_to_float_0_0, 0), (self.blocks_sub_xx_0, 0))
         self.connect((self.blocks_char_to_float_0_0, 0), (self.qtgui_time_sink_x_0_0, 0))
@@ -405,9 +393,14 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_delay_0, 0), (self.blocks_sub_xx_0, 1))
         self.connect((self.blocks_delay_0, 0), (self.qtgui_time_sink_x_0_0, 1))
         self.connect((self.blocks_sub_xx_0, 0), (self.qtgui_time_sink_x_0_0, 2))
-        self.connect((self.blocks_throttle_0, 0), (self.uhd_usrp_sink_0, 0))
+        self.connect((self.blocks_throttle_0, 0), (self.channels_channel_model_0, 0))
         self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.blocks_char_to_float_0_0, 0))
+        self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.blocks_file_sink_0_2, 0))
         self.connect((self.blocks_unpack_k_bits_bb_0_0, 0), (self.blocks_char_to_float_0_0_0, 0))
+        self.connect((self.blocks_unpack_k_bits_bb_0_0, 0), (self.blocks_file_sink_0_2_0, 0))
+        self.connect((self.blocks_vector_source_x_0_0, 0), (self.blocks_unpack_k_bits_bb_0_0, 0))
+        self.connect((self.blocks_vector_source_x_0_0, 0), (self.digital_constellation_modulator_0, 0))
+        self.connect((self.channels_channel_model_0, 0), (self.digital_pfb_clock_sync_xxx_0, 0))
         self.connect((self.digital_cma_equalizer_cc_0, 0), (self.digital_costas_loop_cc_0, 0))
         self.connect((self.digital_constellation_modulator_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.digital_costas_loop_cc_0, 0), (self.MyQPSK_my_qpsk_demod_cb_0, 0))
@@ -416,7 +409,6 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
         self.connect((self.digital_map_bb_0, 0), (self.digital_diff_decoder_bb_0, 0))
         self.connect((self.digital_pfb_clock_sync_xxx_0, 0), (self.digital_cma_equalizer_cc_0, 0))
         self.connect((self.digital_pfb_clock_sync_xxx_0, 0), (self.qtgui_const_sink_x_0_0, 0))
-        self.connect((self.uhd_usrp_source_0, 0), (self.digital_pfb_clock_sync_xxx_0, 0))
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "mpsk_stage6")
@@ -455,20 +447,20 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
 
     def set_time_offset(self, time_offset):
         self.time_offset = time_offset
+        self.channels_channel_model_0.set_timing_offset(self.time_offset)
 
     def get_taps(self):
         return self.taps
 
     def set_taps(self, taps):
         self.taps = taps
+        self.channels_channel_model_0.set_taps((self.taps))
 
     def get_samp_rate(self):
         return self.samp_rate
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.uhd_usrp_source_0.set_samp_rate(self.samp_rate)
-        self.uhd_usrp_sink_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
@@ -498,20 +490,20 @@ class mpsk_stage6(gr.top_block, Qt.QWidget):
 
     def set_noise_volt(self, noise_volt):
         self.noise_volt = noise_volt
+        self.channels_channel_model_0.set_noise_voltage(self.noise_volt)
 
     def get_freq_offset(self):
         return self.freq_offset
 
     def set_freq_offset(self, freq_offset):
         self.freq_offset = freq_offset
+        self.channels_channel_model_0.set_frequency_offset(self.freq_offset)
 
     def get_fc(self):
         return self.fc
 
     def set_fc(self, fc):
         self.fc = fc
-        self.uhd_usrp_source_0.set_center_freq(self.fc, 0)
-        self.uhd_usrp_sink_0.set_center_freq(self.fc, 0)
 
     def get_excess_bw(self):
         return self.excess_bw
