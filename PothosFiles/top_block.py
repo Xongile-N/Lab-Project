@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Tue Aug 13 15:19:36 2019
+# Generated: Tue Aug 13 16:24:15 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -91,7 +91,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.samp_rate = samp_rate = samp_rate_0
         self.pathr = pathr = "C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks"
         self.pathl = pathl = "/home/xongile/Lab-Project/TestSinks/"
-        self.packetLength = packetLength = 400
+        self.packetLength = packetLength = 900
         self.loopBW = loopBW = 62.8e-3
         self.hdr_format_def = hdr_format_def = digital.header_format_default(digital.packet_utils.default_access_code, 0)
         self.hdr_format = hdr_format = hdr_format_count
