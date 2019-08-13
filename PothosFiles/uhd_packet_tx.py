@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Uhd Packet Tx
-# Generated: Tue Aug 13 09:44:18 2019
+# Generated: Tue Aug 13 15:19:06 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -98,7 +98,7 @@ class uhd_packet_tx(gr.top_block, Qt.QWidget):
         self.hdr_format = hdr_format = digital.header_format_counter(digital.packet_utils.default_access_code, 3, Const_PLD.bits_per_symbol())
         self.gain = gain = 50
         self.freq = freq = 483e6-300
-        self.fc = fc = 0
+        self.fc = fc = int(1e6)
 
 
         self.enc_hdr = enc_hdr = fec.dummy_encoder_make(8000)
