@@ -41,8 +41,15 @@ namespace gr {
     CC_Encoder_Custom_impl::CC_Encoder_Custom_impl(int constraint, int frameLength, std::vector<int> polynomial)
       : gr::sync_interpolator("CC_Encoder_Custom",
               gr::io_signature::make(1, 1, sizeof(char)),
-              gr::io_signature::make(1, 1, sizeof(char)), rate)
-    {}
+              gr::io_signature::make(1, 1, sizeof(char)), rate),
+              constraint(constraint),
+              frameLength(frameLength),
+
+    {
+      for(int i=0;i<rate;i++){
+        codes.push_back((uint8_t)polynomial[i]);
+      }
+    }
 
     /*
      * Our virtual destructor.
