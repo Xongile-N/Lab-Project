@@ -4,6 +4,10 @@
     <compoundname>gr::Custom</compoundname>
     <innerclass refid="classgr_1_1Custom_1_1CC__Encoder__Custom" prot="public">gr::Custom::CC_Encoder_Custom</innerclass>
     <innerclass refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl" prot="public">gr::Custom::CC_Encoder_Custom_impl</innerclass>
+    <innerclass refid="classgr_1_1Custom_1_1CCDecoder" prot="public">gr::Custom::CCDecoder</innerclass>
+    <innerclass refid="classgr_1_1Custom_1_1CCDecoder__impl" prot="public">gr::Custom::CCDecoder_impl</innerclass>
+    <innerclass refid="classgr_1_1Custom_1_1DiffDecoderFlush" prot="public">gr::Custom::DiffDecoderFlush</innerclass>
+    <innerclass refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl" prot="public">gr::Custom::DiffDecoderFlush_impl</innerclass>
     <innerclass refid="classgr_1_1Custom_1_1DiffEncoderFlush" prot="public">gr::Custom::DiffEncoderFlush</innerclass>
     <innerclass refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl" prot="public">gr::Custom::DiffEncoderFlush_impl</innerclass>
     <briefdescription>

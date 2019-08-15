@@ -51,24 +51,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4">
+      <node id="12">
         <label>gr::Custom::DiffEncoderFlush</label>
         <link refid="classgr_1_1Custom_1_1DiffEncoderFlush"/>
-        <childnode refid="5" relation="public-inheritance">
+        <childnode refid="13" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5">
+      <node id="13">
         <label>gr::sync_block</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6">
+      <node id="14">
         <label>gr::Custom::DiffEncoderFlush</label>
         <link refid="classgr_1_1Custom_1_1DiffEncoderFlush"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="15" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="15">
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>

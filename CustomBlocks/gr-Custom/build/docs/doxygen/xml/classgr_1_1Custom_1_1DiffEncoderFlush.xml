@@ -52,30 +52,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11">
+      <node id="33">
         <label>gr::Custom::DiffEncoderFlush</label>
         <link refid="classgr_1_1Custom_1_1DiffEncoderFlush"/>
-        <childnode refid="12" relation="public-inheritance">
+        <childnode refid="34" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="13">
+      <node id="35">
         <label>gr::Custom::DiffEncoderFlush_impl</label>
         <link refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl"/>
-        <childnode refid="11" relation="public-inheritance">
+        <childnode refid="33" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="12">
+      <node id="34">
         <label>gr::sync_block</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="14">
+      <node id="36">
         <label>gr::Custom::DiffEncoderFlush</label>
         <link refid="classgr_1_1Custom_1_1DiffEncoderFlush"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="37" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="15">
+      <node id="37">
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>

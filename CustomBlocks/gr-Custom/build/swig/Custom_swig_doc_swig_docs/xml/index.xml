@@ -4,6 +4,14 @@
     <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom_1a58a1f4a38052166beb863ef93abae86f" kind="typedef"><name>sptr</name></member>
     <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom_1adf023513dbc4ccf5d2ea8daa9cb2cc4a" kind="function"><name>make</name></member>
   </compound>
+  <compound refid="classgr_1_1Custom_1_1CCDecoder" kind="class"><name>gr::Custom::CCDecoder</name>
+    <member refid="classgr_1_1Custom_1_1CCDecoder_1ad95695bb8877885f88fce485978c15ed" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder_1a553db7eb981d52d6ab6470f4f36a9cbf" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1Custom_1_1DiffDecoderFlush" kind="class"><name>gr::Custom::DiffDecoderFlush</name>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush_1aca8f6ecd14cde74e4e516b25310e731f" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush_1a0b745795db327a352ab8f7aed9bb1dff" kind="function"><name>make</name></member>
+  </compound>
   <compound refid="classgr_1_1Custom_1_1DiffEncoderFlush" kind="class"><name>gr::Custom::DiffEncoderFlush</name>
     <member refid="classgr_1_1Custom_1_1DiffEncoderFlush_1aeac444c02ad1b4f245224bb96dcc3602" kind="typedef"><name>sptr</name></member>
     <member refid="classgr_1_1Custom_1_1DiffEncoderFlush_1ab7e7a81a96fac608f3832b5cb960ed73" kind="function"><name>make</name></member>
@@ -18,6 +26,10 @@
     <member refid="api_8h_1a1806ab788d6406379b257e6ff1a6a511" kind="define"><name>CUSTOM_API</name></member>
   </compound>
   <compound refid="CC__Encoder__Custom_8h" kind="file"><name>CC_Encoder_Custom.h</name>
+  </compound>
+  <compound refid="CCDecoder_8h" kind="file"><name>CCDecoder.h</name>
+  </compound>
+  <compound refid="DiffDecoderFlush_8h" kind="file"><name>DiffDecoderFlush.h</name>
   </compound>
   <compound refid="DiffEncoderFlush_8h" kind="file"><name>DiffEncoderFlush.h</name>
   </compound>

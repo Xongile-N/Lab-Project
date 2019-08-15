@@ -197,6 +197,33 @@ gnuradio-Custom/fast:
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build && $(MAKE) -f lib/CMakeFiles/gnuradio-Custom.dir/build.make lib/CMakeFiles/gnuradio-Custom.dir/build
 .PHONY : gnuradio-Custom/fast
 
+CCDecoder_impl.o: CCDecoder_impl.cc.o
+
+.PHONY : CCDecoder_impl.o
+
+# target to build an object file
+CCDecoder_impl.cc.o:
+	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build && $(MAKE) -f lib/CMakeFiles/gnuradio-Custom.dir/build.make lib/CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.o
+.PHONY : CCDecoder_impl.cc.o
+
+CCDecoder_impl.i: CCDecoder_impl.cc.i
+
+.PHONY : CCDecoder_impl.i
+
+# target to preprocess a source file
+CCDecoder_impl.cc.i:
+	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build && $(MAKE) -f lib/CMakeFiles/gnuradio-Custom.dir/build.make lib/CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.i
+.PHONY : CCDecoder_impl.cc.i
+
+CCDecoder_impl.s: CCDecoder_impl.cc.s
+
+.PHONY : CCDecoder_impl.s
+
+# target to generate assembly for a file
+CCDecoder_impl.cc.s:
+	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build && $(MAKE) -f lib/CMakeFiles/gnuradio-Custom.dir/build.make lib/CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.s
+.PHONY : CCDecoder_impl.cc.s
+
 CC_Encoder_Custom_impl.o: CC_Encoder_Custom_impl.cc.o
 
 .PHONY : CC_Encoder_Custom_impl.o
@@ -347,6 +374,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... gnuradio-Custom"
 	@echo "... rebuild_cache"
+	@echo "... CCDecoder_impl.o"
+	@echo "... CCDecoder_impl.i"
+	@echo "... CCDecoder_impl.s"
 	@echo "... CC_Encoder_Custom_impl.o"
 	@echo "... CC_Encoder_Custom_impl.i"
 	@echo "... CC_Encoder_Custom_impl.s"

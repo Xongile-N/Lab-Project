@@ -4,6 +4,8 @@
     <compoundname>Custom</compoundname>
     <innerfile refid="api_8h">api.h</innerfile>
     <innerfile refid="CC__Encoder__Custom_8h">CC_Encoder_Custom.h</innerfile>
+    <innerfile refid="CCDecoder_8h">CCDecoder.h</innerfile>
+    <innerfile refid="DiffDecoderFlush_8h">DiffDecoderFlush.h</innerfile>
     <innerfile refid="DiffEncoderFlush_8h">DiffEncoderFlush.h</innerfile>
     <briefdescription>
     </briefdescription>

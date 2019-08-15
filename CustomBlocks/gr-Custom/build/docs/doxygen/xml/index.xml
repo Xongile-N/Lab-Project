@@ -26,6 +26,59 @@
     <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a56310fb3059fdbf6feaeb527182db502" kind="function"><name>~CC_Encoder_Custom_impl</name></member>
     <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1aca0151ce6784fc33b8123470a3a71ecd" kind="function"><name>work</name></member>
   </compound>
+  <compound refid="classgr_1_1Custom_1_1CCDecoder" kind="class"><name>gr::Custom::CCDecoder</name>
+    <member refid="classgr_1_1Custom_1_1CCDecoder_1ad95695bb8877885f88fce485978c15ed" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder_1a553db7eb981d52d6ab6470f4f36a9cbf" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1Custom_1_1CCDecoder__impl" kind="class"><name>gr::Custom::CCDecoder_impl</name>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1aa218e564bfd8687bfdaf37018dad848b" kind="variable"><name>_constraint</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a997db0e14b48f4e0162d3d6523dcc598" kind="variable"><name>rate</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1ae6c54e52bf8e4cae5906d00c7063c13a" kind="variable"><name>stateCount</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a5a2e13c45082a65a8fb4263dbf215ae4" kind="variable"><name>bitsIn</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a08a780137ee099595d9851303d8bc2cf" kind="variable"><name>codes</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a79a51a480d81677380f5d6c4ca2f9bec" kind="variable"><name>polyCodes</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1adf6d24385ef66f9ca8d4378d4e9fde08" kind="variable"><name>codeBuffer</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1aaa9feb0f93ffa47bb73f5489395c11d9" kind="variable"><name>decodeOutput</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1ac79089ee3e55362b0c390e23a461be4a" kind="variable"><name>trellis</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a1cf29a6b8f6454d1dbd7e8c23866da1e" kind="variable"><name>stateAttri</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1af1f42d59ffd404b09f64c48c2424cf0d" kind="variable"><name>currState</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1aafc5355eaa1903293963a900a2a4124a" kind="variable"><name>zeroNext</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a0ba112d67bab393ebce8fb04c5cf8403" kind="variable"><name>zeroOutput</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a8a44962b99b0ab7d8ab6e281eb639429" kind="variable"><name>oneNext</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a3de6fda8803a4e2e19f8d1462ab5be3c" kind="variable"><name>oneOutput</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a2cf78699d90503049bbce757a980ae74" kind="variable"><name>prev_0</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a57ef4364e4004b8700b13488b50a2e72" kind="variable"><name>prev_1</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a3b2acc1df2cc85c3fba9d63cd461ead5" kind="variable"><name>nodes</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a5b90e3432dc8eaef96a6bc08c21f17db" kind="variable"><name>done</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a1ab525d34d96d8069c18dab314246542" kind="variable"><name>numElems</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1ab8bd3413d93bcccf32ac2fc6c8804443" kind="variable"><name>_frameLength</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1adbf402e843b04d30904af0498c80e8d2" kind="variable"><name>flush</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a8f53055d467b11921092a12334810627" kind="variable"><name>procCount</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a1cb0db30ad1b08546b616c9a9fa9fb99" kind="function"><name>Decode</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a0e8d2b6e2770fc44b5b5c1b3aa3dd347" kind="function"><name>destroyTrellis</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a0955ac52673bac499caea6b80ae33e12" kind="function"><name>buildTrellis</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a01c954e1f599cd9fdd1a10adb4042324" kind="function"><name>getHammingDist</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a7a7a18c00ca79c357089821c0f88d258" kind="function"><name>getBit</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1aee3f4190dc553520a4ea1cba3bd02dc2" kind="function"><name>XOR</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a7f87fb1e957047beafd67a415251fdd5" kind="function"><name>BytesToBool</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1adf3860407d024d32565112c82f9bb648" kind="function"><name>BoolToBytes</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a7031652962fba0ab38f7606a71080bb0" kind="function"><name>CCDecoder_impl</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a70c1209f37f4fbac9c8c70eafc567bfc" kind="function"><name>~CCDecoder_impl</name></member>
+    <member refid="classgr_1_1Custom_1_1CCDecoder__impl_1a53a32669e852b5e5a79a03f25992cb92" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1Custom_1_1DiffDecoderFlush" kind="class"><name>gr::Custom::DiffDecoderFlush</name>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush_1aca8f6ecd14cde74e4e516b25310e731f" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush_1a0b745795db327a352ab8f7aed9bb1dff" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl" kind="class"><name>gr::Custom::DiffDecoderFlush_impl</name>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1ab5da31b4cc3c009feccbce27e2a5e843" kind="variable"><name>toFlush</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a968bc46979f8ae6d152e2b886cf455d0" kind="variable"><name>_flushLength</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a403d1e7e6cb90a4a105b11afcb9c1fd6" kind="variable"><name>_modulus</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1af814db777c64af6b5c5ac449664ea7ae" kind="variable"><name>procCount</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a683137e99779ecfaf8907fc44669aefb" kind="function"><name>DiffDecoderFlush_impl</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a63602b345bf4973be3c93157fc6bbc9e" kind="function"><name>~DiffDecoderFlush_impl</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a83bb8a419b24523b466b6ec3ed15e77d" kind="function"><name>work</name></member>
+  </compound>
   <compound refid="classgr_1_1Custom_1_1DiffEncoderFlush" kind="class"><name>gr::Custom::DiffEncoderFlush</name>
     <member refid="classgr_1_1Custom_1_1DiffEncoderFlush_1aeac444c02ad1b4f245224bb96dcc3602" kind="typedef"><name>sptr</name></member>
     <member refid="classgr_1_1Custom_1_1DiffEncoderFlush_1ab7e7a81a96fac608f3832b5cb960ed73" kind="function"><name>make</name></member>
@@ -40,6 +93,30 @@
     <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1ac5dc8b1a0b50b9256a6ecafc86177cac" kind="function"><name>~DiffEncoderFlush_impl</name></member>
     <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1a2391ef6513fa677b4490162a492b5373" kind="function"><name>work</name></member>
   </compound>
+  <compound refid="classViterbiNode" kind="class"><name>ViterbiNode</name>
+    <member refid="classViterbiNode_1a517e947e1c8790c3044d7c7d9d1e4d94" kind="variable"><name>pathHamming</name></member>
+    <member refid="classViterbiNode_1a9696733fea5e078fe157e97e3a1af9b8" kind="variable"><name>prevPathHamming</name></member>
+    <member refid="classViterbiNode_1ab064d1609eac94ce94b59b96396f3afa" kind="variable"><name>prevPrevPathHamming</name></member>
+    <member refid="classViterbiNode_1af3c0f2c1e0591e5c95875a94b5be65f7" kind="variable"><name>path</name></member>
+    <member refid="classViterbiNode_1a15b9fa2e1a6c2608cd9d006c626e08f6" kind="variable"><name>prevPath</name></member>
+    <member refid="classViterbiNode_1a65874da6a31f2ec3b529f0b03c5d79bc" kind="variable"><name>prevPrevPath</name></member>
+    <member refid="classViterbiNode_1adc34d7d47ab353420677494398286643" kind="variable"><name>trellisIndex</name></member>
+    <member refid="classViterbiNode_1a7213c7a27947f441d4ba0d7427b74cb4" kind="variable"><name>nodeAlloc</name></member>
+    <member refid="classViterbiNode_1a2a1417683fd943c42413d8b9a0a9bcd1" kind="function"><name>ViterbiNode</name></member>
+    <member refid="classViterbiNode_1af34d6c1a2a332ef539f3183bb19ce655" kind="function"><name>ViterbiNode</name></member>
+    <member refid="classViterbiNode_1a32ef05271baecdc7626167147c85c3e1" kind="function"><name>addPath</name></member>
+    <member refid="classViterbiNode_1a92729cda9603e267aeb44f5f7942112a" kind="function"><name>getPathHamming</name></member>
+    <member refid="classViterbiNode_1a43ce7a23f98261272a479b15b2e9b693" kind="function"><name>getPrevPathHamming</name></member>
+    <member refid="classViterbiNode_1ade6c62797d37b8515ac44b2847bafa80" kind="function"><name>getPrevPrevPathHamming</name></member>
+    <member refid="classViterbiNode_1a4cbbbf8f6e867ec614aff7b6df882bfa" kind="function"><name>getPathLength</name></member>
+    <member refid="classViterbiNode_1a9c0b31fb8715012dbad0ed3dee3d8667" kind="function"><name>getPrevPathLength</name></member>
+    <member refid="classViterbiNode_1a12b955e0462b666300b3913f7adff409" kind="function"><name>getPrevPrevPathLength</name></member>
+    <member refid="classViterbiNode_1ada1ccbeaa382991b7b43d4c4dd088945" kind="function"><name>getPath</name></member>
+    <member refid="classViterbiNode_1a744027aa33813f1fce7623f8efc795d3" kind="function"><name>getPrevPath</name></member>
+    <member refid="classViterbiNode_1a80bc268032bdf678600a952a07f35da6" kind="function"><name>getPrevPrevPath</name></member>
+    <member refid="classViterbiNode_1a6d20d19c869ca849e41f1694d2de66f4" kind="function"><name>deletePath</name></member>
+    <member refid="classViterbiNode_1a795f9322f33ebe23d1e4d6d5004c3025" kind="function"><name>~ViterbiNode</name></member>
+  </compound>
   <compound refid="namespacegr" kind="namespace"><name>gr</name>
   </compound>
   <compound refid="namespacegr_1_1Custom" kind="namespace"><name>gr::Custom</name>
@@ -53,6 +130,14 @@
   </compound>
   <compound refid="CC__Encoder__Custom__impl_8h" kind="file"><name>CC_Encoder_Custom_impl.h</name>
   </compound>
+  <compound refid="CCDecoder_8h" kind="file"><name>CCDecoder.h</name>
+  </compound>
+  <compound refid="CCDecoder__impl_8h" kind="file"><name>CCDecoder_impl.h</name>
+  </compound>
+  <compound refid="DiffDecoderFlush_8h" kind="file"><name>DiffDecoderFlush.h</name>
+  </compound>
+  <compound refid="DiffDecoderFlush__impl_8h" kind="file"><name>DiffDecoderFlush_impl.h</name>
+  </compound>
   <compound refid="DiffEncoderFlush_8h" kind="file"><name>DiffEncoderFlush.h</name>
   </compound>
   <compound refid="DiffEncoderFlush__impl_8h" kind="file"><name>DiffEncoderFlush_impl.h</name>
@@ -60,6 +145,8 @@
   <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
   </compound>
   <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="ViterbiNode_8h" kind="file"><name>ViterbiNode.h</name>
   </compound>
   <compound refid="group__block" kind="group"><name>block</name>
   </compound>

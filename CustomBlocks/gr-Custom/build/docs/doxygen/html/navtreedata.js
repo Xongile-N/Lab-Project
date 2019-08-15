@@ -24,7 +24,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"CC__Encoder__Custom_8h.html"
+"CCDecoder_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

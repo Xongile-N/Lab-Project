@@ -3,7 +3,10 @@
   <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
     <compoundname>lib</compoundname>
     <innerfile refid="CC__Encoder__Custom__impl_8h">CC_Encoder_Custom_impl.h</innerfile>
+    <innerfile refid="CCDecoder__impl_8h">CCDecoder_impl.h</innerfile>
+    <innerfile refid="DiffDecoderFlush__impl_8h">DiffDecoderFlush_impl.h</innerfile>
     <innerfile refid="DiffEncoderFlush__impl_8h">DiffEncoderFlush_impl.h</innerfile>
+    <innerfile refid="ViterbiNode_8h">ViterbiNode.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

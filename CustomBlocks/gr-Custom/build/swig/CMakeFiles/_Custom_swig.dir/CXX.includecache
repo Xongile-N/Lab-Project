@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../include/Custom/CCDecoder.h
+Custom/api.h
+-
+gnuradio/sync_decimator.h
+-
+
 ../include/Custom/CC_Encoder_Custom.h
 Custom/api.h
 -
@@ -81,6 +87,8 @@ Custom/DiffEncoderFlush.h
 /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom/DiffEncoderFlush.h
 Custom/DiffDecoderFlush.h
 /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom/DiffDecoderFlush.h
+Custom/CCDecoder.h
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom/CCDecoder.h
 float.h
 -
 math.h

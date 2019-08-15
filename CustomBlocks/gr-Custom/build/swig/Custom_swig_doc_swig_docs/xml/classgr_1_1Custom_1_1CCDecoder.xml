@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1Custom_1_1CCDecoder" kind="class" language="C++" prot="public">
+    <compoundname>gr::Custom::CCDecoder</compoundname>
+    <basecompoundref prot="public" virt="virtual">sync_decimator</basecompoundref>
+    <includes refid="CCDecoder_8h" local="no">CCDecoder.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1Custom_1_1CCDecoder_1ad95695bb8877885f88fce485978c15ed" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1Custom_1_1CCDecoder" kindref="compound">CCDecoder</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;CCDecoder&gt; gr::Custom::CCDecoder::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/CCDecoder.h" line="39" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/CCDecoder.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1Custom_1_1CCDecoder_1a553db7eb981d52d6ab6470f4f36a9cbf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1Custom_1_1CCDecoder_1ad95695bb8877885f88fce485978c15ed" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::Custom::CCDecoder::make</definition>
+        <argsstring>(int constraint, int frameLength, std::vector&lt; int &gt; polys)</argsstring>
+        <name>make</name>
+        <param>
+          <type>int</type>
+          <declname>constraint</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>frameLength</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>polys</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1Custom_1_1CCDecoder" kindref="compound">Custom::CCDecoder</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1Custom_1_1CCDecoder" kindref="compound">Custom::CCDecoder</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1Custom_1_1CCDecoder_1a553db7eb981d52d6ab6470f4f36a9cbf" kindref="member">Custom::CCDecoder::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/CCDecoder.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>gr::sync_decimator</label>
+      </node>
+      <node id="4">
+        <label>gr::Custom::CCDecoder</label>
+        <link refid="classgr_1_1Custom_1_1CCDecoder"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>gr::sync_decimator</label>
+      </node>
+      <node id="6">
+        <label>gr::Custom::CCDecoder</label>
+        <link refid="classgr_1_1Custom_1_1CCDecoder"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/CCDecoder.h" line="37" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/CCDecoder.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1Custom_1_1CCDecoder_1a553db7eb981d52d6ab6470f4f36a9cbf" prot="public" virt="non-virtual"><scope>gr::Custom::CCDecoder</scope><name>make</name></member>
+      <member refid="classgr_1_1Custom_1_1CCDecoder_1ad95695bb8877885f88fce485978c15ed" prot="public" virt="non-virtual"><scope>gr::Custom::CCDecoder</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

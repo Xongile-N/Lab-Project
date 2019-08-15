@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1Custom_1_1DiffDecoderFlush" kind="class" language="C++" prot="public">
+    <compoundname>gr::Custom::DiffDecoderFlush</compoundname>
+    <basecompoundref prot="public" virt="virtual">sync_block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl" prot="public" virt="non-virtual">gr::Custom::DiffDecoderFlush_impl</derivedcompoundref>
+    <includes refid="DiffDecoderFlush_8h" local="no">DiffDecoderFlush.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1Custom_1_1DiffDecoderFlush_1aca8f6ecd14cde74e4e516b25310e731f" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1Custom_1_1DiffDecoderFlush" kindref="compound">DiffDecoderFlush</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;DiffDecoderFlush&gt; gr::Custom::DiffDecoderFlush::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/DiffDecoderFlush.h" line="39" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/DiffDecoderFlush.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1Custom_1_1DiffDecoderFlush_1a0b745795db327a352ab8f7aed9bb1dff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1Custom_1_1DiffDecoderFlush_1aca8f6ecd14cde74e4e516b25310e731f" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::Custom::DiffDecoderFlush::make</definition>
+        <argsstring>(int modulus, bool flush, int flushLength)</argsstring>
+        <name>make</name>
+        <param>
+          <type>int</type>
+          <declname>modulus</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>flush</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flushLength</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1Custom_1_1DiffDecoderFlush" kindref="compound">Custom::DiffDecoderFlush</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1Custom_1_1DiffDecoderFlush" kindref="compound">Custom::DiffDecoderFlush</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1Custom_1_1DiffDecoderFlush_1a0b745795db327a352ab8f7aed9bb1dff" kindref="member">Custom::DiffDecoderFlush::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/DiffDecoderFlush.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="23">
+        <label>sync_block</label>
+      </node>
+      <node id="22">
+        <label>gr::Custom::DiffDecoderFlush</label>
+        <link refid="classgr_1_1Custom_1_1DiffDecoderFlush"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>gr::Custom::DiffDecoderFlush_impl</label>
+        <link refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="26">
+        <label>sync_block</label>
+      </node>
+      <node id="25">
+        <label>gr::Custom::DiffDecoderFlush</label>
+        <link refid="classgr_1_1Custom_1_1DiffDecoderFlush"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/DiffDecoderFlush.h" line="37" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/DiffDecoderFlush.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush_1a0b745795db327a352ab8f7aed9bb1dff" prot="public" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush</scope><name>make</name></member>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush_1aca8f6ecd14cde74e4e516b25310e731f" prot="public" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

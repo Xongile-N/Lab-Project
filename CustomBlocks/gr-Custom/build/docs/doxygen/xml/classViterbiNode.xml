@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classViterbiNode" kind="class" language="C++" prot="public">
+    <compoundname>ViterbiNode</compoundname>
+    <includes refid="ViterbiNode_8h" local="no">ViterbiNode.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classViterbiNode_1a517e947e1c8790c3044d7c7d9d1e4d94" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ViterbiNode::pathHamming</definition>
+        <argsstring></argsstring>
+        <name>pathHamming</name>
+        <initializer>=1000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="24" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classViterbiNode_1a9696733fea5e078fe157e97e3a1af9b8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ViterbiNode::prevPathHamming</definition>
+        <argsstring></argsstring>
+        <name>prevPathHamming</name>
+        <initializer>=1000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="25" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classViterbiNode_1ab064d1609eac94ce94b59b96396f3afa" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ViterbiNode::prevPrevPathHamming</definition>
+        <argsstring></argsstring>
+        <name>prevPrevPathHamming</name>
+        <initializer>=1000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="26" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classViterbiNode_1af3c0f2c1e0591e5c95875a94b5be65f7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; ViterbiNode::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="28" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classViterbiNode_1a15b9fa2e1a6c2608cd9d006c626e08f6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; ViterbiNode::prevPath</definition>
+        <argsstring></argsstring>
+        <name>prevPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="29" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classViterbiNode_1a65874da6a31f2ec3b529f0b03c5d79bc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; ViterbiNode::prevPrevPath</definition>
+        <argsstring></argsstring>
+        <name>prevPrevPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="30" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classViterbiNode_1adc34d7d47ab353420677494398286643" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ViterbiNode::trellisIndex</definition>
+        <argsstring></argsstring>
+        <name>trellisIndex</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="31" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classViterbiNode_1a7213c7a27947f441d4ba0d7427b74cb4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ViterbiNode::nodeAlloc</definition>
+        <argsstring></argsstring>
+        <name>nodeAlloc</name>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="32" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classViterbiNode_1a2a1417683fd943c42413d8b9a0a9bcd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ViterbiNode::ViterbiNode</definition>
+        <argsstring>()</argsstring>
+        <name>ViterbiNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="9" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1af34d6c1a2a332ef539f3183bb19ce655" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ViterbiNode::ViterbiNode</definition>
+        <argsstring>(int)</argsstring>
+        <name>ViterbiNode</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="10" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a32ef05271baecdc7626167147c85c3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ViterbiNode::addPath</definition>
+        <argsstring>(const std::vector&lt; int &gt;, int)</argsstring>
+        <name>addPath</name>
+        <param>
+          <type>const std::vector&lt; int &gt;</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a92729cda9603e267aeb44f5f7942112a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ViterbiNode::getPathHamming</definition>
+        <argsstring>()</argsstring>
+        <name>getPathHamming</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="12" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a43ce7a23f98261272a479b15b2e9b693" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ViterbiNode::getPrevPathHamming</definition>
+        <argsstring>()</argsstring>
+        <name>getPrevPathHamming</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="13" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1ade6c62797d37b8515ac44b2847bafa80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ViterbiNode::getPrevPrevPathHamming</definition>
+        <argsstring>()</argsstring>
+        <name>getPrevPrevPathHamming</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="14" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a4cbbbf8f6e867ec614aff7b6df882bfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ViterbiNode::getPathLength</definition>
+        <argsstring>()</argsstring>
+        <name>getPathLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="15" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a9c0b31fb8715012dbad0ed3dee3d8667" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ViterbiNode::getPrevPathLength</definition>
+        <argsstring>()</argsstring>
+        <name>getPrevPathLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="16" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a12b955e0462b666300b3913f7adff409" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ViterbiNode::getPrevPrevPathLength</definition>
+        <argsstring>()</argsstring>
+        <name>getPrevPrevPathLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="17" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1ada1ccbeaa382991b7b43d4c4dd088945" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; ViterbiNode::getPath</definition>
+        <argsstring>()</argsstring>
+        <name>getPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="18" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a744027aa33813f1fce7623f8efc795d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; ViterbiNode::getPrevPath</definition>
+        <argsstring>()</argsstring>
+        <name>getPrevPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="19" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a80bc268032bdf678600a952a07f35da6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; ViterbiNode::getPrevPrevPath</definition>
+        <argsstring>()</argsstring>
+        <name>getPrevPrevPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="20" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="20" bodyend="20"/>
+        <references refid="classViterbiNode_1a6d20d19c869ca849e41f1694d2de66f4">deletePath</references>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a6d20d19c869ca849e41f1694d2de66f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ViterbiNode::deletePath</definition>
+        <argsstring>()</argsstring>
+        <name>deletePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="21" column="1"/>
+        <referencedby refid="classViterbiNode_1a80bc268032bdf678600a952a07f35da6" compoundref="ViterbiNode_8h" startline="20" endline="20">getPrevPrevPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classViterbiNode_1a795f9322f33ebe23d1e4d6d5004c3025" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ViterbiNode::~ViterbiNode</definition>
+        <argsstring>()</argsstring>
+        <name>~ViterbiNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="22" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="7" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="7" bodyend="33"/>
+    <listofallmembers>
+      <member refid="classViterbiNode_1a32ef05271baecdc7626167147c85c3e1" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>addPath</name></member>
+      <member refid="classViterbiNode_1a6d20d19c869ca849e41f1694d2de66f4" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>deletePath</name></member>
+      <member refid="classViterbiNode_1ada1ccbeaa382991b7b43d4c4dd088945" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>getPath</name></member>
+      <member refid="classViterbiNode_1a92729cda9603e267aeb44f5f7942112a" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>getPathHamming</name></member>
+      <member refid="classViterbiNode_1a4cbbbf8f6e867ec614aff7b6df882bfa" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>getPathLength</name></member>
+      <member refid="classViterbiNode_1a744027aa33813f1fce7623f8efc795d3" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>getPrevPath</name></member>
+      <member refid="classViterbiNode_1a43ce7a23f98261272a479b15b2e9b693" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>getPrevPathHamming</name></member>
+      <member refid="classViterbiNode_1a9c0b31fb8715012dbad0ed3dee3d8667" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>getPrevPathLength</name></member>
+      <member refid="classViterbiNode_1a80bc268032bdf678600a952a07f35da6" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>getPrevPrevPath</name></member>
+      <member refid="classViterbiNode_1ade6c62797d37b8515ac44b2847bafa80" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>getPrevPrevPathHamming</name></member>
+      <member refid="classViterbiNode_1a12b955e0462b666300b3913f7adff409" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>getPrevPrevPathLength</name></member>
+      <member refid="classViterbiNode_1a7213c7a27947f441d4ba0d7427b74cb4" prot="private" virt="non-virtual"><scope>ViterbiNode</scope><name>nodeAlloc</name></member>
+      <member refid="classViterbiNode_1af3c0f2c1e0591e5c95875a94b5be65f7" prot="private" virt="non-virtual"><scope>ViterbiNode</scope><name>path</name></member>
+      <member refid="classViterbiNode_1a517e947e1c8790c3044d7c7d9d1e4d94" prot="private" virt="non-virtual"><scope>ViterbiNode</scope><name>pathHamming</name></member>
+      <member refid="classViterbiNode_1a15b9fa2e1a6c2608cd9d006c626e08f6" prot="private" virt="non-virtual"><scope>ViterbiNode</scope><name>prevPath</name></member>
+      <member refid="classViterbiNode_1a9696733fea5e078fe157e97e3a1af9b8" prot="private" virt="non-virtual"><scope>ViterbiNode</scope><name>prevPathHamming</name></member>
+      <member refid="classViterbiNode_1a65874da6a31f2ec3b529f0b03c5d79bc" prot="private" virt="non-virtual"><scope>ViterbiNode</scope><name>prevPrevPath</name></member>
+      <member refid="classViterbiNode_1ab064d1609eac94ce94b59b96396f3afa" prot="private" virt="non-virtual"><scope>ViterbiNode</scope><name>prevPrevPathHamming</name></member>
+      <member refid="classViterbiNode_1adc34d7d47ab353420677494398286643" prot="private" virt="non-virtual"><scope>ViterbiNode</scope><name>trellisIndex</name></member>
+      <member refid="classViterbiNode_1a2a1417683fd943c42413d8b9a0a9bcd1" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>ViterbiNode</name></member>
+      <member refid="classViterbiNode_1af34d6c1a2a332ef539f3183bb19ce655" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>ViterbiNode</name></member>
+      <member refid="classViterbiNode_1a795f9322f33ebe23d1e4d6d5004c3025" prot="public" virt="non-virtual"><scope>ViterbiNode</scope><name>~ViterbiNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

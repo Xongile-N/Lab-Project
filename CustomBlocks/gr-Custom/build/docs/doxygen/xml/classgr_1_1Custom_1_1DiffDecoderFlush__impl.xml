@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1Custom_1_1DiffDecoderFlush__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::Custom::DiffDecoderFlush_impl</compoundname>
+    <basecompoundref refid="classgr_1_1Custom_1_1DiffDecoderFlush" prot="public" virt="non-virtual">gr::Custom::DiffDecoderFlush</basecompoundref>
+    <includes refid="DiffDecoderFlush__impl_8h" local="no">DiffDecoderFlush_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1ab5da31b4cc3c009feccbce27e2a5e843" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::Custom::DiffDecoderFlush_impl::toFlush</definition>
+        <argsstring></argsstring>
+        <name>toFlush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" line="32" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a968bc46979f8ae6d152e2b886cf455d0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::Custom::DiffDecoderFlush_impl::_flushLength</definition>
+        <argsstring></argsstring>
+        <name>_flushLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" line="33" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a403d1e7e6cb90a4a105b11afcb9c1fd6" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gr::Custom::DiffDecoderFlush_impl::_modulus</definition>
+        <argsstring></argsstring>
+        <name>_modulus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" line="34" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1af814db777c64af6b5c5ac449664ea7ae" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::Custom::DiffDecoderFlush_impl::procCount</definition>
+        <argsstring></argsstring>
+        <name>procCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" line="35" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a683137e99779ecfaf8907fc44669aefb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::Custom::DiffDecoderFlush_impl::DiffDecoderFlush_impl</definition>
+        <argsstring>(int modulus, bool flush, int flushLength)</argsstring>
+        <name>DiffDecoderFlush_impl</name>
+        <param>
+          <type>int</type>
+          <declname>modulus</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>flush</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flushLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a63602b345bf4973be3c93157fc6bbc9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::Custom::DiffDecoderFlush_impl::~DiffDecoderFlush_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~DiffDecoderFlush_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a83bb8a419b24523b466b6ec3ed15e77d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::Custom::DiffDecoderFlush_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="29">
+        <label>sync_block</label>
+      </node>
+      <node id="28">
+        <label>gr::Custom::DiffDecoderFlush</label>
+        <link refid="classgr_1_1Custom_1_1DiffDecoderFlush"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>gr::Custom::DiffDecoderFlush_impl</label>
+        <link refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="32">
+        <label>sync_block</label>
+      </node>
+      <node id="31">
+        <label>gr::Custom::DiffDecoderFlush</label>
+        <link refid="classgr_1_1Custom_1_1DiffDecoderFlush"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>gr::Custom::DiffDecoderFlush_impl</label>
+        <link refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" line="30" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h" bodystart="29" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a968bc46979f8ae6d152e2b886cf455d0" prot="private" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush_impl</scope><name>_flushLength</name></member>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a403d1e7e6cb90a4a105b11afcb9c1fd6" prot="private" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush_impl</scope><name>_modulus</name></member>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a683137e99779ecfaf8907fc44669aefb" prot="public" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush_impl</scope><name>DiffDecoderFlush_impl</name></member>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush_1a0b745795db327a352ab8f7aed9bb1dff" prot="public" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1af814db777c64af6b5c5ac449664ea7ae" prot="private" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush_impl</scope><name>procCount</name></member>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush_1aca8f6ecd14cde74e4e516b25310e731f" prot="public" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1ab5da31b4cc3c009feccbce27e2a5e843" prot="private" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush_impl</scope><name>toFlush</name></member>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a83bb8a419b24523b466b6ec3ed15e77d" prot="public" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1Custom_1_1DiffDecoderFlush__impl_1a63602b345bf4973be3c93157fc6bbc9e" prot="public" virt="non-virtual"><scope>gr::Custom::DiffDecoderFlush_impl</scope><name>~DiffDecoderFlush_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

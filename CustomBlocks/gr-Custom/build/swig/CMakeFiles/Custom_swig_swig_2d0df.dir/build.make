@@ -62,7 +62,6 @@ swig/Custom_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/gr_swig_block_magic.
 swig/Custom_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/gr_logger.i
 swig/Custom_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/block_gateway.i
 swig/Custom_swig_swig_2d0df.cpp: ../swig/Custom_swig.i
-swig/Custom_swig_swig_2d0df.cpp: swig/Custom_swig_doc.i
 swig/Custom_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/tags.i
 swig/Custom_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/top_block.i
 swig/Custom_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/sync_block.i
@@ -92,23 +91,14 @@ swig/Custom_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/block_detail.i
 swig/Custom_swig_swig_2d0df.cpp: swig/Custom_swig.tag
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig && /usr/bin/cmake -E copy /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom_swig_swig_2d0df.cpp.in /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom_swig_swig_2d0df.cpp
 
-swig/Custom_swig_doc.i: swig/Custom_swig_doc_swig_docs/xml/index.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating python docstrings for Custom_swig_doc"
-	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/docs/doxygen && /usr/bin/python2 -B /home/xongile/Lab-Project/CustomBlocks/gr-Custom/docs/doxygen/swig_doc.py /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom_swig_doc_swig_docs/xml /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom_swig_doc.i
-
 swig/Custom_swig.tag: swig/_Custom_swig_swig_tag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Custom_swig.tag"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Custom_swig.tag"
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig && ./_Custom_swig_swig_tag
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig && /usr/bin/cmake -E touch /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom_swig.tag
 
-swig/Custom_swig_doc_swig_docs/xml/index.xml: swig/_Custom_swig_doc_tag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating doxygen xml for Custom_swig_doc docs"
-	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig && ./_Custom_swig_doc_tag
-	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig && /usr/bin/doxygen /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom_swig_doc_swig_docs/Doxyfile
-
 swig/CMakeFiles/Custom_swig_swig_2d0df.dir/Custom_swig_swig_2d0df.cpp.o: swig/CMakeFiles/Custom_swig_swig_2d0df.dir/flags.make
 swig/CMakeFiles/Custom_swig_swig_2d0df.dir/Custom_swig_swig_2d0df.cpp.o: swig/Custom_swig_swig_2d0df.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object swig/CMakeFiles/Custom_swig_swig_2d0df.dir/Custom_swig_swig_2d0df.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object swig/CMakeFiles/Custom_swig_swig_2d0df.dir/Custom_swig_swig_2d0df.cpp.o"
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Custom_swig_swig_2d0df.dir/Custom_swig_swig_2d0df.cpp.o -c /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom_swig_swig_2d0df.cpp
 
 swig/CMakeFiles/Custom_swig_swig_2d0df.dir/Custom_swig_swig_2d0df.cpp.i: cmake_force
@@ -140,7 +130,7 @@ Custom_swig_swig_2d0df_EXTERNAL_OBJECTS =
 swig/Custom_swig_swig_2d0df: swig/CMakeFiles/Custom_swig_swig_2d0df.dir/Custom_swig_swig_2d0df.cpp.o
 swig/Custom_swig_swig_2d0df: swig/CMakeFiles/Custom_swig_swig_2d0df.dir/build.make
 swig/Custom_swig_swig_2d0df: swig/CMakeFiles/Custom_swig_swig_2d0df.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Custom_swig_swig_2d0df"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Custom_swig_swig_2d0df"
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Custom_swig_swig_2d0df.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Swig source"
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig && /usr/bin/cmake -E make_directory /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig
@@ -160,9 +150,7 @@ swig/CMakeFiles/Custom_swig_swig_2d0df.dir/clean:
 .PHONY : swig/CMakeFiles/Custom_swig_swig_2d0df.dir/clean
 
 swig/CMakeFiles/Custom_swig_swig_2d0df.dir/depend: swig/Custom_swig_swig_2d0df.cpp
-swig/CMakeFiles/Custom_swig_swig_2d0df.dir/depend: swig/Custom_swig_doc.i
 swig/CMakeFiles/Custom_swig_swig_2d0df.dir/depend: swig/Custom_swig.tag
-swig/CMakeFiles/Custom_swig_swig_2d0df.dir/depend: swig/Custom_swig_doc_swig_docs/xml/index.xml
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xongile/Lab-Project/CustomBlocks/gr-Custom /home/xongile/Lab-Project/CustomBlocks/gr-Custom/swig /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/CMakeFiles/Custom_swig_swig_2d0df.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : swig/CMakeFiles/Custom_swig_swig_2d0df.dir/depend
 

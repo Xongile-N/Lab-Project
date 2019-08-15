@@ -4,6 +4,8 @@
     <compoundname>api.h</compoundname>
     <includes local="no">gnuradio/attributes.h</includes>
     <includedby refid="CC__Encoder__Custom_8h" local="no">CC_Encoder_Custom.h</includedby>
+    <includedby refid="CCDecoder_8h" local="no">CCDecoder.h</includedby>
+    <includedby refid="DiffDecoderFlush_8h" local="no">DiffDecoderFlush.h</includedby>
     <includedby refid="DiffEncoderFlush_8h" local="no">DiffEncoderFlush.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -17,14 +19,24 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
+      <node id="10">
         <label>DiffEncoderFlush_impl.h</label>
         <link refid="DiffEncoderFlush__impl_8h"/>
       </node>
-      <node id="5">
+      <node id="8">
+        <label>DiffDecoderFlush_impl.h</label>
+        <link refid="DiffDecoderFlush__impl_8h"/>
+      </node>
+      <node id="7">
+        <label>DiffDecoderFlush.h</label>
+        <link refid="DiffDecoderFlush_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
         <label>DiffEncoderFlush.h</label>
         <link refid="DiffEncoderFlush_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -38,12 +50,26 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>CC_Encoder_Custom.h</label>
         <link refid="CC__Encoder__Custom_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
+      </node>
+      <node id="5">
+        <label>CCDecoder.h</label>
+        <link refid="CCDecoder_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CCDecoder_impl.h</label>
+        <link refid="CCDecoder__impl_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
