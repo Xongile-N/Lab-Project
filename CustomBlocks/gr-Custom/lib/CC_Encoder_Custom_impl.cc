@@ -41,7 +41,7 @@ namespace gr {
     CC_Encoder_Custom_impl::CC_Encoder_Custom_impl(int constraint, int frameLength, std::vector<int> polynomial)
       : gr::sync_interpolator("CC_Encoder_Custom",
               gr::io_signature::make(1, 1, sizeof(char)),
-              gr::io_signature::make(1, 1, sizeof(char)), <+interpolation+>)
+              gr::io_signature::make(1, 1, sizeof(char)), rate)
     {}
 
     /*
@@ -58,29 +58,26 @@ namespace gr {
     {
       const  uint8_t*in = (const uint8_t *) input_items[0];
       uint8_t *out = (uint8_t*) output_items[0];
+
+
       bool* inBuffer=NULL;
       bool* outBuffer=NULL;
-			numElems=std::min(inputPort->elements(),frameLength-procCount);
+			numElems=noutput_items/rate;
 
-      size_t outCount;
-			procCount+=numElems;
-			outCount=(numElems*rate);
+			//outCount=(numElems*rate);
 			//outCount+=(flushBits%8)>0?1:0;
 			size_t flushBits=constraint*rate;
 			size_t flushBytes=flushBits/8;
-      if(procCount==frameLength){
-				flush=true;
-				//outCount+=flushBytes
-				procCount=0;
-			}
-      uint8_t *temp=new uint8_t [outCount];
+
+      uint8_t *temp=new uint8_t [noutput_items];
 			inBuffer=new bool[numElems*8];
-
 			outBuffer=new bool[numElems*8*rate];	
-
-			BytesToBool(inputBuffer,inBuffer,numElems);
+			BytesToBool(in,inBuffer,numElems);
 			encode(inBuffer,outBuffer,numElems*8);
-			BoolToBytes(outBuffer,temp,outCount );
+			BoolToBytes(outBuffer,temp,noutput_items );
+      for(int i=0;i<noutput_items;i++){
+        out[i]=temp[i];
+      }
 			std::memcpy(outElems.as<void *>(),temp,outCount);
 
 			delete temp;
@@ -90,7 +87,7 @@ namespace gr {
 			delete outBuffer;
 			outBuffer=NULL;	
       // Do <+signal processing+>
-
+      consume_each(noutput_items/rate); 
       // Tell runtime system how many output items we produced.
       return noutput_items;
     }
@@ -114,6 +111,19 @@ namespace gr {
         codeBuffer[i]=0;		
       }
       for(size_t i=0;i<numIn;i+=bitsIn){
+        if(procCount==frameLength){
+          procCount=0;
+          for(size_t i=numIn;i<constraint+numIn;i++){
+            for(int j=constraint-1;j>bitsIn-1;j--){
+              codeBuffer[j]=codeBuffer[j-1]	;		
+            }
+            for(int j=bitsIn-1;j>-1;j--){
+              codeBuffer[j]=0	;		
+            }
+          }
+        }
+        procCount++;
+
         for(int j=constraint-1;j>bitsIn-1;j--){
           codeBuffer[j]=codeBuffer[j-1]	;		
         }
@@ -128,27 +138,6 @@ namespace gr {
           }
           *(outBuffer+i*rate+j)=out;			
         }	
-      }
-      if(flush){
-        flush=false;
-        for(size_t i=numIn;i<constraint+numIn;i++){
-          for(int j=constraint-1;j>bitsIn-1;j--){
-            codeBuffer[j]=codeBuffer[j-1]	;		
-          }
-          for(int j=bitsIn-1;j>-1;j--){
-            codeBuffer[j]=0	;		
-          }
-          /*
-          for(int j=0;j<rate;j++){
-            bool out=0;
-            for(int k=0;k<constraint;k++){
-              bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k];
-              out=XOR(out,poly);
-            }
-            *(outBuffer+i*rate+j)=out;	
-          }	
-          */
-        }
       }
 
       for(auto i=0;i<rate;i++){
