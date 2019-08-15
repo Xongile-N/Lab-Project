@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Thu Aug 15 10:40:02 2019
+# Generated: Thu Aug 15 12:14:36 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -187,6 +187,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_tagged_stream_multiply_length_0 = blocks.tagged_stream_multiply_length(gr.sizeof_gr_complex*1, "packet_len", sps)
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, packetLength, "packet_len")
         self.blocks_repack_bits_bb_0_1_0_1 = blocks.repack_bits_bb(1, 8, "", False, gr.GR_MSB_FIRST)
+        self.blocks_repack_bits_bb_0_1_0_0 = blocks.repack_bits_bb(1, 8, "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0_1_0 = blocks.repack_bits_bb(1, 8, "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0_1 = blocks.repack_bits_bb(8, 1, "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0_0 = blocks.repack_bits_bb(8, qpsk.bits_per_symbol(), "", False, gr.GR_MSB_FIRST)
@@ -195,8 +196,9 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1 , '/home/xongile/Lab-Project/TestSinks/TestData.dat', True)
         self.blocks_file_sink_1_0_0_0_0_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/Header1.dat', False)
         self.blocks_file_sink_1_0_0_0_0_0.set_unbuffered(False)
-        self.blocks_file_sink_1_0_0_0_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/Header.dat', False)
-        self.blocks_file_sink_1_0_0_0_0.set_unbuffered(False)
+        self.blocks_file_sink_1_0_0_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/HeaderEncoded.dat', False)
+        self.blocks_file_sink_1_0_0_0.set_unbuffered(False)
+        self.Custom_DiffEncoderFlush_0_0 = Custom.DiffEncoderFlush(2, True, packetLength*8)
         self.Custom_DiffEncoderFlush_0 = Custom.DiffEncoderFlush(2, True, hdr_format.header_nbits()/qpsk.bits_per_symbol())
         self.Custom_DiffDecoderFlush_0 = Custom.DiffDecoderFlush(2, True, hdr_format.header_nbits()/qpsk.bits_per_symbol())
 
@@ -205,15 +207,17 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         self.connect((self.Custom_DiffDecoderFlush_0, 0), (self.fec_tagged_encoder_2_0, 0))
         self.connect((self.Custom_DiffEncoderFlush_0, 0), (self.Custom_DiffDecoderFlush_0, 0))
+        self.connect((self.Custom_DiffEncoderFlush_0, 0), (self.blocks_repack_bits_bb_0_1_0_0, 0))
         self.connect((self.Custom_DiffEncoderFlush_0, 0), (self.fec_tagged_encoder_2, 0))
+        self.connect((self.Custom_DiffEncoderFlush_0_0, 0), (self.digital_map_bb_0_0, 0))
         self.connect((self.blocks_file_source_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.qtgui_const_sink_x_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.red_pitaya_wide_sink_0, 0))
         self.connect((self.blocks_repack_bits_bb_0, 0), (self.digital_map_bb_0, 0))
-        self.connect((self.blocks_repack_bits_bb_0_0, 0), (self.digital_map_bb_0_0, 0))
+        self.connect((self.blocks_repack_bits_bb_0_0, 0), (self.Custom_DiffEncoderFlush_0_0, 0))
         self.connect((self.blocks_repack_bits_bb_0_1, 0), (self.blocks_tagged_stream_multiply_length_1_1, 0))
-        self.connect((self.blocks_repack_bits_bb_0_1_0, 0), (self.blocks_file_sink_1_0_0_0_0, 0))
         self.connect((self.blocks_repack_bits_bb_0_1_0, 0), (self.blocks_tagged_stream_multiply_length_1_1_0, 0))
+        self.connect((self.blocks_repack_bits_bb_0_1_0_0, 0), (self.blocks_file_sink_1_0_0_0, 0))
         self.connect((self.blocks_repack_bits_bb_0_1_0_1, 0), (self.blocks_file_sink_1_0_0_0_0_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.fec_tagged_encoder_1, 0))
         self.connect((self.blocks_tagged_stream_multiply_length_0, 0), (self.blocks_multiply_const_vxx_0, 0))
