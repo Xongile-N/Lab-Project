@@ -24,7 +24,7 @@
 
 #include <gnuradio/io_signature.h>
 #include "CC_Encoder_Custom_impl.h"
-#include vector;
+#include <vector>
 namespace gr {
   namespace Custom {
 
@@ -42,8 +42,8 @@ namespace gr {
       : gr::sync_interpolator("CC_Encoder_Custom",
               gr::io_signature::make(1, 1, sizeof(char)),
               gr::io_signature::make(1, 1, sizeof(char)), rate),
-              constraint(constraint),
-              frameLength(frameLength),
+              _constraint(constraint),
+              _frameLength(frameLength)
 
     {
       for(int i=0;i<rate;i++){
@@ -73,7 +73,7 @@ namespace gr {
 
 			//outCount=(numElems*rate);
 			//outCount+=(flushBits%8)>0?1:0;
-			size_t flushBits=constraint*rate;
+			size_t flushBits=_constraint*rate;
 			size_t flushBytes=flushBits/8;
 
       uint8_t *temp=new uint8_t [noutput_items];
@@ -85,8 +85,6 @@ namespace gr {
       for(int i=0;i<noutput_items;i++){
         out[i]=temp[i];
       }
-			std::memcpy(outElems.as<void *>(),temp,outCount);
-
 			delete temp;
 			temp=NULL;
 			delete inBuffer;
@@ -105,23 +103,23 @@ namespace gr {
       polyCodes=new bool*[rate];
       
       for(auto i=0;i<rate;i++){
-        polyCodes[i]=new bool[constraint];
-        for(auto j=0;j<constraint;j++){
+        polyCodes[i]=new bool[_constraint];
+        for(auto j=0;j<_constraint;j++){
           polyCodes[i][j]=0;
           polyCodes[i][j]=getBit(codes[i],j);
         }
       }
       
       
-      codeBuffer=new bool[constraint];
-      for(auto i=0;i<constraint;i++){
+      codeBuffer=new bool[_constraint];
+      for(auto i=0;i<_constraint;i++){
         codeBuffer[i]=0;		
       }
       for(size_t i=0;i<numIn;i+=bitsIn){
-        if(procCount==frameLength){
+        if(procCount==_frameLength){
           procCount=0;
-          for(size_t i=numIn;i<constraint+numIn;i++){
-            for(int j=constraint-1;j>bitsIn-1;j--){
+          for(size_t i=numIn;i<_constraint+numIn;i++){
+            for(int j=_constraint-1;j>bitsIn-1;j--){
               codeBuffer[j]=codeBuffer[j-1]	;		
             }
             for(int j=bitsIn-1;j>-1;j--){
@@ -131,7 +129,7 @@ namespace gr {
         }
         procCount++;
 
-        for(int j=constraint-1;j>bitsIn-1;j--){
+        for(int j=_constraint-1;j>bitsIn-1;j--){
           codeBuffer[j]=codeBuffer[j-1]	;		
         }
         for(int j=bitsIn-1;j>-1;j--){
@@ -139,8 +137,8 @@ namespace gr {
         }
         for(int j=0;j<rate;j++){
           bool out=0;
-          for(int k=0;k<constraint;k++){
-            bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k];
+          for(int k=0;k<_constraint;k++){
+            bool poly=polyCodes[j][_constraint-k-1]&&codeBuffer[k];
             out=XOR(out,poly);
           }
           *(outBuffer+i*rate+j)=out;			

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classgr_1_1Custom_1_1CC__Encoder__Custom" kind="class"><name>gr::Custom::CC_Encoder_Custom</name>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom_1a58a1f4a38052166beb863ef93abae86f" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom_1adf023513dbc4ccf5d2ea8daa9cb2cc4a" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl" kind="class"><name>gr::Custom::CC_Encoder_Custom_impl</name>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a787c00626103ff56e52d39380d6754b4" kind="variable"><name>_constraint</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a8565a3c605028b5fda8229bebf5b580b" kind="variable"><name>rate</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a38abb73c74c27caabac92acb6df909f0" kind="variable"><name>bitsIn</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a612ce6fe3bd7c0fa49a9befc02edcbdd" kind="variable"><name>codes</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a338e452f01cb52f775f9f694db822d24" kind="variable"><name>polyCodes</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a63b890b43c8e0bdfcdf296150a90b5a0" kind="variable"><name>codeBuffer</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1ad9319b8293a419b0c0518c2b1c1890d4" kind="variable"><name>skip</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a16cdd548191ef9ea9e6847bd00a50afc" kind="variable"><name>flush</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a50be041efe0402426eface9fe39950df" kind="variable"><name>done</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a3b34b6b595715d08cfe5fd24fd2fe744" kind="variable"><name>numElems</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a379d0994d30488d04e55100187fc3376" kind="variable"><name>_frameLength</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a3b5fa0498544fa27c4fe0309d35395dc" kind="variable"><name>procCount</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a3d13b82ced600beea1a17600e75a9078" kind="function"><name>encode</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a6bcd7243418c6e868c8faf6b3bc7a9ac" kind="function"><name>BytesToBool</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1afe40300fc1a459b6ac148b4139012e13" kind="function"><name>BoolToBytes</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a6d32d84fb5dbfd32568e78fea19b63f9" kind="function"><name>XOR</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a673ada45d7eec36b75ad7b955987c673" kind="function"><name>getBit</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1af22d532bb4b8d48efc45626abd5c0814" kind="function"><name>CC_Encoder_Custom_impl</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a56310fb3059fdbf6feaeb527182db502" kind="function"><name>~CC_Encoder_Custom_impl</name></member>
+    <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1aca0151ce6784fc33b8123470a3a71ecd" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1Custom_1_1DiffEncoderFlush" kind="class"><name>gr::Custom::DiffEncoderFlush</name>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush_1aeac444c02ad1b4f245224bb96dcc3602" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush_1ab7e7a81a96fac608f3832b5cb960ed73" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl" kind="class"><name>gr::Custom::DiffEncoderFlush_impl</name>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1ad99bfb5d1715f1b44f96278c2dff80ef" kind="variable"><name>toFlush</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1a0f2576a53fa4d841474787ffa75fdbd1" kind="variable"><name>_flushLength</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1ac4b089651e61b4d5240efb5739d320e7" kind="variable"><name>_modulus</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1a54ebfa3067db0d72edbe3fbe73d7c078" kind="variable"><name>_lastOut</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1ae027797ba349ddf7b9d1bd727e1545ca" kind="variable"><name>procCount</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1af835aae52f4afd5a40195bb05fa36313" kind="function"><name>DiffEncoderFlush_impl</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1ac5dc8b1a0b50b9256a6ecafc86177cac" kind="function"><name>~DiffEncoderFlush_impl</name></member>
+    <member refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl_1a2391ef6513fa677b4490162a492b5373" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1Custom" kind="namespace"><name>gr::Custom</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a1806ab788d6406379b257e6ff1a6a511" kind="define"><name>CUSTOM_API</name></member>
+  </compound>
+  <compound refid="CC__Encoder__Custom_8h" kind="file"><name>CC_Encoder_Custom.h</name>
+  </compound>
+  <compound refid="CC__Encoder__Custom__impl_8h" kind="file"><name>CC_Encoder_Custom_impl.h</name>
+  </compound>
+  <compound refid="DiffEncoderFlush_8h" kind="file"><name>DiffEncoderFlush.h</name>
+  </compound>
+  <compound refid="DiffEncoderFlush__impl_8h" kind="file"><name>DiffEncoderFlush_impl.h</name>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_deb48c2b1c4af36cc32640518b9b0874" kind="dir"><name>Custom</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

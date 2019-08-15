@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacegr_1_1Custom" kind="namespace" language="C++">
+    <compoundname>gr::Custom</compoundname>
+    <innerclass refid="classgr_1_1Custom_1_1CC__Encoder__Custom" prot="public">gr::Custom::CC_Encoder_Custom</innerclass>
+    <innerclass refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl" prot="public">gr::Custom::CC_Encoder_Custom_impl</innerclass>
+    <innerclass refid="classgr_1_1Custom_1_1DiffEncoderFlush" prot="public">gr::Custom::DiffEncoderFlush</innerclass>
+    <innerclass refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl" prot="public">gr::Custom::DiffEncoderFlush_impl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/CC_Encoder_Custom.h" line="29" column="1"/>
+  </compounddef>
+</doxygen>

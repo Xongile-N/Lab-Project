@@ -27,6 +27,8 @@ link_directories(${Boost_LIBRARY_DIRS})
 
 list(APPEND Custom_sources
     CC_Encoder_Custom_impl.cc
+    DiffEncoderFlush_impl.cc
+    DiffDecoderFlush_impl.cc
 )
 
 set(Custom_sources "${Custom_sources}" PARENT_SCOPE)

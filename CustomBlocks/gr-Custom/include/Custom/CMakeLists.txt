@@ -22,5 +22,7 @@
 ########################################################################
 install(FILES
     api.h
-    CC_Encoder_Custom.h DESTINATION include/Custom
+    CC_Encoder_Custom.h
+    DiffEncoderFlush.h
+    DiffDecoderFlush.h DESTINATION include/Custom
 )

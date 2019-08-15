@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="DiffEncoderFlush__impl_8h" kind="file" language="C++">
+    <compoundname>DiffEncoderFlush_impl.h</compoundname>
+    <includes refid="DiffEncoderFlush_8h" local="no">Custom/DiffEncoderFlush.h</includes>
+    <incdepgraph>
+      <node id="25">
+        <label>DiffEncoderFlush_impl.h</label>
+        <link refid="DiffEncoderFlush__impl_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="28">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="26">
+        <label>Custom/DiffEncoderFlush.h</label>
+        <link refid="DiffEncoderFlush_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Custom/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr_1_1Custom_1_1DiffEncoderFlush__impl" prot="public">gr::Custom::DiffEncoderFlush_impl</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1Custom">gr::Custom</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlush_impl.h"/>
+  </compounddef>
+</doxygen>

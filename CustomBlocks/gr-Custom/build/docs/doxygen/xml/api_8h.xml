@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="api_8h" kind="file" language="C++">
+    <compoundname>api.h</compoundname>
+    <includes local="no">gnuradio/attributes.h</includes>
+    <includedby refid="CC__Encoder__Custom_8h" local="no">CC_Encoder_Custom.h</includedby>
+    <includedby refid="DiffEncoderFlush_8h" local="no">DiffEncoderFlush.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="0">
+        <label>api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>DiffEncoderFlush_impl.h</label>
+        <link refid="DiffEncoderFlush__impl_8h"/>
+      </node>
+      <node id="5">
+        <label>DiffEncoderFlush.h</label>
+        <link refid="DiffEncoderFlush_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CC_Encoder_Custom_impl.h</label>
+        <link refid="CC__Encoder__Custom__impl_8h"/>
+      </node>
+      <node id="2">
+        <label>api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CC_Encoder_Custom.h</label>
+        <link refid="CC__Encoder__Custom_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="api_8h_1a1806ab788d6406379b257e6ff1a6a511" prot="public" static="no">
+        <name>CUSTOM_API</name>
+        <initializer>__GR_ATTR_IMPORT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/api.h" line="30" column="12" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/api.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/api.h"/>
+  </compounddef>
+</doxygen>

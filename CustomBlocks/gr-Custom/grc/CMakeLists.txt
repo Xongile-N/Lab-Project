@@ -18,5 +18,7 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    Custom_CC_Encoder_Custom.xml DESTINATION share/gnuradio/grc/blocks
+    Custom_CC_Encoder_Custom.xml
+    Custom_DiffEncoderFlush.xml
+    Custom_DiffDecoderFlush.xml DESTINATION share/gnuradio/grc/blocks
 )

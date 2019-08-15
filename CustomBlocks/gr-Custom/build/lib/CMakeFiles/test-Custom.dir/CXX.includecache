@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/qa_Custom.cc
+qa_Custom.h
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/qa_Custom.h
+
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/qa_Custom.h
+gnuradio/attributes.h
+-
+cppunit/TestSuite.h
+-
+
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/test_Custom.cc
+config.h
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/config.h
+cppunit/TextTestRunner.h
+-
+cppunit/XmlOutputter.h
+-
+gnuradio/unittests.h
+-
+qa_Custom.h
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/qa_Custom.h
+iostream
+-
+fstream
+-
+

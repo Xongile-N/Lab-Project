@@ -29,7 +29,7 @@ namespace gr {
     class CC_Encoder_Custom_impl : public CC_Encoder_Custom
     {
      private:
-		uint8_t constraint =0;
+		int _constraint =0;
 		int rate =2;
 		int bitsIn=1;
 		std::vector<uint8_t> codes;
@@ -37,10 +37,9 @@ namespace gr {
 		bool * codeBuffer=NULL;
 		bool skip=true;
 		bool flush=false;
-		Pothos::BufferChunk outElems;
 		bool done=false;
 		size_t numElems=0;
-		size_t frameLength;
+		size_t _frameLength;
 		size_t procCount=0;
 		void encode(bool* ,bool*, const size_t );
 		void BytesToBool(const uint8_t* ,bool* ,size_t );
@@ -50,7 +49,7 @@ namespace gr {
 
 
      public:
-      CC_Encoder_Custom_impl(uint8_t constraint, int frameLength, std::vector<int> polynomial);
+      CC_Encoder_Custom_impl(int constraint, int frameLength, std::vector<int> polynomial);
       ~CC_Encoder_Custom_impl();
 
       // Where all the action really happens

@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::Custom::CC_Encoder_Custom_impl</compoundname>
+    <basecompoundref refid="classgr_1_1Custom_1_1CC__Encoder__Custom" prot="public" virt="non-virtual">gr::Custom::CC_Encoder_Custom</basecompoundref>
+    <includes refid="CC__Encoder__Custom__impl_8h" local="no">CC_Encoder_Custom_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a787c00626103ff56e52d39380d6754b4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::Custom::CC_Encoder_Custom_impl::_constraint</definition>
+        <argsstring></argsstring>
+        <name>_constraint</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="32" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a8565a3c605028b5fda8229bebf5b580b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::Custom::CC_Encoder_Custom_impl::rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <initializer>=2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="33" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a38abb73c74c27caabac92acb6df909f0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::Custom::CC_Encoder_Custom_impl::bitsIn</definition>
+        <argsstring></argsstring>
+        <name>bitsIn</name>
+        <initializer>=1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="34" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a612ce6fe3bd7c0fa49a9befc02edcbdd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt;uint8_t&gt; gr::Custom::CC_Encoder_Custom_impl::codes</definition>
+        <argsstring></argsstring>
+        <name>codes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="35" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a338e452f01cb52f775f9f694db822d24" prot="private" static="no" mutable="no">
+        <type>bool **</type>
+        <definition>bool** gr::Custom::CC_Encoder_Custom_impl::polyCodes</definition>
+        <argsstring></argsstring>
+        <name>polyCodes</name>
+        <initializer>=NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="36" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a63b890b43c8e0bdfcdf296150a90b5a0" prot="private" static="no" mutable="no">
+        <type>bool *</type>
+        <definition>bool* gr::Custom::CC_Encoder_Custom_impl::codeBuffer</definition>
+        <argsstring></argsstring>
+        <name>codeBuffer</name>
+        <initializer>=NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="37" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1ad9319b8293a419b0c0518c2b1c1890d4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::Custom::CC_Encoder_Custom_impl::skip</definition>
+        <argsstring></argsstring>
+        <name>skip</name>
+        <initializer>=true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="38" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a16cdd548191ef9ea9e6847bd00a50afc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::Custom::CC_Encoder_Custom_impl::flush</definition>
+        <argsstring></argsstring>
+        <name>flush</name>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="39" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a50be041efe0402426eface9fe39950df" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::Custom::CC_Encoder_Custom_impl::done</definition>
+        <argsstring></argsstring>
+        <name>done</name>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="40" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a3b34b6b595715d08cfe5fd24fd2fe744" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr::Custom::CC_Encoder_Custom_impl::numElems</definition>
+        <argsstring></argsstring>
+        <name>numElems</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="41" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a379d0994d30488d04e55100187fc3376" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr::Custom::CC_Encoder_Custom_impl::_frameLength</definition>
+        <argsstring></argsstring>
+        <name>_frameLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="42" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a3b5fa0498544fa27c4fe0309d35395dc" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr::Custom::CC_Encoder_Custom_impl::procCount</definition>
+        <argsstring></argsstring>
+        <name>procCount</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="43" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a3d13b82ced600beea1a17600e75a9078" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::Custom::CC_Encoder_Custom_impl::encode</definition>
+        <argsstring>(bool *, bool *, const size_t)</argsstring>
+        <name>encode</name>
+        <param>
+          <type>bool *</type>
+        </param>
+        <param>
+          <type>bool *</type>
+        </param>
+        <param>
+          <type>const size_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a6bcd7243418c6e868c8faf6b3bc7a9ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::Custom::CC_Encoder_Custom_impl::BytesToBool</definition>
+        <argsstring>(const uint8_t *, bool *, size_t)</argsstring>
+        <name>BytesToBool</name>
+        <param>
+          <type>const uint8_t *</type>
+        </param>
+        <param>
+          <type>bool *</type>
+        </param>
+        <param>
+          <type>size_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1afe40300fc1a459b6ac148b4139012e13" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::Custom::CC_Encoder_Custom_impl::BoolToBytes</definition>
+        <argsstring>(bool *, uint8_t *, size_t)</argsstring>
+        <name>BoolToBytes</name>
+        <param>
+          <type>bool *</type>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+        </param>
+        <param>
+          <type>size_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a6d32d84fb5dbfd32568e78fea19b63f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr::Custom::CC_Encoder_Custom_impl::XOR</definition>
+        <argsstring>(bool, bool)</argsstring>
+        <name>XOR</name>
+        <param>
+          <type>bool</type>
+        </param>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a673ada45d7eec36b75ad7b955987c673" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr::Custom::CC_Encoder_Custom_impl::getBit</definition>
+        <argsstring>(unsigned char, int)</argsstring>
+        <name>getBit</name>
+        <param>
+          <type>unsigned</type>
+          <declname>char</declname>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="48" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1af22d532bb4b8d48efc45626abd5c0814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::Custom::CC_Encoder_Custom_impl::CC_Encoder_Custom_impl</definition>
+        <argsstring>(int constraint, int frameLength, std::vector&lt; int &gt; polynomial)</argsstring>
+        <name>CC_Encoder_Custom_impl</name>
+        <param>
+          <type>int</type>
+          <declname>constraint</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>frameLength</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>polynomial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a56310fb3059fdbf6feaeb527182db502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::Custom::CC_Encoder_Custom_impl::~CC_Encoder_Custom_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~CC_Encoder_Custom_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1aca0151ce6784fc33b8123470a3a71ecd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::Custom::CC_Encoder_Custom_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="56" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>gr::Custom::CC_Encoder_Custom</label>
+        <link refid="classgr_1_1Custom_1_1CC__Encoder__Custom"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>gr::sync_interpolator</label>
+      </node>
+      <node id="5">
+        <label>gr::Custom::CC_Encoder_Custom_impl</label>
+        <link refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>gr::Custom::CC_Encoder_Custom</label>
+        <link refid="classgr_1_1Custom_1_1CC__Encoder__Custom"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>gr::sync_interpolator</label>
+      </node>
+      <node id="8">
+        <label>gr::Custom::CC_Encoder_Custom_impl</label>
+        <link refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" line="30" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/CC_Encoder_Custom_impl.h" bodystart="29" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a787c00626103ff56e52d39380d6754b4" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>_constraint</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a379d0994d30488d04e55100187fc3376" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>_frameLength</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a38abb73c74c27caabac92acb6df909f0" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>bitsIn</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1afe40300fc1a459b6ac148b4139012e13" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>BoolToBytes</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a6bcd7243418c6e868c8faf6b3bc7a9ac" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>BytesToBool</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1af22d532bb4b8d48efc45626abd5c0814" prot="public" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>CC_Encoder_Custom_impl</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a63b890b43c8e0bdfcdf296150a90b5a0" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>codeBuffer</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a612ce6fe3bd7c0fa49a9befc02edcbdd" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>codes</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a50be041efe0402426eface9fe39950df" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>done</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a3d13b82ced600beea1a17600e75a9078" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>encode</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a16cdd548191ef9ea9e6847bd00a50afc" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>flush</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a673ada45d7eec36b75ad7b955987c673" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>getBit</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom_1adf023513dbc4ccf5d2ea8daa9cb2cc4a" prot="public" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a3b34b6b595715d08cfe5fd24fd2fe744" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>numElems</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a338e452f01cb52f775f9f694db822d24" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>polyCodes</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a3b5fa0498544fa27c4fe0309d35395dc" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>procCount</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a8565a3c605028b5fda8229bebf5b580b" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>rate</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1ad9319b8293a419b0c0518c2b1c1890d4" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>skip</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom_1a58a1f4a38052166beb863ef93abae86f" prot="public" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1aca0151ce6784fc33b8123470a3a71ecd" prot="public" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a6d32d84fb5dbfd32568e78fea19b63f9" prot="private" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>XOR</name></member>
+      <member refid="classgr_1_1Custom_1_1CC__Encoder__Custom__impl_1a56310fb3059fdbf6feaeb527182db502" prot="public" virt="non-virtual"><scope>gr::Custom::CC_Encoder_Custom_impl</scope><name>~CC_Encoder_Custom_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

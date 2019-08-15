@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_deb48c2b1c4af36cc32640518b9b0874" kind="dir">
+    <compoundname>Custom</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <innerfile refid="CC__Encoder__Custom_8h">CC_Encoder_Custom.h</innerfile>
+    <innerfile refid="DiffEncoderFlush_8h">DiffEncoderFlush.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/include/Custom/"/>
+  </compounddef>
+</doxygen>
