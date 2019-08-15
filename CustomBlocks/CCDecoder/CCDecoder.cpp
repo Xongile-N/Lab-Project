@@ -333,7 +333,7 @@ private:
 
 
 		return finalHamming;
-}
+	}
 
 	void destroyTrellis(){
 		for(uint8_t i=0;i<stateCount;i++){
@@ -343,87 +343,87 @@ private:
 		delete trellis;
 	}
 	void buildTrellis(int k_constraint,std::vector<uint8_t> polies,int codeRate){
-	stateCount=(int)pow(2,k_constraint);
-	trellis =new  uint8_t*[(stateCount)];
-	polyCodes=new bool*[codeRate];
-	for(uint8_t i=0;i<stateCount;i++){
-		trellis[i]=new uint8_t[stateAttri];
-		trellis[i][currState]=i;
-		trellis[i][zeroNext]=i>>1;
-		trellis[i][oneNext]=(i+stateCount)>>1;
+		stateCount=(int)pow(2,k_constraint);
+		trellis =new  uint8_t*[(stateCount)];
+		polyCodes=new bool*[codeRate];
+		for(uint8_t i=0;i<stateCount;i++){
+			trellis[i]=new uint8_t[stateAttri];
+			trellis[i][currState]=i;
+			trellis[i][zeroNext]=i>>1;
+			trellis[i][oneNext]=(i+stateCount)>>1;
 
-	}		
-	for(uint8_t i=0;i<stateCount;i++){
-	    int count=0;
-	    for(int j=0;j<stateCount;j++){
-	        if(count==0){
-	            if(trellis[i][currState]==trellis[j][zeroNext]||trellis[i][currState]==trellis[j][oneNext])
-	            {
-	                trellis[i][prev_0]=trellis[j][currState];
-	                count++;
-	            }
-	        }
-	        else if(count ==1){
-	            if(trellis[i][currState]==trellis[j][zeroNext]||trellis[i][currState]==trellis[j][oneNext])
-	            {
-	                trellis[i][prev_1]=trellis[j][currState];
-	                count++;
-	            }
-	        }
-	        
-	        if(count>=2)
-	        break;
-	    }
-	}
-	for(auto i=0;i<rate;i++){
-		polyCodes[i]=new bool[k_constraint];
-		for(auto j=0;j<k_constraint;j++){
-			polyCodes[i][j]=getBit(polies[i],j);
-		}
-	}
-	codeBuffer=new bool[k_constraint];
-	for(int i=0;i<stateCount;i++){
-		uint8_t outState0=0;
-		uint8_t outState1=0;
-		uint8_t state=trellis[i][currState];
-		state=(state>>1);
-
-		for(int i=0;i<k_constraint;i++){
-		    codeBuffer[i]=getBit(state,k_constraint-1-i);
-		 }
-		for(int j=0;j<rate;j++){
-			outState0*=2;
-			outState1*=2;
-			bool out0=0;
-			codeBuffer[0]=0;
-			for(int k=0;k<constraint;k++){
-				bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k];
-				out0=XOR(out0,poly);
+		}		
+		for(uint8_t i=0;i<stateCount;i++){
+			int count=0;
+			for(int j=0;j<stateCount;j++){
+				if(count==0){
+					if(trellis[i][currState]==trellis[j][zeroNext]||trellis[i][currState]==trellis[j][oneNext])
+					{
+						trellis[i][prev_0]=trellis[j][currState];
+						count++;
+					}
+				}
+				else if(count ==1){
+					if(trellis[i][currState]==trellis[j][zeroNext]||trellis[i][currState]==trellis[j][oneNext])
+					{
+						trellis[i][prev_1]=trellis[j][currState];
+						count++;
+					}
+				}
+				
+				if(count>=2)
+				break;
 			}
-			outState0+=out0;
-			codeBuffer[0]=1;
-
-			bool out1=0;
-			for(int k=0;k<constraint;k++){
-				bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k];
-				out1=XOR(out1,poly);
-			}
-			outState1+=out1;
 		}
-		trellis[i][zeroOutput]=		outState0;
-		trellis[i][oneOutput]=		outState1;
-	}
+		for(auto i=0;i<rate;i++){
+			polyCodes[i]=new bool[k_constraint];
+			for(auto j=0;j<k_constraint;j++){
+				polyCodes[i][j]=getBit(polies[i],j);
+			}
+		}
+		codeBuffer=new bool[k_constraint];
+		for(int i=0;i<stateCount;i++){
+			uint8_t outState0=0;
+			uint8_t outState1=0;
+			uint8_t state=trellis[i][currState];
+			state=(state>>1);
 
-	delete polyCodes;
-	polyCodes=NULL;
-}
-int getHammingDist(uint8_t byte_0,uint8_t byte_1){
-	int hamming=0;
-	for( int i=0;i<8;i++){
-	    hamming+=XOR(getBit(byte_0,i),getBit(byte_1,i));
+			for(int i=0;i<k_constraint;i++){
+				codeBuffer[i]=getBit(state,k_constraint-1-i);
+			}
+			for(int j=0;j<rate;j++){
+				outState0*=2;
+				outState1*=2;
+				bool out0=0;
+				codeBuffer[0]=0;
+				for(int k=0;k<constraint;k++){
+					bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k];
+					out0=XOR(out0,poly);
+				}
+				outState0+=out0;
+				codeBuffer[0]=1;
+
+				bool out1=0;
+				for(int k=0;k<constraint;k++){
+					bool poly=polyCodes[j][constraint-k-1]&&codeBuffer[k];
+					out1=XOR(out1,poly);
+				}
+				outState1+=out1;
+			}
+			trellis[i][zeroOutput]=		outState0;
+			trellis[i][oneOutput]=		outState1;
+		}
+
+		delete polyCodes;
+		polyCodes=NULL;
+		}
+		int getHammingDist(uint8_t byte_0,uint8_t byte_1){
+		int hamming=0;
+		for( int i=0;i<8;i++){
+			hamming+=XOR(getBit(byte_0,i),getBit(byte_1,i));
+		}
+		return hamming;
 	}
-	return hamming;
-}
 	bool getBit(unsigned char byte, int position)
 	{
 	    return (byte >> position) & 0x1;

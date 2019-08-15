@@ -1,15 +1,10 @@
 <?xml version="1.0"?>
 <block>
-  <name>CC_Encoder_Custom</name>
+  <name>CC Encoder</name>
   <key>Custom_CC_Encoder_Custom</key>
   <category>[Custom]</category>
   <import>import Custom</import>
   <make>Custom.CC_Encoder_Custom($constraint, $frameLength, $polynomial)</make>
-  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
-       Sub-nodes:
-       * name
-       * key (makes the value accessible as $keyname, e.g. in the make node)
-       * type -->
   <param>
     <name>Constraint</name>
     <key>constraint</key>
@@ -25,12 +20,7 @@
     <key>polynomial</key>
     <type>int_vector</type>
   </param>
-  <!-- Make one 'sink' node per input. Sub-nodes:
-       * name (an identifier for the GUI)
-       * type
-       * vlen
-       * optional (set to 1 for optional inputs) -->
-       <!-- e.g. int, float, complex, byte, short, xxx_vector, ...-->
+
   <sink>
     <name>in</name>
     <type>byte</type>

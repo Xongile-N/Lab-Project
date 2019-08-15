@@ -163,7 +163,7 @@
         </inbodydescription>
         <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="11" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1a92729cda9603e267aeb44f5f7942112a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1a92729cda9603e267aeb44f5f7942112a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int ViterbiNode::getPathHamming</definition>
         <argsstring>()</argsstring>
@@ -174,9 +174,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="12" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="12" bodyend="12"/>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="12" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1a43ce7a23f98261272a479b15b2e9b693" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1a43ce7a23f98261272a479b15b2e9b693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int ViterbiNode::getPrevPathHamming</definition>
         <argsstring>()</argsstring>
@@ -187,9 +187,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="13" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="13" bodyend="13"/>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="13" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1ade6c62797d37b8515ac44b2847bafa80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1ade6c62797d37b8515ac44b2847bafa80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int ViterbiNode::getPrevPrevPathHamming</definition>
         <argsstring>()</argsstring>
@@ -200,9 +200,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="14" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="14" bodyend="14"/>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="14" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1a4cbbbf8f6e867ec614aff7b6df882bfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1a4cbbbf8f6e867ec614aff7b6df882bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int ViterbiNode::getPathLength</definition>
         <argsstring>()</argsstring>
@@ -213,9 +213,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="15" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="15" bodyend="15"/>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="15" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1a9c0b31fb8715012dbad0ed3dee3d8667" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1a9c0b31fb8715012dbad0ed3dee3d8667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int ViterbiNode::getPrevPathLength</definition>
         <argsstring>()</argsstring>
@@ -226,9 +226,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="16" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="16" bodyend="16"/>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="16" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1a12b955e0462b666300b3913f7adff409" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1a12b955e0462b666300b3913f7adff409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int ViterbiNode::getPrevPrevPathLength</definition>
         <argsstring>()</argsstring>
@@ -239,9 +239,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="17" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="17" bodyend="17"/>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="17" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1ada1ccbeaa382991b7b43d4c4dd088945" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1ada1ccbeaa382991b7b43d4c4dd088945" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; int &gt;</type>
         <definition>std::vector&lt;int&gt; ViterbiNode::getPath</definition>
         <argsstring>()</argsstring>
@@ -252,9 +252,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="18" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="18" bodyend="18"/>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="18" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1a744027aa33813f1fce7623f8efc795d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1a744027aa33813f1fce7623f8efc795d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; int &gt;</type>
         <definition>std::vector&lt;int&gt; ViterbiNode::getPrevPath</definition>
         <argsstring>()</argsstring>
@@ -265,9 +265,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="19" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="19" bodyend="19"/>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="19" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1a80bc268032bdf678600a952a07f35da6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1a80bc268032bdf678600a952a07f35da6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; int &gt;</type>
         <definition>std::vector&lt;int&gt; ViterbiNode::getPrevPrevPath</definition>
         <argsstring>()</argsstring>
@@ -278,8 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="20" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="20" bodyend="20"/>
-        <references refid="classViterbiNode_1a6d20d19c869ca849e41f1694d2de66f4">deletePath</references>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="20" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classViterbiNode_1a6d20d19c869ca849e41f1694d2de66f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -293,9 +292,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="21" column="1"/>
-        <referencedby refid="classViterbiNode_1a80bc268032bdf678600a952a07f35da6" compoundref="ViterbiNode_8h" startline="20" endline="20">getPrevPrevPath</referencedby>
       </memberdef>
-      <memberdef kind="function" id="classViterbiNode_1a795f9322f33ebe23d1e4d6d5004c3025" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classViterbiNode_1a795f9322f33ebe23d1e4d6d5004c3025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>ViterbiNode::~ViterbiNode</definition>
         <argsstring>()</argsstring>
@@ -306,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="22" column="1" bodyfile="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" bodystart="22" bodyend="22"/>
+        <location file="/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/ViterbiNode.h" line="22" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
