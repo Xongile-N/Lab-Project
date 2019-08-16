@@ -41,7 +41,8 @@ namespace gr {
     CC_Encoder_Custom_impl::CC_Encoder_Custom_impl(int constraint, int frameLength, std::vector<int> polynomial)
       : gr::sync_interpolator("CC_Encoder_Custom",
               gr::io_signature::make(1, 1, sizeof(char)),
-              gr::io_signature::make(1, 1, sizeof(char)), rate),
+              gr::io_signature::make(1, 1, sizeof(char)),
+              rate),
               _constraint(constraint),
               _frameLength(frameLength)
 
@@ -70,7 +71,7 @@ namespace gr {
       bool* inBuffer=NULL;
       bool* outBuffer=NULL;
 			numElems=noutput_items/rate;
-
+      std::cout<<noutput_items<<" "<<noutput_items/rate<<" In "<<+in[0]<<std::endl;
 			//outCount=(numElems*rate);
 			//outCount+=(flushBits%8)>0?1:0;
 			size_t flushBits=_constraint*rate;

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<block>
+  <name>CC Decoder Test</name>
+  <key>Custom_CCDecoder</key>
+  <category>[Custom]</category>
+  <import>import Custom</import>
+  <make>Custom.CCDecoder($constraint, $frameLength, $polys)</make>
+  <param>
+    <name>Constraint</name>
+    <key>constraint</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Frame Length</name>
+    <key>frameLength</key>
+    <type>int</type>
+  </param>  
+  <param>
+    <name>Polynomials</name>
+    <key>polys</key>
+    <type>int_vector</type>
+  </param>
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+       <!-- e.g. int, float, complex, byte, short, xxx_vector, ...-->
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

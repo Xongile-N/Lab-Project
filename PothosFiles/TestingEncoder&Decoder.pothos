@@ -1,0 +1,432 @@
+{
+    "config": {
+        "graphHeight": 1024,
+        "graphWidth": 1280
+    },
+    "globals": [
+        {
+            "name": "constraint",
+            "value": "4"
+        },
+        {
+            "name": "frameLen",
+            "value": "4"
+        },
+        {
+            "name": "poly1",
+            "value": "15"
+        },
+        {
+            "name": "poly2",
+            "value": "11"
+        }
+    ],
+    "pages": [
+        {
+            "graphObjects": [
+                {
+                    "affinityZone": "",
+                    "enabled": false,
+                    "id": "BinaryFileSink0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEnabled",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setEnabled",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_sink",
+                    "positionX": 814,
+                    "positionY": 137,
+                    "properties": [
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestData_240_Encoded_15_11_4_15.dat\""
+                        },
+                        {
+                            "key": "enabled",
+                            "value": "true"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 346
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "BinaryFileSink1",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "unspecified",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setEnabled",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setEnabled",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_sink",
+                    "positionX": 843.90625,
+                    "positionY": 366,
+                    "properties": [
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestDataCC_240Bytes_15_11_4/TestData_240_Decoded.dat\""
+                        },
+                        {
+                            "key": "enabled",
+                            "value": "true"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 352
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": false,
+                    "id": "BinaryFileSource0",
+                    "inputDesc": [
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAutoRewind",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAutoRewind",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_source",
+                    "positionX": 126,
+                    "positionY": 142,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"uint8\""
+                        },
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestData_240.dat\""
+                        },
+                        {
+                            "key": "rewind",
+                            "value": "false"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 326
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "BinaryFileSource1",
+                    "inputDesc": [
+                        {
+                            "alias": "setFilePath",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFilePath",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setAutoRewind",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setAutoRewind",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/blocks/binary_file_source",
+                    "positionX": 214,
+                    "positionY": 364,
+                    "properties": [
+                        {
+                            "key": "dtype",
+                            "value": "\"uint8\""
+                        },
+                        {
+                            "key": "path",
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestDataCC_240Bytes_15_11_4/TestData_240_Encoded_15_11_4_4.dat\""
+                        },
+                        {
+                            "key": "rewind",
+                            "value": "false"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 356
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": true,
+                    "id": "ConvolutionCodeDecoder0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setPolyF",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setPolyF",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setPolyS",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setPolyS",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setConstraint",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setConstraint",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFrameLength",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFrameLength",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/Custom/CCDecoder",
+                    "positionX": 465,
+                    "positionY": 338,
+                    "properties": [
+                        {
+                            "key": "polyF",
+                            "value": "poly1"
+                        },
+                        {
+                            "key": "polyS",
+                            "value": "poly2"
+                        },
+                        {
+                            "key": "constraint",
+                            "value": "constraint"
+                        },
+                        {
+                            "key": "frameLen",
+                            "value": "frameLen"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 354
+                },
+                {
+                    "affinityZone": "",
+                    "enabled": false,
+                    "id": "ConvolutionCodeEncoder0",
+                    "inputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setPolyF",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setPolyF",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setPolyS",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setPolyS",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setConstraint",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setConstraint",
+                            "size": 1
+                        },
+                        {
+                            "alias": "setFrameLength",
+                            "dtype": "unspecified",
+                            "isSigSlot": true,
+                            "name": "setFrameLength",
+                            "size": 1
+                        }
+                    ],
+                    "outputDesc": [
+                        {
+                            "alias": "0",
+                            "dtype": "uint8",
+                            "isSigSlot": false,
+                            "name": "0",
+                            "size": 1
+                        }
+                    ],
+                    "path": "/Custom/CCEncoder",
+                    "positionX": 468,
+                    "positionY": 143,
+                    "properties": [
+                        {
+                            "key": "polyF",
+                            "value": "poly1"
+                        },
+                        {
+                            "key": "polyS",
+                            "value": "poly2"
+                        },
+                        {
+                            "key": "constraint",
+                            "value": "constraint"
+                        },
+                        {
+                            "key": "frameLen",
+                            "value": "frameLen"
+                        }
+                    ],
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Block",
+                    "zValue": 338
+                },
+                {
+                    "enabled": false,
+                    "id": "Connection_BinaryFileSource00_ConvolutionCodeEncoder00",
+                    "inputId": "ConvolutionCodeEncoder0",
+                    "inputKey": "0",
+                    "outputId": "BinaryFileSource0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_BinaryFileSource10_ConvolutionCodeDecoder00",
+                    "inputId": "ConvolutionCodeDecoder0",
+                    "inputKey": "0",
+                    "outputId": "BinaryFileSource1",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": true,
+                    "id": "Connection_ConvolutionCodeDecoder00_BinaryFileSink10",
+                    "inputId": "BinaryFileSink1",
+                    "inputKey": "0",
+                    "outputId": "ConvolutionCodeDecoder0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                },
+                {
+                    "enabled": false,
+                    "id": "Connection_ConvolutionCodeEncoder00_BinaryFileSink00",
+                    "inputId": "BinaryFileSink0",
+                    "inputKey": "0",
+                    "outputId": "ConvolutionCodeEncoder0",
+                    "outputKey": "0",
+                    "positionX": 0,
+                    "positionY": 0,
+                    "rotation": 0,
+                    "selected": false,
+                    "what": "Connection",
+                    "zValue": 0
+                }
+            ],
+            "pageName": "Main",
+            "selected": true
+        }
+    ]
+}
