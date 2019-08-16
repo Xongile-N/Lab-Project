@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<block>
+  <name>Differential Decoder with Flushing V2</name>
+  <key>Custom_DiffEncoderFlushFixed</key>
+  <category>[Custom]</category>
+  <import>import Custom</import>
+  <make>Custom.DiffEncoderFlushFixed($modulus, $flush, $flushLength)</make>
+  <param>
+    <name>Flush Decoder</name>
+    <key>flush</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+      <name>Yes</name>
+      <key>True</key>
+    </option>
+    <option>
+      <name>No</name>
+      <key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Modulus</name>
+    <key>modulus</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Bytes to Flush after</name>
+    <key>flushLength</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>
