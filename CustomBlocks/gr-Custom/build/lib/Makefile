@@ -278,6 +278,33 @@ DiffDecoderFlush_impl.cc.s:
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build && $(MAKE) -f lib/CMakeFiles/gnuradio-Custom.dir/build.make lib/CMakeFiles/gnuradio-Custom.dir/DiffDecoderFlush_impl.cc.s
 .PHONY : DiffDecoderFlush_impl.cc.s
 
+DiffEncoderFlushFixed_impl.o: DiffEncoderFlushFixed_impl.cc.o
+
+.PHONY : DiffEncoderFlushFixed_impl.o
+
+# target to build an object file
+DiffEncoderFlushFixed_impl.cc.o:
+	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build && $(MAKE) -f lib/CMakeFiles/gnuradio-Custom.dir/build.make lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o
+.PHONY : DiffEncoderFlushFixed_impl.cc.o
+
+DiffEncoderFlushFixed_impl.i: DiffEncoderFlushFixed_impl.cc.i
+
+.PHONY : DiffEncoderFlushFixed_impl.i
+
+# target to preprocess a source file
+DiffEncoderFlushFixed_impl.cc.i:
+	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build && $(MAKE) -f lib/CMakeFiles/gnuradio-Custom.dir/build.make lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.i
+.PHONY : DiffEncoderFlushFixed_impl.cc.i
+
+DiffEncoderFlushFixed_impl.s: DiffEncoderFlushFixed_impl.cc.s
+
+.PHONY : DiffEncoderFlushFixed_impl.s
+
+# target to generate assembly for a file
+DiffEncoderFlushFixed_impl.cc.s:
+	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build && $(MAKE) -f lib/CMakeFiles/gnuradio-Custom.dir/build.make lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.s
+.PHONY : DiffEncoderFlushFixed_impl.cc.s
+
 DiffEncoderFlush_impl.o: DiffEncoderFlush_impl.cc.o
 
 .PHONY : DiffEncoderFlush_impl.o
@@ -383,6 +410,9 @@ help:
 	@echo "... DiffDecoderFlush_impl.o"
 	@echo "... DiffDecoderFlush_impl.i"
 	@echo "... DiffDecoderFlush_impl.s"
+	@echo "... DiffEncoderFlushFixed_impl.o"
+	@echo "... DiffEncoderFlushFixed_impl.i"
+	@echo "... DiffEncoderFlushFixed_impl.s"
 	@echo "... DiffEncoderFlush_impl.o"
 	@echo "... DiffEncoderFlush_impl.i"
 	@echo "... DiffEncoderFlush_impl.s"

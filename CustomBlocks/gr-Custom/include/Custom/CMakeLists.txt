@@ -25,5 +25,6 @@ install(FILES
     CC_Encoder_Custom.h
     DiffEncoderFlush.h
     DiffDecoderFlush.h
-    CCDecoder.h DESTINATION include/Custom
+    CCDecoder.h
+    DiffEncoderFlushFixed.h DESTINATION include/Custom
 )

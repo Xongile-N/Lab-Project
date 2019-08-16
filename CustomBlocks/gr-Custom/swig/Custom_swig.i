@@ -12,6 +12,7 @@
 #include "Custom/DiffEncoderFlush.h"
 #include "Custom/DiffDecoderFlush.h"
 #include "Custom/CCDecoder.h"
+#include "Custom/DiffEncoderFlushFixed.h"
 %}
 
 
@@ -23,3 +24,5 @@ GR_SWIG_BLOCK_MAGIC2(Custom, DiffEncoderFlush);
 GR_SWIG_BLOCK_MAGIC2(Custom, DiffDecoderFlush);
 %include "Custom/CCDecoder.h"
 GR_SWIG_BLOCK_MAGIC2(Custom, CCDecoder);
+%include "Custom/DiffEncoderFlushFixed.h"
+GR_SWIG_BLOCK_MAGIC2(Custom, DiffEncoderFlushFixed);

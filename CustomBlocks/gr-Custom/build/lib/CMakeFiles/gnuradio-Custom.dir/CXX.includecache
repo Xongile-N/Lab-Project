@@ -30,6 +30,12 @@ Custom/api.h
 gnuradio/sync_block.h
 -
 
+../include/Custom/DiffEncoderFlushFixed.h
+Custom/api.h
+-
+gnuradio/block.h
+-
+
 ../include/Custom/api.h
 gnuradio/attributes.h
 -
@@ -72,6 +78,18 @@ DiffDecoderFlush_impl.h
 
 /home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h
 Custom/DiffDecoderFlush.h
+-
+
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlushFixed_impl.cc
+config.h
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/config.h
+gnuradio/io_signature.h
+-
+DiffEncoderFlushFixed_impl.h
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlushFixed_impl.h
+
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlushFixed_impl.h
+Custom/DiffEncoderFlushFixed.h
 -
 
 /home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlush_impl.cc

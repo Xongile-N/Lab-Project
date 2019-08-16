@@ -17,6 +17,11 @@ lib/CMakeFiles/gnuradio-Custom.dir/DiffDecoderFlush_impl.cc.o: ../include/Custom
 lib/CMakeFiles/gnuradio-Custom.dir/DiffDecoderFlush_impl.cc.o: ../lib/DiffDecoderFlush_impl.cc
 lib/CMakeFiles/gnuradio-Custom.dir/DiffDecoderFlush_impl.cc.o: ../lib/DiffDecoderFlush_impl.h
 
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o: ../include/Custom/DiffEncoderFlushFixed.h
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o: ../include/Custom/api.h
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o: ../lib/DiffEncoderFlushFixed_impl.cc
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o: ../lib/DiffEncoderFlushFixed_impl.h
+
 lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlush_impl.cc.o: ../include/Custom/DiffEncoderFlush.h
 lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlush_impl.cc.o: ../include/Custom/api.h
 lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlush_impl.cc.o: ../lib/DiffEncoderFlush_impl.cc

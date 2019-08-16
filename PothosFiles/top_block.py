@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Fri Aug 16 17:01:49 2019
+# Generated: Fri Aug 16 19:22:41 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -187,6 +187,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_tagged_stream_multiply_length_0 = blocks.tagged_stream_multiply_length(gr.sizeof_gr_complex*1, "packet_len", sps)
         self.blocks_stream_to_tagged_stream_0_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, hdr_format.header_nbits()/8+1, "packet_len")
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, packetLength+1, "packet_len")
+        self.blocks_repack_bits_bb_0_1_0_1_0 = blocks.repack_bits_bb(1, 8, "", False, gr.GR_MSB_FIRST)
+        self.blocks_repack_bits_bb_0_1_0_0 = blocks.repack_bits_bb(1, 8, "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0_1_0 = blocks.repack_bits_bb(1, 8, "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0_1 = blocks.repack_bits_bb(8, 1, "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0_0 = blocks.repack_bits_bb(8, qpsk.bits_per_symbol(), "", False, gr.GR_MSB_FIRST)
@@ -195,12 +197,20 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1 , '/home/xongile/Lab-Project/TestSinks/TestData.dat', True)
         self.blocks_file_sink_1_0_0_0_1 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/HeaderEncodedTwice.dat', False)
         self.blocks_file_sink_1_0_0_0_1.set_unbuffered(False)
+        self.blocks_file_sink_1_0_0_0_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/Header.dat', False)
+        self.blocks_file_sink_1_0_0_0_0.set_unbuffered(False)
+        self.blocks_file_sink_1_0_0_0 = blocks.file_sink(gr.sizeof_char*1, '/home/xongile/Lab-Project/TestSinks/HeaderEncoded.dat', False)
+        self.blocks_file_sink_1_0_0_0.set_unbuffered(False)
         self.Custom_DiffEncoderFlush_0_0 = Custom.DiffEncoderFlush(2, True, (packetLength+1)*8/qpsk.bits_per_symbol())
         self.Custom_DiffEncoderFlush_0 = Custom.DiffEncoderFlush(2, True, (hdr_format.header_nbits()+8)/qpsk.bits_per_symbol())
+        self.Custom_DiffEncoderFlushFixed_0 = Custom.DiffEncoderFlushFixed(2, True, (hdr_format.header_nbits()+8)/qpsk.bits_per_symbol())
 
         ##################################################
         # Connections
         ##################################################
+        self.connect((self.Custom_DiffEncoderFlushFixed_0, 0), (self.blocks_repack_bits_bb_0_1_0_1_0, 0))
+        self.connect((self.Custom_DiffEncoderFlush_0, 0), (self.Custom_DiffEncoderFlushFixed_0, 0))
+        self.connect((self.Custom_DiffEncoderFlush_0, 0), (self.blocks_repack_bits_bb_0_1_0_0, 0))
         self.connect((self.Custom_DiffEncoderFlush_0, 0), (self.fec_tagged_encoder_2, 0))
         self.connect((self.Custom_DiffEncoderFlush_0_0, 0), (self.digital_map_bb_0_0, 0))
         self.connect((self.blocks_file_source_0, 0), (self.blocks_throttle_0, 0))
@@ -211,6 +221,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_repack_bits_bb_0_1, 0), (self.blocks_tagged_stream_multiply_length_1_1, 0))
         self.connect((self.blocks_repack_bits_bb_0_1_0, 0), (self.blocks_file_sink_1_0_0_0_1, 0))
         self.connect((self.blocks_repack_bits_bb_0_1_0, 0), (self.blocks_tagged_stream_multiply_length_1_1_0, 0))
+        self.connect((self.blocks_repack_bits_bb_0_1_0_0, 0), (self.blocks_file_sink_1_0_0_0, 0))
+        self.connect((self.blocks_repack_bits_bb_0_1_0_1_0, 0), (self.blocks_file_sink_1_0_0_0_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.blocks_repack_bits_bb_0_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.digital_protocol_formatter_bb_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0_0, 0), (self.blocks_repack_bits_bb_0_1, 0))

@@ -153,12 +153,37 @@ lib/CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.o.provides: lib/CMakeFiles/
 lib/CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.o.provides.build: lib/CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.o
 
 
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o: lib/CMakeFiles/gnuradio-Custom.dir/flags.make
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o: ../lib/DiffEncoderFlushFixed_impl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o"
+	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o -c /home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlushFixed_impl.cc
+
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.i"
+	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlushFixed_impl.cc > CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.i
+
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.s"
+	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlushFixed_impl.cc -o CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.s
+
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o.requires:
+
+.PHONY : lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o.requires
+
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o.provides: lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o.requires
+	$(MAKE) -f lib/CMakeFiles/gnuradio-Custom.dir/build.make lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o.provides.build
+.PHONY : lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o.provides
+
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o.provides.build: lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o
+
+
 # Object files for target gnuradio-Custom
 gnuradio__Custom_OBJECTS = \
 "CMakeFiles/gnuradio-Custom.dir/CC_Encoder_Custom_impl.cc.o" \
 "CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlush_impl.cc.o" \
 "CMakeFiles/gnuradio-Custom.dir/DiffDecoderFlush_impl.cc.o" \
-"CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.o"
+"CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.o" \
+"CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o"
 
 # External object files for target gnuradio-Custom
 gnuradio__Custom_EXTERNAL_OBJECTS =
@@ -167,6 +192,7 @@ lib/libgnuradio-Custom-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-Custom.dir/CC_
 lib/libgnuradio-Custom-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlush_impl.cc.o
 lib/libgnuradio-Custom-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-Custom.dir/DiffDecoderFlush_impl.cc.o
 lib/libgnuradio-Custom-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.o
+lib/libgnuradio-Custom-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o
 lib/libgnuradio-Custom-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-Custom.dir/build.make
 lib/libgnuradio-Custom-1.0.0git.so.0.0.0: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 lib/libgnuradio-Custom-1.0.0git.so.0.0.0: /usr/lib/x86_64-linux-gnu/libboost_system.so
@@ -174,7 +200,7 @@ lib/libgnuradio-Custom-1.0.0git.so.0.0.0: /usr/lib/x86_64-linux-gnu/libgnuradio-
 lib/libgnuradio-Custom-1.0.0git.so.0.0.0: /usr/lib/x86_64-linux-gnu/libgnuradio-pmt.so
 lib/libgnuradio-Custom-1.0.0git.so.0.0.0: /usr/lib/x86_64-linux-gnu/liblog4cpp.so
 lib/libgnuradio-Custom-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-Custom.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libgnuradio-Custom-1.0.0git.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libgnuradio-Custom-1.0.0git.so"
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-Custom.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libgnuradio-Custom-1.0.0git.so.0.0.0 libgnuradio-Custom-1.0.0git.so.0.0.0 libgnuradio-Custom-1.0.0git.so
 	cd /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/lib && /usr/bin/cmake -E create_symlink libgnuradio-Custom-1.0.0git.so.0.0.0 /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/lib/libgnuradio-Custom.so
@@ -193,6 +219,7 @@ lib/CMakeFiles/gnuradio-Custom.dir/requires: lib/CMakeFiles/gnuradio-Custom.dir/
 lib/CMakeFiles/gnuradio-Custom.dir/requires: lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlush_impl.cc.o.requires
 lib/CMakeFiles/gnuradio-Custom.dir/requires: lib/CMakeFiles/gnuradio-Custom.dir/DiffDecoderFlush_impl.cc.o.requires
 lib/CMakeFiles/gnuradio-Custom.dir/requires: lib/CMakeFiles/gnuradio-Custom.dir/CCDecoder_impl.cc.o.requires
+lib/CMakeFiles/gnuradio-Custom.dir/requires: lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o.requires
 
 .PHONY : lib/CMakeFiles/gnuradio-Custom.dir/requires
 

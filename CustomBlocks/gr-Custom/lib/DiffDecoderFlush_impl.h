@@ -32,7 +32,9 @@ namespace gr {
       bool toFlush;
       int _flushLength;
       unsigned _modulus;
-      int procCount;
+      int procCount=0;
+      int removedCount=0;
+
      public:
       DiffDecoderFlush_impl(int modulus, bool flush, int flushLength);
       ~DiffDecoderFlush_impl();

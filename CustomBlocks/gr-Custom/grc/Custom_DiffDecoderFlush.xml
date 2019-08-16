@@ -6,7 +6,7 @@
   <import>import Custom</import>
   <make>Custom.DiffDecoderFlush($modulus, $flush, $flushLength)</make>
   <param>
-    <name>Flush Encoder</name>
+    <name>Flush Decoder</name>
     <key>flush</key>
     <value>False</value>
     <type>bool</type>

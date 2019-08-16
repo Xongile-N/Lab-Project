@@ -4,6 +4,7 @@
 /usr/local/include/Custom/DiffEncoderFlush.h
 /usr/local/include/Custom/DiffDecoderFlush.h
 /usr/local/include/Custom/CCDecoder.h
+/usr/local/include/Custom/DiffEncoderFlushFixed.h
 /usr/local/lib/libgnuradio-Custom-1.0.0git.so.0.0.0
 /usr/local/lib/libgnuradio-Custom-1.0.0git.so
 /usr/local/lib/libgnuradio-Custom.so
@@ -21,6 +22,7 @@
 /usr/local/share/gnuradio/grc/blocks/Custom_DiffEncoderFlush.xml
 /usr/local/share/gnuradio/grc/blocks/Custom_DiffDecoderFlush.xml
 /usr/local/share/gnuradio/grc/blocks/Custom_CCDecoder.xml
+/usr/local/share/gnuradio/grc/blocks/Custom_DiffEncoderFlushFixed.xml
 /usr/local/share/doc/gr-Custom/xml/group__block.xml
 /usr/local/share/doc/gr-Custom/xml/indexpage.xml
 /usr/local/share/doc/gr-Custom/xml/classgr_1_1Custom_1_1CCDecoder.xml

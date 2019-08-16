@@ -30,6 +30,12 @@ Custom/api.h
 gnuradio/sync_block.h
 -
 
+../include/Custom/DiffEncoderFlushFixed.h
+Custom/api.h
+-
+gnuradio/block.h
+-
+
 ../include/Custom/api.h
 gnuradio/attributes.h
 -
@@ -89,6 +95,8 @@ Custom/DiffDecoderFlush.h
 /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom/DiffDecoderFlush.h
 Custom/CCDecoder.h
 /home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom/CCDecoder.h
+Custom/DiffEncoderFlushFixed.h
+/home/xongile/Lab-Project/CustomBlocks/gr-Custom/build/swig/Custom/DiffEncoderFlushFixed.h
 float.h
 -
 math.h

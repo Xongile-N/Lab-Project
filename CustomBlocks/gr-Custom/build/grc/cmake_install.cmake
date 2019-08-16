@@ -43,6 +43,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/xongile/Lab-Project/CustomBlocks/gr-Custom/grc/Custom_DiffEncoderFlush.xml"
     "/home/xongile/Lab-Project/CustomBlocks/gr-Custom/grc/Custom_DiffDecoderFlush.xml"
     "/home/xongile/Lab-Project/CustomBlocks/gr-Custom/grc/Custom_CCDecoder.xml"
+    "/home/xongile/Lab-Project/CustomBlocks/gr-Custom/grc/Custom_DiffEncoderFlushFixed.xml"
     )
 endif()
 

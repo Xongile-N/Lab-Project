@@ -30,6 +30,7 @@ list(APPEND Custom_sources
     DiffEncoderFlush_impl.cc
     DiffDecoderFlush_impl.cc
     CCDecoder_impl.cc
+    DiffEncoderFlushFixed_impl.cc
 )
 
 set(Custom_sources "${Custom_sources}" PARENT_SCOPE)

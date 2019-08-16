@@ -962,7 +962,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1464, 188)</value>
+      <value>(1464, 204)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -971,6 +971,57 @@
     <param>
       <key>id</key>
       <value>Custom_DiffDecoderFlush_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>modulus</key>
+      <value>2</value>
+    </param>
+  </block>
+  <block>
+    <key>Custom_DiffEncoderFlushFixed</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>flushLength</key>
+      <value>(hdr_format.header_nbits()+8)/qpsk.bits_per_symbol()</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>flush</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1384, 124)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>Custom_DiffEncoderFlushFixed_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1158,7 +1209,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>file</key>
@@ -1209,7 +1260,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>file</key>
@@ -1598,7 +1649,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(656, 156)</value>
+      <value>(672, 220)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1708,7 +1759,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>endianness</key>
@@ -1826,7 +1877,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>endianness</key>
@@ -2156,7 +2207,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(832, 232)</value>
+      <value>(872, 240)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2616,7 +2667,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(664, 396)</value>
+      <value>(656, 484)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3492,8 +3543,20 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>Custom_DiffEncoderFlushFixed_0</source_block_id>
+    <sink_block_id>blocks_repack_bits_bb_0_1_0_1_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>Custom_DiffEncoderFlush_0</source_block_id>
     <sink_block_id>Custom_DiffDecoderFlush_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>Custom_DiffEncoderFlush_0</source_block_id>
+    <sink_block_id>Custom_DiffEncoderFlushFixed_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

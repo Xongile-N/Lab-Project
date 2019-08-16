@@ -17,6 +17,11 @@ lib/CMakeFiles/gnuradio-Custom.dir/DiffDecoderFlush_impl.cc.o
  ../include/Custom/api.h
  /home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.cc
  /home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffDecoderFlush_impl.h
+lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlushFixed_impl.cc.o
+ ../include/Custom/DiffEncoderFlushFixed.h
+ ../include/Custom/api.h
+ /home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlushFixed_impl.cc
+ /home/xongile/Lab-Project/CustomBlocks/gr-Custom/lib/DiffEncoderFlushFixed_impl.h
 lib/CMakeFiles/gnuradio-Custom.dir/DiffEncoderFlush_impl.cc.o
  ../include/Custom/DiffEncoderFlush.h
  ../include/Custom/api.h

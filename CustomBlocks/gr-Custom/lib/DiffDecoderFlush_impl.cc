@@ -50,28 +50,16 @@ namespace gr {
       in += 1; // ensure that in[-1] is valid
       unsigned modulus = _modulus;
       int outCount=noutput_items;
-      int removedCount=0;
       for (int i = 0; i < noutput_items; i++) {
           unsigned char curr=in[i];
           unsigned char prev=in[i-1];
-
-
           if(toFlush&&procCount==_flushLength){
             procCount=0;
-            removedCount=0;
-          }
-          if(toFlush&&removedCount<8){
-            removedCount++;
-            outCount--;
-          }
-          else{
-            out[offset] = (curr - prev) % modulus;
-            offset++;
+            prev=0
           }
           procCount++;
-
+          out[i]=(curr-prev)% modulus;
         }
-
       return outCount;
     }
 

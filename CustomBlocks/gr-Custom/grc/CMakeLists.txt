@@ -21,5 +21,6 @@ install(FILES
     Custom_CC_Encoder_Custom.xml
     Custom_DiffEncoderFlush.xml
     Custom_DiffDecoderFlush.xml
-    Custom_CCDecoder.xml DESTINATION share/gnuradio/grc/blocks
+    Custom_CCDecoder.xml
+    Custom_DiffEncoderFlushFixed.xml DESTINATION share/gnuradio/grc/blocks
 )
