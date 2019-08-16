@@ -55,7 +55,7 @@ namespace gr {
           unsigned char prev=in[i-1];
           if(toFlush&&procCount==_flushLength){
             procCount=0;
-            prev=0
+            prev=0;
           }
           procCount++;
           out[i]=(curr-prev)% modulus;
