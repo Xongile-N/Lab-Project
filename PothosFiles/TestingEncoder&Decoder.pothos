@@ -10,7 +10,7 @@
         },
         {
             "name": "frameLen",
-            "value": "4"
+            "value": "10"
         },
         {
             "name": "poly1",
@@ -57,7 +57,7 @@
                     "properties": [
                         {
                             "key": "path",
-                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestData_240_Encoded_15_11_4_15.dat\""
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestDataCC_200Bytes_15_11_4/TestData_200_Encoded_15_11_4_1.dat\""
                         },
                         {
                             "key": "enabled",
@@ -67,11 +67,11 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 346
+                    "zValue": 365
                 },
                 {
                     "affinityZone": "",
-                    "enabled": true,
+                    "enabled": false,
                     "id": "BinaryFileSink1",
                     "inputDesc": [
                         {
@@ -97,12 +97,12 @@
                         }
                     ],
                     "path": "/blocks/binary_file_sink",
-                    "positionX": 843.90625,
-                    "positionY": 366,
+                    "positionX": 849.90625,
+                    "positionY": 367,
                     "properties": [
                         {
                             "key": "path",
-                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestDataCC_240Bytes_15_11_4/TestData_240_Decoded.dat\""
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestDataCC_200Bytes_15_11_4/Decoded.dat\""
                         },
                         {
                             "key": "enabled",
@@ -110,9 +110,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 352
+                    "zValue": 372
                 },
                 {
                     "affinityZone": "",
@@ -145,7 +145,7 @@
                     ],
                     "path": "/blocks/binary_file_source",
                     "positionX": 126,
-                    "positionY": 142,
+                    "positionY": 141,
                     "properties": [
                         {
                             "key": "dtype",
@@ -153,7 +153,7 @@
                         },
                         {
                             "key": "path",
-                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestData_240.dat\""
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestData.dat\""
                         },
                         {
                             "key": "rewind",
@@ -163,11 +163,11 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 326
+                    "zValue": 368
                 },
                 {
                     "affinityZone": "",
-                    "enabled": true,
+                    "enabled": false,
                     "id": "BinaryFileSource1",
                     "inputDesc": [
                         {
@@ -204,7 +204,7 @@
                         },
                         {
                             "key": "path",
-                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestDataCC_240Bytes_15_11_4/TestData_240_Encoded_15_11_4_4.dat\""
+                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestDataCC_200Bytes_15_11_4/TestData_200_Encoded_15_11_4_10.dat\""
                         },
                         {
                             "key": "rewind",
@@ -212,13 +212,13 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 356
+                    "zValue": 381
                 },
                 {
                     "affinityZone": "",
-                    "enabled": true,
+                    "enabled": false,
                     "id": "ConvolutionCodeDecoder0",
                     "inputDesc": [
                         {
@@ -288,9 +288,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Block",
-                    "zValue": 354
+                    "zValue": 380
                 },
                 {
                     "affinityZone": "",
@@ -383,7 +383,7 @@
                     "zValue": 0
                 },
                 {
-                    "enabled": true,
+                    "enabled": false,
                     "id": "Connection_BinaryFileSource10_ConvolutionCodeDecoder00",
                     "inputId": "ConvolutionCodeDecoder0",
                     "inputKey": "0",
@@ -392,12 +392,12 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Connection",
                     "zValue": 0
                 },
                 {
-                    "enabled": true,
+                    "enabled": false,
                     "id": "Connection_ConvolutionCodeDecoder00_BinaryFileSink10",
                     "inputId": "BinaryFileSink1",
                     "inputKey": "0",
@@ -406,7 +406,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": false,
+                    "selected": true,
                     "what": "Connection",
                     "zValue": 0
                 },

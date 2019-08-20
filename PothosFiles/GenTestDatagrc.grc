@@ -215,7 +215,7 @@
     </param>
     <param>
       <key>num_samps</key>
-      <value>240</value>
+      <value>200</value>
     </param>
     <param>
       <key>type</key>
@@ -250,7 +250,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/xongile/Lab-Project/TestSinks/TestData_240.dat</value>
+      <value>/home/xongile/Lab-Project/TestSinks/TestData_200.dat</value>
     </param>
     <param>
       <key>_coordinate</key>
