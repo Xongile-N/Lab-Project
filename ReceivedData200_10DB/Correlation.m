@@ -14,13 +14,12 @@ b6=[0 1 1 0 0 0 0 0];
 codeFirst8=[code   b1 b2 b3 b4 b5 b6];
 %codeConv=codeFirst8*2-1;
 codeConv=b13conv;
-corrThresh=11;
+corrThresh=9;
 
 frameLength=402;
 frameLength=8*frameLength;
-file="DBPSK_FEC_200_15_11_4_4_1_Barker.dat";
-
-outFile="DBPSK_FEC_200_15_11_4_4_1_Barker_Trimmed.dat";
+file="DBPSK_FEC_200_15_11_4_1_1_Barker.dat";
+outFile="DBPSK_FEC_200_15_11_4_1_1_Barker_Trimmed_9.dat";
 fileID=fopen(file);
 outFileID=fopen(outFile,'w');
 
@@ -64,7 +63,7 @@ while index <len
        index=index+8;
    end
 end
-count;
+count
 offset=1;
 
 dataPrePack=ones(1,count);

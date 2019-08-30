@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Tue Aug 20 19:09:13 2019
+# Generated: Fri Aug 30 12:44:24 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -72,17 +72,15 @@ class top_block(gr.top_block, Qt.QWidget):
         # Variables
         ##################################################
         self.sps = sps = 2
+        self.qpsk_1 = qpsk_1 = digital.constellation_rect(([-1-1j, -1+1j, 1+1j, 1-1j]), ([0, 1, 3, 2]), 4, 2, 2, 1, 1).base()
         self.nfilts = nfilts = 32
         self.eb = eb = 0.22
-
-        self.bpsk = bpsk = digital.constellation_bpsk().base()
-
 
         self.tx_rrc_taps = tx_rrc_taps = firdes.root_raised_cosine(nfilts, nfilts, 1.0, eb, 15*sps*nfilts)
 
         self.samp_rates = samp_rates = [2e4,5e4,1e5,2.5e5,5e5,1.25e6]
         self.samp_index = samp_index = 3
-        self.qpsk = qpsk = bpsk
+        self.qpsk = qpsk = qpsk_1
         self.taps_per_filt = taps_per_filt = len(tx_rrc_taps)/nfilts
         self.samp_rate_0 = samp_rate_0 = samp_rates[samp_index]
         self.rep = rep = 3
@@ -92,10 +90,12 @@ class top_block(gr.top_block, Qt.QWidget):
         self.taps_bw = taps_bw = 0.35
         self.sdr = sdr = "redpitaya=10.0.0.100:1001"
         self.samp_rate = samp_rate = samp_rate_0
-        self.qpsk_1 = qpsk_1 = digital.constellation_rect(([0.707+0.707j, -0.707+0.707j, -0.707-0.707j, 0.707-0.707j]), ([0, 1,2,3]), 4, 2, 2, 1, 1).base()
         self.pathr = pathr = "C:\Users\XongileN\GoogleDrive\2019\Semester2\ELEN40024012_lab_project\Lab-Project\TestSinks"
         self.pathl = pathl = "/home/xongile/Lab-Project/TestSinks/"
-        self.packetLength = packetLength = 400
+        self.packetLength = packetLength = 200
+
+        self.ook = ook = digital.constellation_calcdist(([0,1]), ([0, 1]), 2, 1).base()
+
         self.loopBW = loopBW = 62.8e-3
         self.hdr_format_def = hdr_format_def = digital.header_format_default(digital.packet_utils.default_access_code, 0)
         self.hdr_format = hdr_format = hdr_format_count
@@ -104,6 +104,9 @@ class top_block(gr.top_block, Qt.QWidget):
 
 
         self.enc_hdr = enc_hdr = fec.repetition_encoder_make(8000, rep)
+
+
+        self.bpsk = bpsk = digital.constellation_bpsk().base()
 
 
         ##################################################
@@ -176,7 +179,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.digital_chunks_to_symbols_xx_0_0 = digital.chunks_to_symbols_bc((qpsk.points()), 1)
         self.digital_chunks_to_symbols_xx_0 = digital.chunks_to_symbols_bc((qpsk.points()), 1)
         self.digital_burst_shaper_xx_0 = digital.burst_shaper_cc((firdes.window(firdes.WIN_HANN, 20, 0)), 0, filt_delay, True, "packet_len")
-        self.blocks_vector_insert_x_0 = blocks.vector_insert_b((124, 212), packetLength+2, 0)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_char*1, samp_rate,True)
         self.blocks_tagged_stream_mux_0 = blocks.tagged_stream_mux(gr.sizeof_gr_complex*1, "packet_len", 0)
         self.blocks_tagged_stream_multiply_length_1_1_0 = blocks.tagged_stream_multiply_length(gr.sizeof_char*1, 'packet_len', 0.125)
@@ -184,21 +186,23 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_tagged_stream_multiply_length_1_0 = blocks.tagged_stream_multiply_length(gr.sizeof_gr_complex*1, 'packet_len', 8/qpsk.bits_per_symbol())
         self.blocks_tagged_stream_multiply_length_1 = blocks.tagged_stream_multiply_length(gr.sizeof_gr_complex*1, 'packet_len', 8/qpsk.bits_per_symbol())
         self.blocks_tagged_stream_multiply_length_0 = blocks.tagged_stream_multiply_length(gr.sizeof_gr_complex*1, "packet_len", sps)
-        self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, packetLength+2, "packet_len")
+        self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, packetLength, "packet_len")
+        self.blocks_repack_bits_bb_0_2 = blocks.repack_bits_bb(8, qpsk.bits_per_symbol(), "", False, gr.GR_MSB_FIRST)
+        self.blocks_repack_bits_bb_0_1_0_1 = blocks.repack_bits_bb(1, 8, "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0_1_0 = blocks.repack_bits_bb(1, 8, "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0_1 = blocks.repack_bits_bb(8, 1, "", False, gr.GR_MSB_FIRST)
-        self.blocks_repack_bits_bb_0_0 = blocks.repack_bits_bb(8, qpsk.bits_per_symbol(), "", False, gr.GR_MSB_FIRST)
+        self.blocks_repack_bits_bb_0_0 = blocks.repack_bits_bb(8, 1, "", False, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0 = blocks.repack_bits_bb(8, qpsk.bits_per_symbol(), "", False, gr.GR_MSB_FIRST)
         self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vcc((0.5, ))
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1 , '/home/xongile/Lab-Project/TestSinks/TestDataCC_200Bytes_15_11_4/TestData_200_Encoded_15_11_4_10.dat', True)
-        self.Custom_DiffEncoderFlush_0_0 = Custom.DiffEncoderFlush(2, False, packetLength*8/qpsk.bits_per_symbol())
+        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1 , '/home/xongile/Lab-Project/TestSinks/TestDataCC_200Bytes_15_11_4/TestData_200.dat', True)
+        self.Custom_DiffEncoderFlush_0_0 = Custom.DiffEncoderFlush(2, True, packetLength*8/qpsk.bits_per_symbol())
         self.Custom_DiffEncoderFlush_0 = Custom.DiffEncoderFlush(2, True, hdr_format.header_nbits()/qpsk.bits_per_symbol())
 
         ##################################################
         # Connections
         ##################################################
         self.connect((self.Custom_DiffEncoderFlush_0, 0), (self.fec_tagged_encoder_2, 0))
-        self.connect((self.Custom_DiffEncoderFlush_0_0, 0), (self.digital_map_bb_0_0, 0))
+        self.connect((self.Custom_DiffEncoderFlush_0_0, 0), (self.blocks_repack_bits_bb_0_1_0_1, 0))
         self.connect((self.blocks_file_source_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.qtgui_const_sink_x_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.red_pitaya_wide_sink_0, 0))
@@ -206,6 +210,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_repack_bits_bb_0_0, 0), (self.Custom_DiffEncoderFlush_0_0, 0))
         self.connect((self.blocks_repack_bits_bb_0_1, 0), (self.blocks_tagged_stream_multiply_length_1_1, 0))
         self.connect((self.blocks_repack_bits_bb_0_1_0, 0), (self.blocks_tagged_stream_multiply_length_1_1_0, 0))
+        self.connect((self.blocks_repack_bits_bb_0_1_0_1, 0), (self.blocks_repack_bits_bb_0_2, 0))
+        self.connect((self.blocks_repack_bits_bb_0_2, 0), (self.digital_map_bb_0_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.blocks_repack_bits_bb_0_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.digital_protocol_formatter_bb_0, 0))
         self.connect((self.blocks_tagged_stream_multiply_length_0, 0), (self.blocks_multiply_const_vxx_0, 0))
@@ -214,8 +220,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_tagged_stream_multiply_length_1_1, 0), (self.Custom_DiffEncoderFlush_0, 0))
         self.connect((self.blocks_tagged_stream_multiply_length_1_1_0, 0), (self.blocks_repack_bits_bb_0, 0))
         self.connect((self.blocks_tagged_stream_mux_0, 0), (self.digital_burst_shaper_xx_0, 0))
-        self.connect((self.blocks_throttle_0, 0), (self.blocks_vector_insert_x_0, 0))
-        self.connect((self.blocks_vector_insert_x_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))
+        self.connect((self.blocks_throttle_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))
         self.connect((self.digital_burst_shaper_xx_0, 0), (self.pfb_arb_resampler_xxx_0, 0))
         self.connect((self.digital_chunks_to_symbols_xx_0, 0), (self.blocks_tagged_stream_multiply_length_1, 0))
         self.connect((self.digital_chunks_to_symbols_xx_0_0, 0), (self.blocks_tagged_stream_multiply_length_1_0, 0))
@@ -239,6 +244,13 @@ class top_block(gr.top_block, Qt.QWidget):
         self.pfb_arb_resampler_xxx_0.set_rate(self.sps)
         self.blocks_tagged_stream_multiply_length_0.set_scalar(self.sps)
 
+    def get_qpsk_1(self):
+        return self.qpsk_1
+
+    def set_qpsk_1(self, qpsk_1):
+        self.qpsk_1 = qpsk_1
+        self.set_qpsk(self.qpsk_1)
+
     def get_nfilts(self):
         return self.nfilts
 
@@ -251,13 +263,6 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_eb(self, eb):
         self.eb = eb
-
-    def get_bpsk(self):
-        return self.bpsk
-
-    def set_bpsk(self, bpsk):
-        self.bpsk = bpsk
-        self.set_qpsk(self.bpsk)
 
     def get_tx_rrc_taps(self):
         return self.tx_rrc_taps
@@ -346,12 +351,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.red_pitaya_wide_sink_0.set_rate(int(self.samp_rate))
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
 
-    def get_qpsk_1(self):
-        return self.qpsk_1
-
-    def set_qpsk_1(self, qpsk_1):
-        self.qpsk_1 = qpsk_1
-
     def get_pathr(self):
         return self.pathr
 
@@ -369,8 +368,14 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_packetLength(self, packetLength):
         self.packetLength = packetLength
-        self.blocks_stream_to_tagged_stream_0.set_packet_len(self.packetLength+2)
-        self.blocks_stream_to_tagged_stream_0.set_packet_len_pmt(self.packetLength+2)
+        self.blocks_stream_to_tagged_stream_0.set_packet_len(self.packetLength)
+        self.blocks_stream_to_tagged_stream_0.set_packet_len_pmt(self.packetLength)
+
+    def get_ook(self):
+        return self.ook
+
+    def set_ook(self, ook):
+        self.ook = ook
 
     def get_loopBW(self):
         return self.loopBW
@@ -408,6 +413,12 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_enc_hdr(self, enc_hdr):
         self.enc_hdr = enc_hdr
+
+    def get_bpsk(self):
+        return self.bpsk
+
+    def set_bpsk(self, bpsk):
+        self.bpsk = bpsk
 
 
 def main(top_block_cls=top_block, options=None):

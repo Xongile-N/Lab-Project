@@ -451,7 +451,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>400</value>
+      <value>200</value>
     </param>
   </block>
   <block>
@@ -1854,7 +1854,7 @@
     </param>
     <param>
       <key>packet_len</key>
-      <value>packetLength+2</value>
+      <value>packetLength</value>
     </param>
     <param>
       <key>type</key>
@@ -2270,11 +2270,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(72, 316)</value>
+      <value>(136, 372)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3832,6 +3832,12 @@
   <connection>
     <source_block_id>blocks_tagged_stream_mux_0</source_block_id>
     <sink_block_id>digital_burst_shaper_xx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_throttle_0</source_block_id>
+    <sink_block_id>blocks_stream_to_tagged_stream_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

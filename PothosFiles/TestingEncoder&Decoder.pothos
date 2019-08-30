@@ -10,7 +10,7 @@
         },
         {
             "name": "frameLen",
-            "value": "10"
+            "value": "8"
         },
         {
             "name": "poly1",
@@ -67,11 +67,11 @@
                     "rotation": 0,
                     "selected": false,
                     "what": "Block",
-                    "zValue": 365
+                    "zValue": 407
                 },
                 {
                     "affinityZone": "",
-                    "enabled": false,
+                    "enabled": true,
                     "id": "BinaryFileSink1",
                     "inputDesc": [
                         {
@@ -97,12 +97,12 @@
                         }
                     ],
                     "path": "/blocks/binary_file_sink",
-                    "positionX": 849.90625,
-                    "positionY": 367,
+                    "positionX": 654.90625,
+                    "positionY": 310,
                     "properties": [
                         {
                             "key": "path",
-                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestDataCC_200Bytes_15_11_4/Decoded.dat\""
+                            "value": "\"/home/xongile/Lab-Project/ReceivedData200_15DB/Decoded/DBPSK_FEC_200_15_11_4_8_2_Decoded.dat\""
                         },
                         {
                             "key": "enabled",
@@ -112,7 +112,7 @@
                     "rotation": 0,
                     "selected": true,
                     "what": "Block",
-                    "zValue": 372
+                    "zValue": 702
                 },
                 {
                     "affinityZone": "",
@@ -167,7 +167,7 @@
                 },
                 {
                     "affinityZone": "",
-                    "enabled": false,
+                    "enabled": true,
                     "id": "BinaryFileSource1",
                     "inputDesc": [
                         {
@@ -195,8 +195,8 @@
                         }
                     ],
                     "path": "/blocks/binary_file_source",
-                    "positionX": 214,
-                    "positionY": 364,
+                    "positionX": 82,
+                    "positionY": 313,
                     "properties": [
                         {
                             "key": "dtype",
@@ -204,7 +204,7 @@
                         },
                         {
                             "key": "path",
-                            "value": "\"/home/xongile/Lab-Project/TestSinks/TestDataCC_200Bytes_15_11_4/TestData_200_Encoded_15_11_4_10.dat\""
+                            "value": "\"/home/xongile/Lab-Project/ReceivedData200_15DB/DBPSK_FEC_200_15_11_4_8_2_Trimmed_Scuffed.dat\""
                         },
                         {
                             "key": "rewind",
@@ -212,13 +212,13 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Block",
-                    "zValue": 381
+                    "zValue": 701
                 },
                 {
                     "affinityZone": "",
-                    "enabled": false,
+                    "enabled": true,
                     "id": "ConvolutionCodeDecoder0",
                     "inputDesc": [
                         {
@@ -267,8 +267,8 @@
                         }
                     ],
                     "path": "/Custom/CCDecoder",
-                    "positionX": 465,
-                    "positionY": 338,
+                    "positionX": 356,
+                    "positionY": 286,
                     "properties": [
                         {
                             "key": "polyF",
@@ -288,9 +288,9 @@
                         }
                     ],
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Block",
-                    "zValue": 380
+                    "zValue": 657
                 },
                 {
                     "affinityZone": "",
@@ -383,7 +383,7 @@
                     "zValue": 0
                 },
                 {
-                    "enabled": false,
+                    "enabled": true,
                     "id": "Connection_BinaryFileSource10_ConvolutionCodeDecoder00",
                     "inputId": "ConvolutionCodeDecoder0",
                     "inputKey": "0",
@@ -392,12 +392,12 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Connection",
-                    "zValue": 0
+                    "zValue": 622
                 },
                 {
-                    "enabled": false,
+                    "enabled": true,
                     "id": "Connection_ConvolutionCodeDecoder00_BinaryFileSink10",
                     "inputId": "BinaryFileSink1",
                     "inputKey": "0",
@@ -406,7 +406,7 @@
                     "positionX": 0,
                     "positionY": 0,
                     "rotation": 0,
-                    "selected": true,
+                    "selected": false,
                     "what": "Connection",
                     "zValue": 0
                 },
